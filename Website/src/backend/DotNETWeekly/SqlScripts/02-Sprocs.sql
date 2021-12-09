@@ -14,9 +14,9 @@ Create PROC dbo.Episode_Get_ById
 As
 Begin
 	SET NoCount On
-	Select e.Id, e.Title, e.Introduction, e.CreateTime, r.Id, r.title, r.Content, r.Category, r.CreateTime
+	Select e.Id, e.Title, e.Introduction, e.CreateTime, r.Id, r.title, r.Content, r.Category, r.CreateTime, r.EpisodeId
 	From dbo.Episode e
-		Left Join dbo.Record r On e.Id = r.EpisodeId
+		Left Join dbo.Record r On e.Id = r.EpisodeId And e.Id = @EpisodeId
 End 
 Go
 
@@ -25,7 +25,7 @@ Create PROC dbo.Episode_Post
 	(
 		@Title nvarchar(100),
 		@Introduction nvarchar(max),
-		@CreateTIme datetime2
+		@CreateTime datetime2
 
 	)
 As 
@@ -52,7 +52,7 @@ Begin
 	Set NoCount On
 	Insert into dbo.Record
 		(EpisodeId, Title, Content, Category, CreateTime)
-	Values(@EpisodeId, @Title, @Content, @Category, @CateTime)
+	Values(@EpisodeId, @Title, @Content, @Category, @CreateTime)
 
 	Select Scope_Identity() as Id
 End

@@ -8,6 +8,8 @@
 
         public string Content { get; set; }
 
+        public int EpisodeId { get; set; }
+
         public Category Category { get; set; }
 
         public DateTime CreateTime { get; set; }
