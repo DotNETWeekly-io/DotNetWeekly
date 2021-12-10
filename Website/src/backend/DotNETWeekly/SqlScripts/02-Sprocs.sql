@@ -16,7 +16,8 @@ Begin
 	SET NoCount On
 	Select e.Id, e.Title, e.Introduction, e.CreateTime, r.Id, r.title, r.Content, r.Category, r.CreateTime, r.EpisodeId
 	From dbo.Episode e
-		Left Join dbo.Record r On e.Id = r.EpisodeId And e.Id = @EpisodeId
+		Left Join dbo.Record r On e.Id = r.EpisodeId 
+	Where e.Id = @EpisodeId
 End 
 Go
 

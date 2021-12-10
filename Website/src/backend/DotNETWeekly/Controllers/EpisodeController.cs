@@ -22,9 +22,14 @@ namespace DotNETWeekly.Controllers
         }
 
         [HttpGet("episodes/{episodeId:int}")]
-        public async Task<Episode> GetEpisode(int episodeId)
+        public async Task<IActionResult> GetEpisode(int episodeId)
         {
-            return await _dataRepository.GetEpisodeByIdAsync(episodeId);
+            var episode =  await _dataRepository.GetEpisodeByIdAsync(episodeId);
+            if (episode == null)
+            {
+                return NotFound();
+            }
+            return CreatedAtAction(nameof(GetEpisode), episode);
         }
 
         [HttpPost("episodes")]
