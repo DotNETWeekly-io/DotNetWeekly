@@ -5,6 +5,12 @@ It has two platforms to read this managzie.
 - Website (In developing)
 - GitHub (In developing)
 
+## Episode
+
+### 2021
+
+**December**: [Episode 001](docs/episode-001.md):high_brightness:
+
 ## Contribution
 
-Welcome to the contribute to managize via raising an issue.
+Welcome to the contribute to managize via raising issues.
