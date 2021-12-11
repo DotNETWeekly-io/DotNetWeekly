@@ -1,10 +1,11 @@
 .banner {
-    position: center;
-    box-sizing: border-box;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
+    display: flex;
     background-color: #f7f8fa;
+    margin: auto;
+    align-items: center;
+    padding: 10px;
 }
