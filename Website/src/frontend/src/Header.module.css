@@ -1,0 +1,10 @@
+.banner {
+    position: center;
+    box-sizing: border-box;
+    top: 0;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f7f8fa;
+}
