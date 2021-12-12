@@ -14,6 +14,7 @@ CREATE TABLE dbo.Record (
 	Id int IDENTITY(1, 1) NOT NULL,
 	EpisodeId int NOT NULL,
 	Title nvarchar(100) NOT NULL,
+	Link nvarchar(max) NOT NULL,
 	Content nvarchar(max) NOT NULL,
 	Category int NOT NULL,
 	CreateTime Datetime2(7) NOT NULL,

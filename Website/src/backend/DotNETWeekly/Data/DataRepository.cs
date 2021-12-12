@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using System.Linq;
 
 using DotNETWeekly.Models;
 
@@ -32,7 +31,7 @@ namespace DotNETWeekly.Data
             {
                 await connection.OpenAsync();
                 return await connection.QueryFirstAsync<int>(@"EXEC dbo.Record_Post
-                    @EpisodeId=@EpisodeId, @Title=@Title, @Content=@Content, @Category=@Category, @CreateTime=@CreateTime", record);
+                    @EpisodeId=@EpisodeId, @Title=@Title, @Link=@Link, @Content=@Content, @Category=@Category, @CreateTime=@CreateTime", record);
             }
         }
 
@@ -42,7 +41,7 @@ namespace DotNETWeekly.Data
             {
                 await connection.OpenAsync();
 
-                Episode episode = default; 
+                Episode? episode = default; 
                 return (await connection.QueryAsync<Episode, Record, Episode>(
                     "EXEC dbo.Episode_Get_ById @EpisodeId=@EpisodeId",
                     map: (q, a) =>

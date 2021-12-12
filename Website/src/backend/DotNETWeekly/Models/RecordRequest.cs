@@ -9,6 +9,8 @@ namespace DotNETWeekly.Models
         [Required]
         public string Content { get; set; }
 
+        [Required]
+        public string Link { get; set; }
 
         [Required]
         public Category Category { get; set; }

@@ -14,7 +14,6 @@ namespace DotNETWeekly.Controllers
             _dataRepository = dataRepository;
         }
 
-
         [HttpGet("episodes")]
         public async Task<IEnumerable<Episode>> GetAllEpisodes()
         {
@@ -50,6 +49,7 @@ namespace DotNETWeekly.Controllers
             var record = new Record
             {
                 Title = recordRequest.Title,
+                Link = recordRequest.Link,
                 Content = recordRequest.Content,
                 EpisodeId = recordRequest.EpisodeId,
                 Category = recordRequest.Category,

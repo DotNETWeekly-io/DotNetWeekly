@@ -8,6 +8,8 @@
 
         public string Content { get; set; }
 
+        public string Link { get; set; }
+
         public int EpisodeId { get; set; }
 
         public Category Category { get; set; }
