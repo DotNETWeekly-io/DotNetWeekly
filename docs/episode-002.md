@@ -21,14 +21,16 @@
 
 1、[.NET Ketchup](https://dotnetketchup.com/)
 
+怎样实时的抓住 `.NET` 的最新动态呢？访问 [.NET Ketchup](https://dotnetketchup.com/)，它会定时的抓取最新的 `.NET` 信息，比如官方博客，Youtube，Twitter 等等。而且它和周刊一样，以按照周的形式组织信息源。
+
+2、[一张图了解 .NET 发展历程](https://www.reddit.com/r/dotnet/comments/rcg391/net_history_timeline_its_not_finished_yet_so_if/)
+
 Reddit 有人发布了一张 `.NET` 的发展历程
 
 ![](https://i.redd.it/s2czm5lf9i481.png)
 
 - 上面是操作系统，Visual Studio， C# 语言
 - 下面是 CLR 的版本
-
-2、[一张图了解 .NET 发展历程](https://www.reddit.com/r/dotnet/comments/rcg391/net_history_timeline_its_not_finished_yet_so_if/)
 
 ## 文章推荐
 
