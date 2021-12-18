@@ -1,16 +1,14 @@
-`DotNetWeekly` is the public resource center that foucses on the `.NET` ecosystem. It's inspired by the [科技爱好者周刊](https://github.com/ruanyf/weekly) and [Go 语言爱好者周刊](https://github.com/polaris1119/golangweekly).
+.NET 周刊`是一个专注于`.NET`生态的资源中心，它的目标是收集`.NET` 生态中的有价值的内容，并且每周定期发布。它受到[科技爱好者周刊](https://github.com/ruanyf/weekly)和[Go 语言爱好者周刊](https://github.com/polaris1119/golangweekly) 的启发。
 
-It has two platforms to read this managzie.
+欢迎投稿，请[提交 issue](https://github.com/gaufung/DotNetWeekly/issues)。
 
-- Website (In developing)
-- GitHub (In developing)
+我们打算在两个平台上发布
 
-## Episode
+- GitHub
+- 网站 (开发中)
+
+## 周刊
 
 ### 2021
 
-**December**: [Episode 001](docs/episode-001.md):high_brightness:
-
-## Contribution
-
-Welcome to the contribute to managize via raising issues.
+**十二月份**: [第 002 期](docs/episode-002.md):high_brightness: | [第 001 期](docs/episode-001.md)
