@@ -25,9 +25,9 @@ export interface Episode {
 const episodes: Episode[] = [
     {
         id: 1,
-        title: '.NET 周刊第 1 期',
+        title: '第 1 期',
         introduction:
-            '**周刊** 第 `1` 期\n![](https://www.dotnetconf.net/img/world-of-dotnet.svg)',
+            '**周刊** 第 `1` 期\n\n![](https://www.dotnetconf.net/img/world-of-dotnet.svg)\n\n各种各样的原因，`.NET` 在国内的流行程度仍然赶不上 `Java`, `C/C++` 这样的编程语言。作为 `.NET` 生态的参与者，常常想能不能做一些事情来改变这个情况。由于语言的原因，很多外网 `.NET` 社区的内容并没有在国内传播过来。因此 `DotNET Weekly` 将会专注于分享全球 `.NET` 社区内容，通常会包含下面三种的类型的资源：\n\n- 行业资讯\n\n- 文章推荐\n\n- 开源项目',
         records: [
             {
                 id: 1,
@@ -64,7 +64,7 @@ const episodes: Episode[] = [
                 title: '单元测试框架',
                 link: 'https://github.com/moq/moq4',
                 content:
-                    '在软件开发中，单元测试是必不可少的部分。但是代码中存在一些外部的依赖，因此需要对它们进行 **Mock**。在 `.NET` 平台，最有名的框架就是 `Moq`，借助它可以帮助我们有效编写单元测试，并且辅助我们遵循面向接口编程原则。',
+                    '在软件开发中，单元测试是必不可少的部分。但是代码中存在一些外部的依赖，因此需要对它们进行 **Mock**。在 `.NET` 平台，最有名的框架就是 `Moq`，借助它可以帮助我们有效编写单元测试，并且辅助我们遵循面向接口编程原则。在软件开发中，单元测试是必不可少的部分。但是代码中存在一些外部的依赖，因此需要对它们进行 **Mock**。在 `.NET` 平台，最有名的框架就是 `Moq`，借助它可以帮助我们有效编写单元测试，并且辅助我们遵循面向接口编程原则。',
                 episodeId: 1,
                 category: Category.OpenSource,
                 createTime: new Date(),
@@ -74,9 +74,9 @@ const episodes: Episode[] = [
     },
     {
         id: 2,
-        title: '.NET 周刊第 2 期',
+        title: '第 2 期',
         introduction:
-            '**周刊** 第 `2` 期\n![](https://www.dotnetconf.net/img/world-of-dotnet.svg)',
+            '**周刊** 第 `2` 期\n\n![](https://www.dotnetconf.net/img/world-of-dotnet.svg)',
         records: [
             {
                 id: 5,
