@@ -9,6 +9,10 @@
 
 ## 周刊
 
+### 2022
+
+**一月份**: [第 004 期](docs/episode-004.md):high_brightness:
+
 ### 2021
 
-**十二月份**: [第 003 期](docs/episode-003.md):high_brightness:| [第 002 期](docs/episode-002.md) | [第 001 期](docs/episode-001.md)
+**十二月份**: [第 003 期](docs/episode-003.md)| [第 002 期](docs/episode-002.md) | [第 001 期](docs/episode-001.md)
