@@ -5,6 +5,7 @@ import Footer from './Footer';
 import HomePage from './HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { EpisodePage } from './EpisodePage';
+import { NotFoundPage } from './NotFoundPage';
 
 export class App extends React.Component {
     render() {
@@ -18,6 +19,7 @@ export class App extends React.Component {
                             path="episode/:episodeId"
                             element={<EpisodePage />}
                         />
+                        <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                     <Footer />
                 </div>

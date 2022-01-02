@@ -1,3 +1,4 @@
+import { http } from './http';
 export enum Category {
     News,
     OpenSource,
@@ -122,17 +123,20 @@ const episodes: Episode[] = [
     },
 ];
 
-const wait = async (ms: number): Promise<void> => {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-};
-
-export const getEpisodes = async (): Promise<Episode[] | null> => {
-    await wait(500);
-    return episodes.length === 0 ? null : episodes;
+export const getEpisodes = async (): Promise<Episode[]> => {
+    const result = await http<Episode[]>({ path: '/episodes' });
+    if (result.ok && result.body) {
+        return result.body;
+    } else {
+        return [];
+    }
 };
 
 export const getEpisodeById = async (id: number): Promise<Episode | null> => {
-    await wait(500);
-    const results = episodes.filter((e) => e.id === id);
-    return results.length === 0 ? null : results[0];
+    const result = await http<Episode>({ path: `/episodes/${id}` });
+    if (result.ok && result.body) {
+        return result.body;
+    } else {
+        return null;
+    }
 };

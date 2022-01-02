@@ -3,7 +3,7 @@ using DotNETWeekly.Data;
 using DotNETWeekly.Models;
 namespace DotNETWeekly.Controllers
 {
-    [Route("[controller]")]
+    [Route("api")]
     [ApiController]
     public class EpisodeController : ControllerBase
     {
