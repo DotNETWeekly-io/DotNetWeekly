@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=dotnetweekly;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+}
