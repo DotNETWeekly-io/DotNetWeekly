@@ -3,10 +3,37 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DotNETWeeklyPublisher"
+        xmlns:mdxam="clr-namespace:MdXaml;assembly=MdXaml"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title=".NET Weekly Publisher" Height="1000" Width="1200" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock Text="{Binding Name}"></TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Push an Episode" Height="50" Width="150" Command="{Binding OpenEpisodeCommand}"/>
+                <Button Content="Add a Record" Height="50" Width="150" Grid.Column="1"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Button Content="Preview" Height="50" Width="150"/>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button Content="Pushish" Height="50" Width="150"/>
+            </Grid>
+        </Grid>
+        <Border Grid.Row="1" BorderThickness="2" BorderBrush="BlueViolet"></Border>
+        <mdxam:MarkdownScrollViewer Grid.Row="1" Markdown="{Binding EpisodePreviewText}">
+        </mdxam:MarkdownScrollViewer>
     </Grid>
 </Window>
