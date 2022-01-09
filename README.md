@@ -11,7 +11,7 @@
 
 ### 2022
 
-**一月份**: [第 004 期](docs/episode-004.md):high_brightness:
+**一月份**: [第 005 期](docs/episode-005.md):high_brightness: | [第 004 期](docs/episode-004.md)
 
 ### 2021
 
