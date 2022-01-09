@@ -2,6 +2,9 @@
 {
     using Data;
 
+    using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+    using Microsoft.Identity.Web;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -21,6 +24,8 @@
             builder.AllowAnyMethod()
             .AllowAnyHeader()
             .WithOrigins(Configuration["Frontend"])));
+            services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+          .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
@@ -30,7 +35,10 @@
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
 

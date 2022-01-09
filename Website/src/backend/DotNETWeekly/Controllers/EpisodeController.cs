@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DotNETWeekly.Data;
 using DotNETWeekly.Models;
+using Microsoft.AspNetCore.Authorization;
+
 namespace DotNETWeekly.Controllers
 {
     [Route("api")]
@@ -32,6 +34,7 @@ namespace DotNETWeekly.Controllers
         }
 
         [HttpPost("episodes")]
+        [Authorize]
         public async Task<int> CreateEpisode(EpisodeRequest episodeRequest)
         {
             var episode = new Episode
@@ -44,6 +47,7 @@ namespace DotNETWeekly.Controllers
         }
 
         [HttpPost("records")]
+        [Authorize]
         public async Task<int> CreateRecord(RecordRequest recordRequest)
         {
             var record = new Record

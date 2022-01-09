@@ -2,6 +2,7 @@ import React from 'react';
 import { Category, Episode, getEpisodeById, Record } from './EpisodeData';
 import { useParams } from 'react-router';
 import ReactMarkdown from 'react-markdown';
+import styles from './EpisodePage.module.css';
 
 export const EpisodePage = () => {
     const [episode, setEpisode] = React.useState<Episode | null>(null);
@@ -62,8 +63,11 @@ export const EpisodePage = () => {
             return rawContent;
         }
     };
-
-    return <ReactMarkdown>{expandEpisode(episode)}</ReactMarkdown>;
+    return (
+        <div className={styles.episodePage}>
+            <ReactMarkdown>{expandEpisode(episode)}</ReactMarkdown>
+        </div>
+    );
 };
 
 export default EpisodePage;
