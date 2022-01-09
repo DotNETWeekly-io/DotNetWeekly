@@ -2,8 +2,7 @@
 {
     using Data;
 
-    using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-    using Microsoft.Identity.Web;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
 
     public class Startup
     {
@@ -15,7 +14,12 @@
         public IConfiguration Configuration { get; set; }
 
         public void ConfigureServices(IServiceCollection services)
-        {
+{
+            services.AddAuthentication(sharedOptions =>
+            {
+                sharedOptions.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddAzureAdBearer(options => Configuration.Bind("AzureAd", options));
             services.AddScoped<IDataRepository, DataRepository>();
             services.AddMvc();
             services.AddEndpointsApiExplorer();
@@ -24,8 +28,6 @@
             builder.AllowAnyMethod()
             .AllowAnyHeader()
             .WithOrigins(Configuration["Frontend"])));
-            services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-          .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
@@ -35,7 +37,6 @@
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
@@ -46,6 +47,8 @@
             {
                 endpoints.MapControllers();
             });
+
+
         }
     }
 }

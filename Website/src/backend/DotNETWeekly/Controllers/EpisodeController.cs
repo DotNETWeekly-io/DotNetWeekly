@@ -17,12 +17,14 @@ namespace DotNETWeekly.Controllers
         }
 
         [HttpGet("episodes")]
+        [AllowAnonymous]
         public async Task<IEnumerable<Episode>> GetAllEpisodes()
         {
             return await _dataRepository.GetEpisodesAsync();
         }
 
         [HttpGet("episodes/{episodeId:int}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetEpisode(int episodeId)
         {
             var episode =  await _dataRepository.GetEpisodeByIdAsync(episodeId);
