@@ -40,24 +40,8 @@ namespace DotNETWeekly.Data
             using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
-
-                Episode? episode = default; 
-                return (await connection.QueryAsync<Episode, Record, Episode>(
-                    "EXEC dbo.Episode_Content_Get_ById @EpisodeId=@EpisodeId",
-                    map: (q, a) =>
-                    {
-                        if (episode == null)
-                        {
-                            episode = q;
-                        }
-                        if (episode.Records == null)
-                        {
-                            episode.Records = new List<Record>();
-                        }
-                        episode.Records.Add(a);
-                        return episode;
-                    }, new { EpisodeId = id }
-                    )).FirstOrDefault();
+                var episodes = await connection.QueryAsync<Episode>("EXEC dbo.Episode_Content_Get_ById @EpisodeId=@EpisodeId", new {EpisodeId = id});
+                return episodes.FirstOrDefault();
             }
         }
 

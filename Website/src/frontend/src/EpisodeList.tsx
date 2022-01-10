@@ -1,7 +1,7 @@
 import React from 'react';
 import { Episode } from './EpisodeData';
 import styles from './EpisodeList.module.css';
-import link, { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface Props {
     data: Episode[];

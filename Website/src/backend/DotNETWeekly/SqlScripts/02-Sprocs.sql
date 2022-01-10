@@ -14,7 +14,7 @@ Create PROC dbo.Episode_Records_Get_ById
 As
 Begin
 	SET NoCount On
-	Select e.Id, e.Title, e.Introduction, e.CreateTime, r.Id, r.Title, r.Link, r.Content, r.Category, r.CreateTime, r.EpisodeId
+	Select e.Id, e.Title, e.CreateTime, r.Id, r.Title, r.Link, r.Content, r.Category, r.CreateTime, r.EpisodeId
 	From dbo.Episode e
 		Left Join dbo.Record r On e.Id = r.EpisodeId 
 	Where e.Id = @EpisodeId
@@ -30,7 +30,7 @@ Begin
 	SET NoCount On
 	Select e.Id, e.Title, e.Content, e.CreateTime
 	From dbo.Episode e
-	where e.Id = @EpisodeId
+	Where e.Id = @EpisodeId
 End
 Go
 
@@ -45,11 +45,11 @@ Create PROC dbo.Episode_Post
 As 
 Begin
 	Set NoCount On
-	IF NOT EXISTS(Select * From dob.Episode where Id = @Id)
+	IF NOT EXISTS(Select * From dbo.Episode where Id = @Id)
 	Begin
 		Insert into dbo.Episode
-			(Title, Introduction, Content, CreateTime)
-		Values (@Title, @Introduction, @Content, @CreateTime)
+			(Title, Content, CreateTime)
+		Values (@Title, @Content, @CreateTime)
 		Select Scope_Identity() as Id
 	End
 	Else 
@@ -60,6 +60,7 @@ Begin
 			Content = @Content,
 			CreateTime = GETUTCDATE()
 		Where Id = @id
+		Select Scope_Identity() as Id
 	end
 End
 Go
