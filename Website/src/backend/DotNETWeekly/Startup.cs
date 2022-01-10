@@ -14,7 +14,7 @@
         public IConfiguration Configuration { get; set; }
 
         public void ConfigureServices(IServiceCollection services)
-{
+        {
             services.AddAuthentication(sharedOptions =>
             {
                 sharedOptions.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;

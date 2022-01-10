@@ -36,20 +36,26 @@ namespace DotNETWeekly.Controllers
         }
 
         [HttpPost("episodes")]
+#if !DEBUG
         [Authorize]
+#endif
         public async Task<int> CreateEpisode(EpisodeRequest episodeRequest)
         {
             var episode = new Episode
             {
+                Id= episodeRequest.Id,
                 Title = episodeRequest.Title,
                 CreateTime = DateTime.UtcNow,
-                Introduction = episodeRequest.Introduction,
+                Content = episodeRequest.Content,
             };
-            return await _dataRepository.CreateEpisode(episode);
+            return await _dataRepository.AddOrUpdateEpisode(episode);
         }
 
         [HttpPost("records")]
+
+#if !DEBUG
         [Authorize]
+#endif
         public async Task<int> CreateRecord(RecordRequest recordRequest)
         {
             var record = new Record

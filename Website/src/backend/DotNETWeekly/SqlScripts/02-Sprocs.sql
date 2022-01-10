@@ -1,13 +1,13 @@
-﻿Create PROC dbo.Episodes_Get
+﻿Create PROC dbo.Episodes_Title_Get
 As
-Begin 
+Begin
 	Set NoCount On
-	Select e.Id, e.Title, e.Introduction, e.CreateTime
-	From dbo.Episode e 
+	Select e.Id, e.Title, e.CreateTime
+	from dbo.Episode e
 End
 Go
 
-Create PROC dbo.Episode_Get_ById
+Create PROC dbo.Episode_Records_Get_ById
 (
 	@EpisodeId int
 )
@@ -21,21 +21,46 @@ Begin
 End 
 Go
 
+Create PROC dbo.Episode_Content_Get_ById
+(
+	@EpisodeId int
+)
+As
+Begin
+	SET NoCount On
+	Select e.Id, e.Title, e.Content, e.CreateTime
+	From dbo.Episode e
+	where e.Id = @EpisodeId
+End
+Go
+
 
 Create PROC dbo.Episode_Post
 	(
+		@Id int,
 		@Title nvarchar(100),
-		@Introduction nvarchar(max),
+		@Content nvarchar(max),
 		@CreateTime datetime2
 	)
 As 
 Begin
 	Set NoCount On
-	Insert into dbo.Episode
-		(Title, Introduction, CreateTime)
-	Values (@Title, @Introduction, @CreateTime)
-
-	Select Scope_Identity() as Id
+	IF NOT EXISTS(Select * From dob.Episode where Id = @Id)
+	Begin
+		Insert into dbo.Episode
+			(Title, Introduction, Content, CreateTime)
+		Values (@Title, @Introduction, @Content, @CreateTime)
+		Select Scope_Identity() as Id
+	End
+	Else 
+	Begin 
+		Update dbo.Episode
+		SET
+		    Title = @Title,
+			Content = @Content,
+			CreateTime = GETUTCDATE()
+		Where Id = @id
+	end
 End
 Go
 

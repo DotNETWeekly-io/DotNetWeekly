@@ -6,7 +6,7 @@
 
         public string Title { get; set; }
 
-        public string Introduction { get; set; }
+        public string Content { get; set; }
 
         public List<Record> Records { get; set; }
 

@@ -1,7 +1,7 @@
 ﻿Create Table dbo.Episode (
 	Id int IDENTITY(1, 1) NOT NULL,
 	Title nvarchar(100) NOT NULL,
-	Introduction nvarchar(max) NOT NULL,
+	Content nvarchar(max) NOT NULL,
 	CreateTIme Datetime2(7) NOT NULL,
 	CONSTRAINT PK_Episode PRIMARY KEY CLUSTERED
 	(

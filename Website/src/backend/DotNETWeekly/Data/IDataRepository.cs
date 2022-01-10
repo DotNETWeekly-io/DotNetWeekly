@@ -8,7 +8,7 @@
 
         Task<Episode> GetEpisodeByIdAsync(int id);
 
-        Task<int> CreateEpisode(Episode episode);
+        Task<int> AddOrUpdateEpisode(Episode episode);
 
         Task<int> CreateRecord(Record record);
 

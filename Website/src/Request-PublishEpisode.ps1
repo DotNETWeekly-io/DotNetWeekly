@@ -14,15 +14,5 @@ function Get-EpisodeFromMarkdown
 		Write-Host "Failed to get $FileName from GitHub" -ForegroundColor Red
 		return
 	}
-
-	$content = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($response.Content))
-
-	$contentFilePath = Join-Path -Path $env:TEMP -ChildPath $FileName
-	if (Test-Path $contentFilePath) {
-		Remove-Item $contentFilePath -Force
-	}
-	$content | Out-File $contentFilePath
-	[string[]]$lines = Get-Content $contentFilePath 
-
-	return $lines
+	
 }
