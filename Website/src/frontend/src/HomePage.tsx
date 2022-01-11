@@ -1,7 +1,6 @@
 import React from 'react';
 import { getEpisodes } from './EpisodeData';
 import { EpisodeList } from './EpisodeList';
-import styles from './HomePage.module.css';
 export class HomePage extends React.Component {
     state = {
         episodes: [],
@@ -10,6 +9,13 @@ export class HomePage extends React.Component {
     componentDidMount() {
         getEpisodes().then((episodes) => {
             if (!!episodes) {
+                episodes.sort((a, b) =>
+                    a.createTime > b.createTime
+                        ? -1
+                        : a.createTime < b.createTime
+                        ? 1
+                        : 0,
+                );
                 this.setState({ episodes: episodes });
             }
         });

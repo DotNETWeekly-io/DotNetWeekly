@@ -4,15 +4,25 @@ param (
 	[string]
 	$Title,
 
-	# Parameter help description
 	[Parameter(Mandatory=$true)]
 	[string]
 	$FileName,
 
-	# Parameter help description
 	[Parameter(Mandatory=$true)]
 	[string]
 	$SecretKey,
+
+	[Parameter(Mandatory=$true)]
+	[string]
+	$TenantId,
+
+	[Parameter(Mandatory=$true)]
+	[string]
+	$ClientId,
+
+	[Parameter(Mandatory=$true)]
+	[string]
+	$ResourceScope,
 
 	# Parameter help description
 	[Parameter(Mandatory=$true)]
@@ -45,17 +55,17 @@ function Get-AADToken
 {
 	[CmdletBinding()]
 	param (
-		[Parameter(Mandatory=$false)]
+		[Parameter(Mandatory=$true)]
 		[string]
-		$TenantId = "",
+		$TenantId,
 
-		[Parameter(Mandatory=$false)]
+		[Parameter(Mandatory=$true)]
 		[string]
-		$ClientId = "",
+		$ClientId,
 
-		[Parameter(Mandatory=$false)]
+		[Parameter(Mandatory=$true)]
 		[string]
-		$ResourceScope = "",
+		$ResourceScope,
 
 		[Parameter(Mandatory=$true)]
 		[string]
@@ -72,4 +82,9 @@ $data = @{
 $url = "$($EndPoint)/api/episodes"
 
 $body = $data | ConvertTo-Json -Depth 99
-Invoke-RestMethod -Method Post -Uri $url -Body $body -ContentType "application/json; charset=utf-8"
+$token = Get-AADToken -TenantId $TenantId -ClientId $ClientId -ResourceScope $ResourceScope -SecretKey $SecretKey
+$headers = @{
+	Authorization = "Bearer $($token)"
+}
+
+Invoke-RestMethod -Method Post -Uri $url -Body $body -ContentType "application/json; charset=utf-8" -Headers $headers

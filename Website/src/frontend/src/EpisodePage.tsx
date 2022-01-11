@@ -3,6 +3,7 @@ import { Episode, getEpisodeById } from './EpisodeData';
 import { useParams } from 'react-router';
 import ReactMarkdown from 'react-markdown';
 import styles from './EpisodePage.module.css';
+import './EpisodePage.module.css';
 
 export const EpisodePage = () => {
     const [episode, setEpisode] = React.useState<Episode | null>(null);
@@ -17,6 +18,7 @@ export const EpisodePage = () => {
             doGetEpisode(Number(episodeId));
         }
     }, [episodeId]);
+
     return (
         <div className={styles.episodePage}>
             <ReactMarkdown>{episode ? episode.content : ''}</ReactMarkdown>

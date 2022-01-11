@@ -3,3 +3,7 @@
     padding-bottom: 60px;
     text-align: left;
 }
+
+img {
+    max-width: 500px;
+}

@@ -2,6 +2,7 @@
 {
     using Data;
 
+    using DbUp;
     using Microsoft.AspNetCore.Authentication.JwtBearer;
 
     public class Startup
@@ -15,6 +16,19 @@
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            EnsureDatabase.For.SqlDatabase(connectionString);
+            var upgrader = DeployChanges.To
+                .SqlDatabase(connectionString, null)
+                .WithScriptsEmbeddedInAssembly(System.Reflection.Assembly.GetExecutingAssembly())
+                .WithTransaction()
+                .LogToConsole()
+                .Build();
+
+            if (upgrader.IsUpgradeRequired())
+            {
+                upgrader.PerformUpgrade();
+            }
             services.AddAuthentication(sharedOptions =>
             {
                 sharedOptions.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
