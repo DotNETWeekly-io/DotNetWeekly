@@ -1,5 +1,6 @@
 ﻿namespace DotNETWeekly.Models
 {
+    using System;
     public class Record
     {
         public int Id { get; set; }

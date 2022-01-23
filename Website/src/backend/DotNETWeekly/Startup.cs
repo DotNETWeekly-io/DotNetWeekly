@@ -5,6 +5,13 @@
     using DbUp;
     using Microsoft.AspNetCore.Authentication.JwtBearer;
 
+    using System;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.Extensions.Hosting;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -37,7 +44,7 @@
             services.AddScoped<IDataRepository, DataRepository>();
             services.AddMvc();
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
+            //services.AddSwaggerGen();
             services.AddCors(option => option.AddPolicy("CorsPolicy", builder=>
             builder.AllowAnyMethod()
             .AllowAnyHeader()
@@ -46,11 +53,11 @@
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
         {
-            if (environment.IsDevelopment())
+           /* if (environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
-            }
+            }*/
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

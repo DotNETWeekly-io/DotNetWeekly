@@ -1,7 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using DotNETWeekly.Data;
+﻿using DotNETWeekly.Data;
 using DotNETWeekly.Models;
+
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DotNETWeekly.Controllers
 {

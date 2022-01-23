@@ -3,6 +3,13 @@
 using DotNETWeekly.Models;
 
 using Microsoft.Data.SqlClient;
+
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
+
+
 namespace DotNETWeekly.Data
 {
     public class DataRepository : IDataRepository

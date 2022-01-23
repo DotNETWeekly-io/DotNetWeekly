@@ -1,5 +1,7 @@
 ﻿namespace DotNETWeekly.Models
 {
+    using System;
+    using System.Collections.Generic;
     public class Episode
     {
         public int Id { get; set; }

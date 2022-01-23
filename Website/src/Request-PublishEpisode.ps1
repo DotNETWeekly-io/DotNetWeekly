@@ -71,6 +71,23 @@ function Get-AADToken
 		[string]
 		$SecretKey
 	)
+	$url = "https://login.microsoftonline.com/" + $TenantId + "/oauth2/v2.0/token";
+	$body = @{
+		grant_type    = "client_credentials"
+		client_id     = $ClientId
+		scope         = $ResourceScope
+		client_secret = $SecretKey
+	}
+
+	$headers = @{
+		"Content-Type"    = "application/x-www-form-urlencoded"
+		"Accept"          = "*/*"
+		"Accept-Encoding" = "gzip, deflate, br"
+	}
+
+	$response = Invoke-RestMethod -Uri $url -Method POST -Body $body -Headers $headers 
+	return $response.access_token;
+
 }
 
 $content = Get-EpisodeFromMarkdown -FileName $FileName

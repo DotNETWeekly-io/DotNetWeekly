@@ -5,7 +5,7 @@
 我们打算在两个平台上发布
 
 - GitHub
-- 网站 (开发中)
+- [网站](https://dotnetweekly.azurewebsites.net/)
 
 ## 周刊
 

@@ -3,8 +3,13 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+    <AnalysisLevel>preview</AnalysisLevel>
   </PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>preview</LangVersion>
+	</PropertyGroup>
 
 
 	<ItemGroup>
@@ -13,8 +18,8 @@
 	</ItemGroup>
 
   <ItemGroup>
-	  <EmbeddedResource  Include="SqlScripts\01-Tables.sql" />
-	  <EmbeddedResource  Include="SqlScripts\02-Sprocs.sql" />
+	  <EmbeddedResource Include="SqlScripts\01-Tables.sql" />
+	  <EmbeddedResource Include="SqlScripts\02-Sprocs.sql" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +27,11 @@
     <PackageReference Include="dbup" Version="4.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.1" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="4.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Identity.Web" Version="1.22.1" />
     <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />

@@ -25,6 +25,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
+        "build:production": "cross-env REACT_APP_ENV=production npm run build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
@@ -47,6 +48,7 @@
         ]
     },
     "devDependencies": {
-        "@types/jquery": "^3.5.10"
+        "@types/jquery": "^3.5.10",
+        "cross-env": "^7.0.3"
     }
 }

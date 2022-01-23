@@ -2,6 +2,10 @@
 {
     using Models;
 
+    using System;
+    using System.Threading.Tasks;
+    using System.Collections.Generic;
+
     public interface IDataRepository
     {
         Task<IEnumerable<Episode>> GetEpisodesAsync();
