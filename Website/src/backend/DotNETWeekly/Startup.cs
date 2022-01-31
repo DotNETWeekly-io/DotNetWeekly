@@ -49,6 +49,7 @@
             builder.AllowAnyMethod()
             .AllowAnyHeader()
             .WithOrigins(Configuration["Frontend"])));
+            services.AddMemoryCache();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)

@@ -3,6 +3,7 @@ using DotNETWeekly.Models;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,12 @@ namespace DotNETWeekly.Controllers
     {
         private readonly IDataRepository _dataRepository;
 
-        public EpisodeController(IDataRepository dataRepository)
+        private readonly IMemoryCache _cache;
+
+        public EpisodeController(IDataRepository dataRepository, IMemoryCache cache)
         {
             _dataRepository = dataRepository;
+            _cache = cache;
         }
 
         [HttpGet("episodes")]
@@ -32,11 +36,17 @@ namespace DotNETWeekly.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> GetEpisode(int episodeId)
         {
-            var episode =  await _dataRepository.GetEpisodeByIdAsync(episodeId);
+            Episode? episode;
+            if (_cache.TryGetValue<Episode>(episodeId, out episode))
+            {
+                return Ok(episode);
+            }
+            episode =  await _dataRepository.GetEpisodeByIdAsync(episodeId);
             if (episode == null)
             {
                 return NotFound();
             }
+            _cache.Set(episodeId, episode);
             return CreatedAtAction(nameof(GetEpisode), episode);
         }
 
