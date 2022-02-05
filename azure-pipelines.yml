@@ -20,3 +20,45 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   workingDirectory: Website/src/backend/DotNETWeekly
   displayName: 'dotnet build $(buildConfiguration)'
+
+- script: dotnet publish -c $(buildConfiguration) --self-contained true -r win-x86
+  workingDirectory: Website/src/backend/DotNETWeekly
+  displayName: 'dotnet build $(buildConfiguration)'
+
+- task: ArchiveFiles@2
+  inputs:
+   rootFolderOrFile: 'Website/src/backend/DotNETWeekly/bin/Release/net6.0/win-x86/publish'
+   includeRootFolder: false
+   archiveType: zip
+   archiveFile: '$(Build.ArtifactStagingDirectory)/backend/$(Build.BuildId).zip'
+   replaceExistingArchive: true
+  displayName: 'backend zip files'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/backend'
+    ArtifactName: 'backend'
+  displayName: 'backend publish to pipeline'
+
+- script: npm install
+  workingDirectory: Website/src/frontend
+  displayName: 'frontend install dependencies'
+
+- script: npm run build:production
+  workingDirectory: Website/src/frontend
+  displayName: 'frontend build'
+
+- task: ArchiveFiles@2
+  inputs:
+   rootFolderOrFile: 'Website/src/frontend/build'
+   includeRootFolder: false
+   archiveType: zip
+   archiveFile: '$(Build.ArtifactStagingDirectory)/frontend/build.zip'
+   replaceExistingArchive: true
+  displayName: 'frontend zip files'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+   PathtoPublish: '$(Build.ArtifactStagingDirectory)/frontend'
+   ArtifactName: 'frontend'
+  displayName: 'frontend publish to the pipeline'
