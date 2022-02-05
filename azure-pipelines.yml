@@ -18,5 +18,5 @@ steps:
     packageType: 'sdk'
     version: '6.0.100'
 - script: dotnet build --configuration $(buildConfiguration)
-  workingDirectory: Website/backend
+  workingDirectory: Website/src/backend/DotNETWeekly
   displayName: 'dotnet build $(buildConfiguration)'
