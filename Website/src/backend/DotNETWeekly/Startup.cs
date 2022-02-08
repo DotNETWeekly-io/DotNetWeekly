@@ -3,14 +3,14 @@
     using Data;
 
     using DbUp;
-    using Microsoft.AspNetCore.Authentication.JwtBearer;
 
-    using System;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.Extensions.Hosting;
+
+    using Services;
 
     public class Startup
     {
@@ -41,7 +41,7 @@
                 sharedOptions.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddAzureAdBearer(options => Configuration.Bind("AzureAd", options));
-            services.AddScoped<IDataRepository, DataRepository>();
+            services.AddSingleton<IDataRepository, DataRepository>();
             services.AddMvc();
             services.AddEndpointsApiExplorer();
             //services.AddSwaggerGen();
@@ -50,6 +50,8 @@
             .AllowAnyHeader()
             .WithOrigins(Configuration["Frontend"])));
             services.AddMemoryCache();
+            services.AddHttpClient();
+            services.AddHostedService<UpdateEpisodeHostedService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
