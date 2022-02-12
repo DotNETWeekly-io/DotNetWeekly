@@ -7,20 +7,6 @@ Begin
 End
 Go
 
-Create PROC dbo.Episode_Records_Get_ById
-(
-	@EpisodeId int
-)
-As
-Begin
-	SET NoCount On
-	Select e.Id, e.Title, e.CreateTime, r.Id, r.Title, r.Link, r.Content, r.Category, r.CreateTime, r.EpisodeId
-	From dbo.Episode e
-		Left Join dbo.Record r On e.Id = r.EpisodeId 
-	Where e.Id = @EpisodeId
-End 
-Go
-
 Create PROC dbo.Episode_Content_Get_ById
 (
 	@EpisodeId int
@@ -28,7 +14,7 @@ Create PROC dbo.Episode_Content_Get_ById
 As
 Begin
 	SET NoCount On
-	Select e.Id, e.Title, e.Content, e.CreateTime
+	Select e.Id, e.Title, e.Content
 	From dbo.Episode e
 	Where e.Id = @EpisodeId
 End
@@ -37,50 +23,51 @@ Go
 
 Create PROC dbo.Episode_Post
 	(
-		@Id int,
-		@Title nvarchar(100),
-		@Content nvarchar(max),
-		@CreateTime datetime2
+		@Title nvarchar(256),
+		@Content nvarchar(max)
 	)
 As 
 Begin
 	Set NoCount On
-	IF NOT EXISTS(Select * From dbo.Episode where Id = @Id)
 	Begin
 		Insert into dbo.Episode
-			(Title, Content, CreateTime)
-		Values (@Title, @Content, @CreateTime)
+			(Title, Content)
+		Values (@Title, @Content)
 		Select Scope_Identity() as Id
 	End
-	Else 
-	Begin 
+End
+Go
+
+Create PROC dbo.Episode_Put
+	(
+		@Id int,
+		@Title nvarchar(256),
+		@Content nvarchar(max)
+	)
+AS
+Begin
+	SET NoCount On
+	Begin
 		Update dbo.Episode
 		SET
-		    Title = @Title,
-			Content = @Content,
-			CreateTime = GETUTCDATE()
-		Where Id = @id
-		Select Scope_Identity() as Id
-	end
+			Title = @Title,
+			Content = @Content
+		where Id = @Id
+	End
 End
-Go
+GO
 
-Create PROC dbo.Record_Post
-	(
-		@EpisodeId int,
-		@Title nvarchar(100),
-		@Link nvarchar(max),
-		@Content nvarchar(max),
-		@Category int,
-		@CreateTime datetime2
-	)
-As
+Create Proc dbo.Episode_Delete
+(
+	@Id int
+)
+AS
 Begin
-	Set NoCount On
-	Insert into dbo.Record
-		(EpisodeId, Title, Link, Content, Category, CreateTime)
-	Values(@EpisodeId, @Title, @Link, @Content, @Category, @CreateTime)
-
-	Select Scope_Identity() as Id
+	SET NoCount On
+	Begin
+		Delete 
+		From dbo.Episode
+		Where Id = @Id
+	End
 End
-Go
+GO

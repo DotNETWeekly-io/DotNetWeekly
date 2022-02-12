@@ -111,13 +111,23 @@
                 {
                     _logger.LogWarning($"Failed to read {file.Name} content");
                 }
-                await _dataRepository.AddOrUpdateEpisode(new Episode()
+                if (episode == null)
                 {
-                    Id = episode?.Id ?? 0,
-                    Title = file.Title,
-                    Content = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(fileContent.Content)),
-                    CreateTime = DateTime.UtcNow,
-                });
+                    await _dataRepository.AddEpisodeAsync(new Episode()
+                    {
+                        Title = file.Title,
+                        Content = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(fileContent.Content)),
+                    });
+                }
+                else
+                {
+                    await _dataRepository.UpdateEpisodeAsync(new Episode()
+                    {
+                        Id = episode.Id,
+                        Title = file.Title,
+                        Content = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(fileContent.Content)),
+                    });
+                }
             }
             else
             {

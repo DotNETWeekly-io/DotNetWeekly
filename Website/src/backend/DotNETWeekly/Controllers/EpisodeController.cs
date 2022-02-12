@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -58,31 +57,25 @@ namespace DotNETWeekly.Controllers
         {
             var episode = new Episode
             {
-                Id= episodeRequest.Id,
                 Title = episodeRequest.Title,
-                CreateTime = DateTime.UtcNow,
                 Content = episodeRequest.Content,
             };
-            return await _dataRepository.AddOrUpdateEpisode(episode);
+            return await _dataRepository.AddEpisodeAsync(episode);
         }
 
-        [HttpPost("records")]
-
+        [HttpPut("episodes")]
 #if !DEBUG
         [Authorize]
 #endif
-        public async Task<int> CreateRecord(RecordRequest recordRequest)
+        public async Task UpdateEpisode(Episode episodeRequest)
         {
-            var record = new Record
+            var episode = new Episode
             {
-                Title = recordRequest.Title,
-                Link = recordRequest.Link,
-                Content = recordRequest.Content,
-                EpisodeId = recordRequest.EpisodeId,
-                Category = recordRequest.Category,
-                CreateTime = DateTime.UtcNow,
+                Id = episodeRequest.Id,
+                Title = episodeRequest.Title,
+                Content = episodeRequest.Content,
             };
-            return await _dataRepository.CreateRecord(record);
+            await _dataRepository.UpdateEpisodeAsync(episode);
         }
     }
 }

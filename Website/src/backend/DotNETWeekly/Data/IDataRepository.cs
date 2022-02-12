@@ -2,9 +2,8 @@
 {
     using Models;
 
-    using System;
-    using System.Threading.Tasks;
     using System.Collections.Generic;
+    using System.Threading.Tasks;
 
     public interface IDataRepository
     {
@@ -12,9 +11,11 @@
 
         Task<Episode> GetEpisodeByIdAsync(int id);
 
-        Task<int> AddOrUpdateEpisode(Episode episode);
+        Task<int> AddEpisodeAsync(Episode episode);
 
-        Task<int> CreateRecord(Record record);
+        Task UpdateEpisodeAsync(Episode episode);
+
+        Task DeleteEpisodeAsync(int id);
 
     }
 }

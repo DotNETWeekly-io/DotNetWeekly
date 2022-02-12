@@ -3,10 +3,10 @@
 using DotNETWeekly.Models;
 
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 
 
@@ -21,24 +21,23 @@ namespace DotNETWeekly.Data
             _connectionString = configuration["ConnectionStrings:DefaultConnection"];
         }
 
-        public async Task<int> AddOrUpdateEpisode(Episode episode)
+        public async Task<int> AddEpisodeAsync(Episode episode)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using(var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
                 return await connection.QueryFirstAsync<int>(@"EXEC dbo.Episode_Post
-                    @Id=@Id, @Title=@Title, @Content=@Content, @CreateTime=@CreateTime",
-                    episode);
+                    @Title=@Title, @Content=@Content", episode);
             }
         }
 
-        public async Task<int> CreateRecord(Record record)
+        public async Task DeleteEpisodeAsync(int id)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
-                return await connection.QueryFirstAsync<int>(@"EXEC dbo.Record_Post
-                    @EpisodeId=@EpisodeId, @Title=@Title, @Link=@Link, @Content=@Content, @Category=@Category, @CreateTime=@CreateTime", record);
+                await connection.ExecuteAsync(@"EXEC dbo.Episode_Delete
+                    @Id=@Id", new { Id = id });
             }
         }
 
@@ -58,6 +57,15 @@ namespace DotNETWeekly.Data
             {
                 await connection.OpenAsync();
                 return await connection.QueryAsync<Episode>("EXEC dbo.Episodes_Title_Get");
+            }
+        }
+
+        public async Task UpdateEpisodeAsync(Episode episode)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                await connection.OpenAsync();
+                await connection.QueryAsync<Episode>("EXEC dbo.Episode_Put @Id=@Id, @Title=@Title, @Content=@Content", episode);
             }
         }
     }
