@@ -8,7 +8,7 @@
 
 1、[优化 .NET 性能的 11 个最佳实践](https://michaelscodingspot.com/cpu-bound-memory-bound/)
 
-![](https://michaelscodingspot.com/wp-content/uploads/2022/01/cpu-bound-memory-bound.jpg)
+![](https://dotnetweeklypics.blob.core.windows.net/007/performance.jpeg)
 
 应用程序的性能通常会分为两种
 
@@ -19,7 +19,7 @@
 
 2、[.NET Framework 和 .NET Core 介绍](https://procodeguide.com/dotnet/getting-started-net-core-framework/)
 
-![](https://fullscale.io/blog/wp-content/uploads/2021/06/net-core-net-framework-differences.png)
+![](https://dotnetweeklypics.blob.core.windows.net/007/dotnet-core-framework.png)
 
 `.NET Framework` 和  `.NET Core` 是 `.NET` 世界讨论最多的两个话题。一个代表了过去，一个代表了现在和未来。这系列文章能够再一次帮你回顾一下它们的联系和区别。
 
@@ -55,7 +55,7 @@ public void Method() {
 
 4、[使用 DateTimeOffset](https://ardalis.com/why-use-datetimeoffset/?utm_sq=gyiamfvfod)
 
-![](https://ardalis.com/static/c8166182a364652dc4e8116239397bcd/4e530/why-use-datetimeoffset.png)
+![](https://dotnetweeklypics.blob.core.windows.net/007/datetimeoffset.png)
 
 `DataTime` 是在  `C#` 中广泛使用地类型，但是它最大地问题是它没有包含时区信息，而是根据运行系统确定时区，所以导致了这样一个问题。
 ```C# 
@@ -78,7 +78,7 @@ rightNow.ToUniversalTime(); //  1/30/2022 2:50:00 AM
 
 4、[ASP.NET Core 6 中性能提升](https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-6/)
 
-![](https://www.exentials.net/wp-content/uploads/2019/09/ASP-NET-Core-Logo-1.png)
+![](https://dotnetweeklypics.blob.core.windows.net/007/aspnet-core-performance.png)
 
 得益于 `.NET 6` 在性能方面的提升，`ASP.NET Core 6` 在性能方面也到了提升，这边文章带你展示了这些提升的示例。 
 - Span<T>：使用 `Span<T>` 可以大幅提高字符串操作方面性能的提升。
@@ -90,7 +90,7 @@ rightNow.ToUniversalTime(); //  1/30/2022 2:50:00 AM
 
 1、[防御性编程](https://github.com/safakgur/guard)
 
-![](https://github.com/safakgur/guard/blob/dev/media/guard-64.png?raw=true)
+![](https://dotnetweeklypics.blob.core.windows.net/007/guard.png)
 
 防御性编程要求在函数在接受参数的时候，验证这些参数的合法性，比如说 
 
@@ -125,6 +125,6 @@ public Person(string name, int age)
 
 2、[PowerShell RDP](https://github.com/DarkCoderSc/PowerRemoteDesktop)
 
-![](https://github.com/DarkCoderSc/PowerRemoteDesktop/raw/main/Assets/demo.png)
+![](https://dotnetweeklypics.blob.core.windows.net/007/powershell-rdp.png)
 
 我们都知道 `PowerShell` 很 `Power`, 这个开源项目实现了通过 `PowerShell` 实现了 `RDP (Remote Desktop Protocols)` 。

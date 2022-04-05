@@ -33,6 +33,8 @@ function Get-ImageMimeMapping {
         '.jpg'                          = 'image/jpeg'
         '.gif'                          = 'image/gif'
         '.bmp'                          = 'image/bmp'
+        '.svg'                          = 'image/svg+xml'
+        '.webp'                         = 'image/webp'
     }
 
     return $mimeTypeMap[$extension];
@@ -74,4 +76,5 @@ $ImageFilePaths | Foreach-Object {
     $blob = Set-AzStorageBlobContent @blob2HT
     $uri = $blob.ICloudBlob.Uri
     Write-Host "$($_) -> $($uri)"
+    
 }

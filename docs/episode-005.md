@@ -33,7 +33,7 @@
 
 2、[.NET MAUI Preview 11 发布](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-preview-11/)
 
-![](https://docs.microsoft.com/en-us/dotnet/maui/media/what-is-maui/maui.png)
+![](https://dotnetweeklypics.blob.core.windows.net/005/maui-11.png)
 
 虽然 `MAUI` 并没有随着 `.NET 6` 一同发布，但是微软并没有停止对 `MAUI` 的开发工作，最近 `Preview 11` 随着 `Visual Studio 2022 17.1 Preview 2` 一同发布，此次更新包含的内容有
 
@@ -46,7 +46,7 @@
 
 1、[ASP.NET Core 和 Spring Boot 比较](https://medium.com/@putuprema/spring-boot-vs-asp-net-core-a-showdown-1d38b89c6c2d)
 
-![](https://miro.medium.com/max/1400/1*3HDwsy-GXeiJTQVAoHj49w.png)
+![](https://dotnetweeklypics.blob.core.windows.net/005/spring-vs-dotnet.png)
 
 `Java` 和 `C#` 都是成熟的工业级软件开发语言，在 `Web` 后端开发方面，`Java` 有 `Spring` 框架，而 `C#` 有 `ASP.NET Core`, 这篇文章带你分析这两个框架在后端开发的区别，主要有
 
@@ -60,7 +60,7 @@
 
 2、[旧闻回顾：Visual Studio 会毁掉你的心智吗？](http://charlespetzold.com/etc/DoesVisualStudioRotTheMind.html)
 
-![](https://agetintopc.com/wp-content/uploads/2021/01/Visual-Studio-Software-Download-Setup-Free.png)
+![](https://dotnetweeklypics.blob.core.windows.net/005/vs.png)
 
 这是一篇十几年前的演讲稿，作者是开发 `Window Form` 应用程序，在 `Visual Studio 2005` 发布之后，对其功能做了一些*吐槽*。
 
@@ -78,13 +78,13 @@
 
 1、[2021 .NET 最活跃的 Microsoft 的开源项目](https://pbs.twimg.com/media/FICYOcDWUAIFkXw?format=png&name=900x900)
 
-![](https://pbs.twimg.com/media/FICYOcDWUAIFkXw?format=png&name=900x900)
+![](https://dotnetweeklypics.blob.core.windows.net/005/dotnet-oss-ms.png)
 
 这里是 2021 年最活跃的由 Microsoft 维护或者支持 `.NET` 开源项目列表，主要 `Pull Request`， `Commit` 和 `New Contributor` 三个指标统计。
 
 2、[Benchmarkdotnet 库](https://benchmarkdotnet.org/articles/overview.html)
 
-![](https://repository-images.githubusercontent.com/12191244/e327c900-f194-11e9-8d50-db9acd1690af)
+![](https://dotnetweeklypics.blob.core.windows.net/005/benchmark.png)
 
 在进行代码性能分析的时候，我们需要准确地知道其运行时间和内存消耗数据。同时针对不同的环境和数据量的情况，也需要进行相关分析。
 

@@ -1,9 +1,7 @@
 # .NET 每周分享第 3 期
-
 ## 开卷语
 
-
-![](https://secure-content.meetupstatic.com/images/classic-events/500430410/676x380.webp)
+![](https://dotnetweeklypics.blob.core.windows.net/003/xmas.webp)
 
 圣诞节快乐！
 
@@ -17,12 +15,12 @@
 
 与 Windows 11 中的 Widget 一下，Visual Studio 团队打算为其增加一个类似 Kanban 的功能 `Widget`，通过它可以避免在不同的应用程序之间跳转。
 
-![](https://pbs.twimg.com/media/FEW0DeKXsA4cdpL?format=png&name=small)
+![](https://dotnetweeklypics.blob.core.windows.net/003/vs-widget.png)
 
 
 3、[.NET Conf 2021 中国大会回顾](https://www.cnblogs.com/shanyou/p/15707498.html)
 
-![](https://img2020.cnblogs.com/blog/510/202110/510-20211007211430221-1145860077.png)
+![](https://dotnetweeklypics.blob.core.windows.net/003/dotnet-conf-china.png)
 
 上周一年一度的中国 `.NET Conf` 圆满落幕，这是中国 `.NET` 开发者的峰会，也是学习，分享和拓展 `.NET` 生态的重要途径。由于疫情原因，今年的大会全部由线上举办。但是大会的质量并没有因此而下降，这篇文章带你回顾一下本次大会。
 
@@ -47,7 +45,7 @@
 
 3、[Linq via C#](https://weblogs.asp.net/dixin/linq-via-csharp)
 
-![](https://pbs.twimg.com/media/FHKmvF4X0AQe9BQ?format=jpg&name=900x900)
+![](https://dotnetweeklypics.blob.core.windows.net/003/linq.jpeg)
 
 `Linq` 是 `C#` 开发者中的*利器*， 但是很多时候，我们知道如何使用 `API`, 但是关于 `Linq` 背后的实现又掌握多少呢？这一些列文章可以帮你了解 `Linq` 的种种，主要分为三块
 
@@ -59,7 +57,7 @@
 
 1、[依赖注入框架 Autofac](https://autofac.org/)
 
-![](https://pbs.twimg.com/profile_images/1072559495052697601/nhL4Uc-Z_400x400.jpg)
+![](https://dotnetweeklypics.blob.core.windows.net/003/autofac.jpeg)
 
 `Microsoft.Extension.DependencyInjection` 是在 `ASP.NET Core` 中广泛使用的依赖注入框架，在 `.NET` 生态中还有一个著名的框架叫 `autofac`。作为一个老牌的依赖注入框架，它提供了很多 `M.E.DependencyInjection` 不具备的功能
 - 不同类型的生命周期
@@ -70,10 +68,9 @@
 如果你向在你的 `ASP.NET Core` 应用程序中使用 `autofac`，可以参考[这篇文章](https://autofaccn.readthedocs.io/en/latest/integration/aspnetcore.html)。
 
 
-
 2、[Entity Framework Plus](https://entityframework-plus.net/)
 
-![](https://zzzprojects.github.io/images/logo/entityframework-extensions-pub.jpg)
+![](https://dotnetweeklypics.blob.core.windows.net/003/ef-plus.jpeg)
 
 `Entity Framework` 是一个优秀的 `ORM` 框架，但是由于设计取舍的问题，一些必要（Must  Have）的特性的缺失在一些情况下会导致性能不够理想。因此 `Entity Framework Plus` 插件可以解决这个问题，它主要有一下的功能
 - 批量操作

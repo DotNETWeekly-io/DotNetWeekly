@@ -8,13 +8,14 @@
 
 1、[Visual Studio 生命周期支持到期](https://devblogs.microsoft.com/visualstudio/support-ends-for-older-versions-of-visual-studio-feb2022/)
 
-![](https://offlineinstallersofts.com/wp-content/uploads/2017/10/Microsoft_Visual_Studio_2012.jpg)
+![](https://dotnetweeklypics.blob.core.windows.net/009/vs_2012.jpeg)
 
 微软发布了老版本的 `Visual Studio` 的支持周期，`Visual Studio 2012` 和 `Visual Studio 2017` 已经快到达支持周期的末尾。
 
 2、[.NET 7 Preview 发布](https://devblogs.microsoft.com/dotnet/announcing-net-7-preview-1/)
 
-![](https://res.cloudinary.com/practicaldev/image/fetch/s--oFeBR7WR--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ozqillljnmv8ao1jmnxb.png)
+![](https://dotnetweeklypics.blob.core.windows.net/009/dotnet-7-preview.jpeg)
+
 作为 `.NET` 20 周年的活动的一部分，微软已经发布了 `.NET 7` Preview 版本，主要包含一下几个重要的内容:
 
 - MAUI
@@ -26,7 +27,7 @@
 
 1、[C# 代码中 Nullable Type](https://csharp.christiannagel.com/2022/02/14/nullable/)
 
-![](https://miro.medium.com/max/638/1*G9V4FjA0RK4nqZfsEak1Gg.jpeg)
+![](https://dotnetweeklypics.blob.core.windows.net/009/nullable.jpeg)
 
 我们都知道 `NULL` 类型是一个
 > 百万美元的错误 
@@ -86,7 +87,7 @@ public void Foo(string s)
 
 2、[关于 .NET 运行在 Linux， 你需要这些事情](https://dotnetcore.show/episode-92-a-few-things-i-wish-i-knew-before-writing-net-on-linux/)
 
-![](https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg)
+![](https://dotnetweeklypics.blob.core.windows.net/009/linux.svg)
 
 对于 `.NET` 开发者而言，`Windows` 是最熟悉的开发平台。但是 `.NET` 已经是一个跨平台的开发平台，了解 `Linux` 已经是 `.NET` 开发人员必需能力。如果你是 `Linux` 的小白的话，这篇文章带你熟悉这个平台。
 
