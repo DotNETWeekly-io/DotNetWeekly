@@ -2,7 +2,7 @@
 
 ## 开卷语
 
-![](https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2022%2F01%2Fpython-C.jpg&signature=66ef24cd5538af03ca18a710889fe4a3)
+![](https://dotnetweeklypics.blob.core.windows.net/006/csharp.jpeg)
 
 `Tiobe` 公布了 2021 年度语言，`Python` 再一次夺得头名。但是之前都是 `C#` 处于领头羊的位置，只不过在最后一个月被 `Python` 反超。不管怎样，都说明了 `C#` 仍然往好的方向发展。
 
@@ -18,7 +18,7 @@
 
 2、[Visual Studio 2022 格式化文件](https://devblogs.microsoft.com/visualstudio/bringing-code-cleanup-on-save-to-visual-studio-2022-17-1-preview-2/)
 
-![](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2022/01/word-image.gif)
+![](https://dotnetweeklypics.blob.core.windows.net/006/vs.gif)
 
 代码有两个主要目的：
 
@@ -31,11 +31,11 @@
 
 1、[PowerShell 学习课程](https://www.youtube.com/playlist?list=PLDjtLML5l9l-y_MPI5qThjZqvcIwHnMzw)
 
-PoweShell 是一个强大的 Shell 工具，这一系列课程帮你学习如何它。
+PowerShell 是一个强大的 Shell 工具，这一系列课程帮你学习如何它。
 
 2、[StringBuilder 探秘](https://www.stevejgordon.co.uk/how-does-the-stringbuilder-work-in-dotnet-part-1-why-do-we-need-a-stringbuilder-and-when-should-we-use-one)
 
-![](https://media.geeksforgeeks.org/wp-content/uploads/20190310161026/Presentation12.jpg)
+![](https://dotnetweeklypics.blob.core.windows.net/006/stringbuilder.jpeg)
 
 `StringBuilder` 是一个广泛使用的 `C#` 类，关于它有哪些具体的细节可以探索的呢？这一系列文章可以帮你了解它们
 
