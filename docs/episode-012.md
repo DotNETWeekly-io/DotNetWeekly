@@ -6,7 +6,7 @@
 
 ![](https://dotnetweeklypics.blob.core.windows.net/012/github-co-pilot.webp)
 
-去年 `GitHub` 发布了 `Code Copilot` 之后，引起了行业内巨大的反馈，~人工智能取代程序员的日子即将到来~，但是只支持 `Visual Studio Code`。最近 `GitHub` 发布了 `Code Copilot` 的 `Visual Studio` 的插件，这样在宇宙第一 IDE 中编写代码，尤其是 `.NET` 的相关代码，也能得到人工智能的加持。
+去年 `GitHub` 发布了 `Code Copilot` 之后，引起了行业内巨大的反馈，~人工智能取代程序员的日子即将到来~，但是只支持 `Visual Studio Code`。最近 `GitHub` 发布了 `Code Copilot` for `Visual Studio` 的插件，这样在宇宙第一 IDE 中编写代码，尤其是 `.NET` 的相关代码，也能得到人工智能的加持。
 
 2、[MAUI RC 发布](https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-1/)
 
@@ -51,7 +51,7 @@
 
 ## 文章推荐
 
-1、[Visual Studio 中的 editorconfig](https://www.youtube.com/watch?v=CQW5b58mPdg&ab_channel=IAmTimCorey)
+1、[Visual Studio 中的 .editorconfig](https://www.youtube.com/watch?v=CQW5b58mPdg&ab_channel=IAmTimCorey)
 
 每个人都有自己的编程风格，对于独立项目，这个没有问题。但是如果是团队合作的项目，不同的代码风格会增加合作的难度，因此在 Visual Studio 的项目中，增加一个 .editorconfig 文件，它可以规范代码风格，甚至配置 Severity 的等级。
 
@@ -172,15 +172,17 @@ void DoSomethingForever(CancellationToken cancellationToken)
 
 3、[Timer 类介绍](https://code-maze.com/timer-csharp/)
 
-定时器 (Timer) 广泛使用在应用程序开发中，在达到一定的事件后，执行相关的操作。那么关于 System.Timers.Timer 类，由哪些需要注意的地方呢？
+定时器 (Timer) 广泛使用在应用程序开发中，在达到一定的事件后，执行相关的操作。那么关于 `System.Timers.Timer` 类，由哪些需要注意的地方呢？
 
-Timer 类实现了 IDisposable 接口。
+`Timer` 类实现了 `IDisposable` 接口。
 设置 timer.AutoReset = false 可以发生一次事件。
 事件注册 Elapsed 既可以是 Lambda 表达式，也可以是异步形式。
-一般事件触发的委托由线程池的线程执行，但是在 Windows Forms 这样的 UI 应用程序中，UI 必须由 UI 线程更新，所以可以设置 SynchronizingObject 属性，通常为 Control 对象。
+一般事件触发的委托由线程池的线程执行，但是在 `Windows Forms` 这样的 UI 应用程序中，UI 必须由 UI 线程更新，所以可以设置 `SynchronizingObject` 属性，通常为 `Control` 对象。
+
 和其他 Timer 的区别
-System.Threading.Timer: 只会执行一次
-System.Windows.Form.Timer: UI 单线程的计时器
+
+- System.Threading.Timer: 只会执行一次
+- System.Windows.Form.Timer: UI 单线程的计时器
 
 4、[如何将一个字符串转换成标题的样式](https://code-maze.com/csharp-convert-string-title-case/)
 
