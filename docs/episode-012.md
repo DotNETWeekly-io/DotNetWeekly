@@ -172,6 +172,8 @@ void DoSomethingForever(CancellationToken cancellationToken)
 
 3、[Timer 类介绍](https://code-maze.com/timer-csharp/)
 
+![](https://dotnetweeklypics.blob.core.windows.net/012/Timer.png)
+
 定时器 (Timer) 广泛使用在应用程序开发中，在达到一定的事件后，执行相关的操作。那么关于 `System.Timers.Timer` 类，由哪些需要注意的地方呢？
 
 `Timer` 类实现了 `IDisposable` 接口。
