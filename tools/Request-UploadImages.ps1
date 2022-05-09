@@ -12,7 +12,6 @@ param (
     [string]
     $EpisodeName,
 
-    # Parameter help description
     [Parameter(Mandatory=$true)]
     [string[]]
     $ImageFilePaths
@@ -20,7 +19,6 @@ param (
 
 function Get-ImageMimeMapping {
     param (
-        # Parameter help description
         [Parameter(Mandatory=$true)]
         [string]
         $fileName
@@ -76,5 +74,4 @@ $ImageFilePaths | Foreach-Object {
     $blob = Set-AzStorageBlobContent @blob2HT
     $uri = $blob.ICloudBlob.Uri
     Write-Host "$($_) -> $($uri)"
-    
 }
