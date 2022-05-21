@@ -12,7 +12,6 @@ export class App extends React.Component {
         return (
             <BrowserRouter>
                 <div className="App">
-                    <Header />
                     <Routes>
                         <Route path="" element={<HomePage />} />
                         <Route
@@ -21,7 +20,6 @@ export class App extends React.Component {
                         />
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>
-                    <Footer />
                 </div>
             </BrowserRouter>
         );
