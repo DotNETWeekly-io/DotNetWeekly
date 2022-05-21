@@ -178,7 +178,7 @@ Error: Process completed with exit code 2.
 - 在 `ASP.NET Core` 中，还使用哪些第三方的库？
 - 如果你在网页中定义了一个 `Form`, 但是在提交的时候，并没有预期的结果发生，你会如何 debug? 
 
-4、[C# 程序员学习 C++](hhttps://www.jacksondunstan.com/articles/5530)
+4、[C# 程序员学习 C++](https://www.jacksondunstan.com/articles/5530)
 
 ![](https://miro.medium.com/max/460/1*sz9n_vb48iaY9vuzIgqJqQ.png) 
 
