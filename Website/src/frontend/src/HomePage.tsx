@@ -5,11 +5,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 export class HomePage extends React.Component {
-
-    constructor() {
-        super({});
-    }
-
     render(): JSX.Element {
         return (
             <Stack verticalFill>
@@ -17,7 +12,7 @@ export class HomePage extends React.Component {
                 <EpisodeList></EpisodeList>
                 <Footer></Footer>
             </Stack>
-        )
+        );
     }
 }
 

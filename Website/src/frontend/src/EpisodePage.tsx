@@ -23,14 +23,13 @@ export const EpisodePage = () => {
     }, [episodeId]);
 
     return (
-        <div className={styles.episodePage}>
-            <Stack verticalFill>
-                <Header></Header>
+        <Stack verticalFill>
+            <Header></Header>
+            <div className={styles.episodePage}>
                 <ReactMarkdown>{episode ? episode.content : ''}</ReactMarkdown>
-                <Footer></Footer>
-            </Stack>
-
-        </div>
+            </div>
+            <Footer></Footer>
+        </Stack>
     );
 };
 

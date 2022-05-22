@@ -2,7 +2,7 @@
 As
 Begin
 	Set NoCount On
-	Select e.Id, e.Title, e.CreateTime
+	Select e.Id, e.Title, e.CreateTime, e.Content
 	from dbo.Episode e
 End
 Go
