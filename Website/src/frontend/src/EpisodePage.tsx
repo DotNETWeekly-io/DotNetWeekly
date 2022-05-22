@@ -4,6 +4,9 @@ import { useParams } from 'react-router';
 import ReactMarkdown from 'react-markdown';
 import styles from './EpisodePage.module.css';
 import './EpisodePage.module.css';
+import { Stack } from '@fluentui/react';
+import Header from './Header';
+import Footer from './Footer';
 
 export const EpisodePage = () => {
     const [episode, setEpisode] = React.useState<Episode | null>(null);
@@ -21,7 +24,12 @@ export const EpisodePage = () => {
 
     return (
         <div className={styles.episodePage}>
-            <ReactMarkdown>{episode ? episode.content : ''}</ReactMarkdown>
+            <Stack verticalFill>
+                <Header></Header>
+                <ReactMarkdown>{episode ? episode.content : ''}</ReactMarkdown>
+                <Footer></Footer>
+            </Stack>
+
         </div>
     );
 };

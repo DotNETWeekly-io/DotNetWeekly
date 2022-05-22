@@ -1,10 +1,22 @@
 import React from 'react';
-import styles from './Footer.module.css';
+import { Stack } from '@fluentui/react';
 
 export class Footer extends React.Component {
     render() {
         return (
-            <div className={styles.footer}>
+            <Stack horizontal horizontalAlign="center" verticalAlign="baseline" styles={{
+                root: {
+                    left: 0,
+                    bottom: 0,
+                    width: "100%",
+                    height: "30px",
+                    position: "fixed",
+                    "background-color": "#f7f8fa",
+                    "text-align": "center",
+                    "font-size": "12px",
+                    "font-style": "italic",
+                }
+            }}>
                 <p>
                     本周刊开源，(GitHub:
                     <a
@@ -16,7 +28,7 @@ export class Footer extends React.Component {
                     </a>
                     )，欢迎提交 issue 投稿。
                 </p>
-            </div>
+            </Stack>
         );
     }
 }
