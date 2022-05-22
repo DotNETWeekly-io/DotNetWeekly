@@ -23,7 +23,7 @@ export interface Episode {
     createTime: Date;
 }
 
-export const getEpisodes = async (): Promise<Episode[]> => {
+export async function getEpisodes(): Promise<Episode[]> {
     const result = await http<Episode[]>({ path: '/episodes' });
     if (result.ok && result.body) {
         return result.body;
@@ -32,7 +32,7 @@ export const getEpisodes = async (): Promise<Episode[]> => {
     }
 };
 
-export const getEpisodeById = async (id: number): Promise<Episode | null> => {
+export async function getEpisodeById(id: number): Promise<Episode | null> {
     const result = await http<Episode>({ path: `/episodes/${id}` });
     if (result.ok && result.body) {
         return result.body;
