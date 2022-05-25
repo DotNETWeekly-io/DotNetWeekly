@@ -20,7 +20,7 @@ C# 中的属性是非常重要的设计，区别于 `Java` 中的 字段和 `get
 
 1. C# 1.0 
 
-```C#
+```Csharp
 public class User 
 {
     private string _firstName;
@@ -34,7 +34,7 @@ public class User
 在 1.0 时代，c# 的属性就比 `Java` 中的 Getter 和 Setter 领先了一大截。，通过 `get, set` 两个关键字，避免了编写大量的方法。
 
 2. C# 3.0
-```C#
+```Csharp
 public class User
 {
     public string FirstName {get; private set; }
@@ -45,7 +45,7 @@ public class User
 
 4. C# 6.0 
     
-```C#
+```Csharp
 public class User
 {
     public string FirstName {get; set; } = "Foo";
@@ -57,7 +57,7 @@ public class User
 
 5. C# 8.0
 
-```C#
+```Csharp
 public class User
 {
     public string FirstName {get; set; }
@@ -74,7 +74,7 @@ if (person is { FirstName : "Foo" } )
 
 6. C# 9 
 
-```C#
+```Csharp
 public class User
 {
      public string FirstName { get; set;}
@@ -85,7 +85,7 @@ public class User
 
 7. C# 10 
 
-```C#
+```Csharp
 public reocrd User(string FirstName, string LastName); 
 ```
 在 1.0 版本中引入了 `record`， 如果一个类只有属性，然后可以采用 `record`, 这样只需要在构造的时候声明属性。
@@ -103,7 +103,7 @@ C# 内置的库提供了时间的类 `DateTime` ， 不过这个类既包含了�
 1. 使用 `Date` 属性
 `DateTime` 中的 `Date` 属性只返回日期
 
-```C#
+```Csharp
 var date1 = new DateTime(2022, 02, 14, 10, 40, 00);
 var date2 = new DateTime(2018, 10, 18, 11, 23, 34);
 Console.WriteLine(date1.Date.ToString()); //2/14/2022 12:00:00 AM
@@ -113,7 +113,7 @@ Console.WriteLine(date2.Date.ToString()); //10/18/2018 12:00:00 AM
 2. 使用 `ToString()` 格式化数据
 Date 的 `ToString` 方法可以自定义日期输出格式
 
-```C#
+```Csharp
 var date1 = new DateTime(2022, 02, 14, 10, 40, 00); 
 var date2 = new DateTime(2018, 10, 18, 11, 23, 34); 
 Console.WriteLine("Hide the time part:");
@@ -123,7 +123,7 @@ Console.WriteLine(date2.Date.ToString("dd/MM/yyyy")); //18/10/2018
 
 当然也可以使用 `ToShortDateString` 转换成短的日期表达
 
-```C#
+```Csharp
 var date3 = new DateTime(2022, 02, 14, 10, 40, 00); 
 Console.WriteLine("Short Date Value:");
 Console.WriteLine(date3.Date.ToShortDateString()); //2/14/2022
@@ -133,7 +133,7 @@ Console.WriteLine(date3.Date.ToShortDateString()); //2/14/2022
 3. 使用 `DateOnly` 类型
 在 `.NET 6` 中增加了一个新的类型 `DateOnly`，它可以用来只表示日期类型
 
-```C#
+```Csharp
 var date = new DateTime(2021, 7, 8, 11, 10, 9); 
 var dateOnly = new DateOnly(date.Year, date.Month, date.Day); 
 
@@ -150,7 +150,7 @@ Windows 服务是一类长期运行的应用程序，在 `Linux` 中也叫做守
 
 在 `IHost` 服务是一种长时间运行的容器，它会管理所有实现 `IHostedService`  的服务，并且长时间运行。通常这些服务都是通过依赖注入完成的
 
-```C#
+```Csharp
 public class Worker : BackgroundService
 {
     protected override async Task ExexcuteAsync(CancellationToken stoppingToken) 
@@ -167,7 +167,7 @@ public class Worker : BackgroundService
 
 `Microsoft.Extensions.Hosting.WindowsService` 包提供了一站式服务
 
-```C#
+```Csharp
 IHost host = Host.CreateDefaultBuilder(args)
       .ConfigureService(service => {
         services.AddHostedService<Worker>();
@@ -195,7 +195,7 @@ sc create "Sample Service" binPath = "./SimpleWorkerService.exe"
 ![](https://dotnetweeklypics.blob.core.windows.net/011/exception.png)
 
 正确的数据才能带来正确地结果，对于不正确的数据，需要通过抛出异常让调用者知道出现了未知的问题。通常的做法是手动抛出一个异常
-```C#
+```Csharp
 throw new Exception();
 ```
 
@@ -203,7 +203,7 @@ throw new Exception();
 
 - 判断字符长度是否为 3 
 
-```C#
+```Csharp
 name.ThrowIfNull()
     .IfEmpty()
     .IfLongerThan(3);
@@ -211,18 +211,18 @@ name.ThrowIfNull()
 
 - 判断大小
 
-```C#
+```Csharp
 dateTime.Throw().IfLessThan(DateTime.Now.AddYears(20));
 ```
 
 - 判断集合大小
-```C#
+```Csharp
 collection.Throw().IfCountLessThan(5);
 ```
 
 等等，本质上讲通过 `C#` 的拓展方法来完成各种判断方法，当然也可以自定义自己的判断逻辑
 
-```C#
+```Csharp
 namespace Throw
 {
     public static class ValidatableExtensions

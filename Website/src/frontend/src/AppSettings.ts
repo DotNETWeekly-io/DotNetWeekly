@@ -1,4 +1,4 @@
-export const server = 'https://dotnetweekly-backend.azurewebsites.net';
+export const server = 'https://localhost:7202';
 
 export const webAPIUrl = `${server}/api`;
 

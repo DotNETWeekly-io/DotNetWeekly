@@ -38,7 +38,7 @@ Reddit 有人发布了一张 `.NET` 的发展历程
 
 如果你用日志来记录异常，通常会写这样的代码
 
-```C#
+```Csharp
 try
 {
   ...
@@ -52,7 +52,7 @@ catch (Exception e)
 
 对于早期*刀耕火种*的时期日志，这样做是没有问题的，但是现代日志有更加丰富的功能，称之为语义化日志或者结构化日志。在遇到异常的时候，`runtime` 会在栈向上查找，在匹配后展开（unwind），这样的问题就会将日志的上下文丢弃了。而 `.NET` 支持异常过滤器，如果在异常过滤器中记录日志，就能保留下日志的上下文。
 
-```C#
+```Csharp
 try
 {
     ...
@@ -86,7 +86,7 @@ public static bool False(Action action)
 
 `HttpClient` 是 C# 广泛使用的类，但是大部分人都错误的使用了它，比如：
 
-```C#
+```Csharp
 using(var httpClient = new HttpClient())
 {
 }

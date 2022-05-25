@@ -32,7 +32,7 @@
 
 在过去如果多行字符串中添加新行，需要使用 `\r\n` 来进行转义，但是在 `C# 11` 中，我们可以直接使用原始多行字符串
 
-```C#
+```Csharp
 var v = $"Count ist: { this.Is.Really.Something()
                             .That.I.Should(
                                 be + able)[
@@ -44,7 +44,7 @@ var v = $"Count ist: { this.Is.Really.Something()
 
 模式匹配现在可以支持数组或者列表，比如
 
-```C#
+```Csharp
 public static int CheckSwitch(int[] values)
     => values switch
     {
@@ -57,7 +57,7 @@ public static int CheckSwitch(int[] values)
 ```
 也可以捕获列表中的切片变量
 
-```C#
+```Csharp
 public static string CaptureSlice(int[] values)
     => values switch
     {
@@ -69,7 +69,7 @@ public static string CaptureSlice(int[] values)
 3. 参数 null 检查
 
 过去需要在函数/方法中对输入的参数进行 null 检查 
-```C#
+```Csharp
 public static void M(string s)
 {
     if (s is null)
@@ -81,7 +81,7 @@ public static void M(string s)
 ```
 
 现在只需要在参数中使用双感叹号（`!!`）， 也能达到同样的效果。
-```C#
+```Csharp
 public static void M(string s!!)
 {
     // Body of the method
@@ -94,13 +94,13 @@ public static void M(string s!!)
 
 对于一个 `Dictionary` 有多少中循环方式呢？
 假设存在一个字典如下 
-```C# 
+```Csharp 
 var monthsInYear = new Dictionary<int, string>();
 ```
 
 1. 使用 `Foreach` 方法
 
-```C#
+```Csharp
 public static void SubDictionaryUsingForEach(Dictionary<int,string> monthsInYear)
 {
     foreach (var month in monthsInYear)
@@ -112,7 +112,7 @@ public static void SubDictionaryUsingForEach(Dictionary<int,string> monthsInYear
 
 2. 使用 `For` 方法
 
-```C#
+```Csharp
 public static void SubDictionaryForLoop(Dictionary<int, string> monthsInYear)
 {
    for (int index = 0; index < monthsInYear.Count; index++)
@@ -126,7 +126,7 @@ public static void SubDictionaryForLoop(Dictionary<int, string> monthsInYear)
 
 3. 使用 `ParallelEnumerable.ForAll` 方法
 
-```C#
+```Csharp
 public static void SubDictionaryParallelEnumerable(Dictionary<int, string> monthsInYear)
 {
     monthsInYear.AsParallel()

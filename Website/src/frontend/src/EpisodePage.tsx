@@ -11,6 +11,8 @@ import {
 } from '@fluentui/react';
 import Header from './Header';
 import Footer from './Footer';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+
 
 export const EpisodePage = () => {
     const [episode, setEpisode] = React.useState<Episode | null>(null);
@@ -43,7 +45,24 @@ export const EpisodePage = () => {
                     <Spinner label="Loading" labelPosition="bottom" size={SpinnerSize.large}>
                     </Spinner>
                 </Stack>) : (<div className={styles.episodePage}>
-                    <ReactMarkdown>{episode ? episode.content : ''}</ReactMarkdown>
+                    <ReactMarkdown
+                        children={episode ? episode.content : ''}
+                        components={{
+                            code({ node, inline, className, children, ...props }) {
+                                const match = /language-(\w+)/.exec(className || '')
+                                return !inline && match ? (
+                                    <SyntaxHighlighter
+                                        children={String(children).replace(/\n$/, '')}
+                                        language={match[1]}
+                                    />
+                                ) : (
+                                    <code className={className} {...props}>
+                                        {children}
+                                    </code>
+                                )
+                            }
+                        }}
+                    />
                 </div>)
             }
             <Footer></Footer>

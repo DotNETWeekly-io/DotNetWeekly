@@ -65,7 +65,7 @@
 
 通常分为两个部分，取消请求发起方和请求响应方，响应方的方法签名如下
 
-```C#
+```Csharp
 async Task DoSomethingAsync(int data, CancellationToken cancellationToken)
 {
     ...
@@ -79,7 +79,7 @@ async Task DoSomethingAsync(int data, CancellationToken cancellationToken = defa
 
 响应方可以选择接受取消的请求，也可以选择拒绝取消请求。注意这种使用方式并不会真正取消操作
 
-```C#
+```Csharp
 async Task DoSomethingAsync(CancellationToken cancellationToken)
 {
     var test = await Task.Run(() =>
@@ -98,7 +98,7 @@ async Task DoSomethingAsync(CancellationToken cancellationToken)
 
 在取消请求得到响应了，会抛出 `OperationCanceledException` 的异常，所以在调用方捕获这个异常即可正确的处理
 
-```C#
+```Csharp
 async Task DoSomethingAsync()
 {
     using CancellationTokenSource cts = new();
@@ -122,7 +122,7 @@ async Task DoSomethingAsync()
 
 如果一个请求是由另外的 `CancellationToken` 发出的，那么需要判断请求发出的正确的对象
 
-```C#
+```Csharp
 async Task DoSomethingAsync()
 {
     Environment.FailFast("Bad code; do not use!");
@@ -146,7 +146,7 @@ async Task DoSomethingAsync()
 
 在响应段的代码中，需要知道取消请求是否发生。通常是在循环发生的开始，执行 `ThrowIfCancellationRequested` 方法，如果取消请求发生，则抛出 `OperationCanceledException` 异常。
 
-```C#
+```Csharp
 void DoSomething(CancellationToken cancellationToken)
 {
     while (!done)
@@ -159,7 +159,7 @@ void DoSomething(CancellationToken cancellationToken)
 
 注意不要使用 `IsCancellationRequested` 属性来判断取消是否发生，因为这样，调用方不知道取消操作是否发生。
 
-```C#
+```Csharp
 void DoSomethingForever(CancellationToken cancellationToken)
 {
     Environment.FailFast("Bad code! Do not use!");
@@ -201,7 +201,7 @@ void DoSomethingForever(CancellationToken cancellationToken)
 
 那么这么多的规则，在 .NET 中该怎么实现呢？基础库已经帮我们实现了改功能
 
-```c#
+```Csharp
 var textInfo = new CultureInfo("en-US", false).TextInfo;
 Console.WriteLine(textinfo.ToTitleCase("a tale oF tWo citIes")); // A Tale of Two Cities
 ```

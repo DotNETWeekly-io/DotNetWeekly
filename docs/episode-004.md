@@ -3,7 +3,7 @@
 
 欢迎来到 2022 年！
 
-```C#
+```Csharp
 global using System;
 Console.WriteLine("Hello .NET 2022!");
 ```
@@ -16,7 +16,7 @@ Console.WriteLine("Hello .NET 2022!");
 
 我们都知道使用 `using(var obj = new SomeClass())` 语句可以帮助我们安全的释放需要的内存，从本质上来讲，这是一个编译器的语法糖，上面的语句转换为如下
 
-```C#
+```Csharp
 var obj = new SomeClass();
 try
 {
@@ -30,7 +30,7 @@ finally
 
 借助这个特性， 我们可在非业务性代码中使用它们，比如说日志。
 
-```C#
+```Csharp
 class LogHandler: IDisposable
 {
       private ILogger _logger;
@@ -91,7 +91,7 @@ class LogHandler: IDisposable
 
 假设现在有一个库提供了一个 `const` 变量
 
-```C#
+```Csharp
 public class MyLib
 {
     public const int StatusCode = 200;
@@ -100,7 +100,7 @@ public class MyLib
 
 我们的应用程序使用了这个库中 `StatusCode` 这个变量
 
-```C#
+```Csharp
 Console.WriteLine(MyLib.StatusCode); // 200
 ```
 

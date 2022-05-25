@@ -10,7 +10,7 @@ Null 是一个百万美元的错误，C# 代码花费了很多精力来消灭这
 对于一个值类型，C# 已经有了很好的解决方案，就是 `Nullable<T>` 的类型，它表示该值可以为 `null` 也可以是需要的 `T` 类型的值，一种简写的方案是 `T?` ，比如 `int?`, `Datetime?`, `Guid?` 等等。
 但是对于引用类型，它本身就可以表示为 `null`，比如说 
 
-```C#
+```Csharp
 string s = GetValue();
 ```
 这里的 `s` 既可以表示为普通的字符串，也可以表示为一个`null`。在 `C#` 工程文件中，可以通过这种方式开启 `NRT` 
@@ -21,12 +21,12 @@ string s = GetValue();
 
 这时候，我们的代码如下 
 
-```C#
+```Csharp
 string? s  = GetValue();
 ```
 这时候，编译器知道 `s` 既可以是普通的字符串，也可以为 `null`，如果我们的代码如下
 
-```C#
+```Csharp
 string s = GetValue();
 ```
 这时候 `s` 肯定非 `null`，换句话说就是 `NRT` 开启后，普通的引用类型就不能再为 `null`。  
@@ -35,7 +35,7 @@ string s = GetValue();
 
 熟悉 `C#` 的知道，`NRT` 同样也是一种*语法糖*，那么对于这样的代码
 
-```C#
+```Csharp
 int? GetInt() => 1;
 string? GetString() => "";
 ```
@@ -80,7 +80,7 @@ string? GetString() => "";
 ### 注解代码
 
 虽然有了 `?` 可以帮助编译器分析我们的代码，但是这个还不够，我们需要使用代码注解来提高编译器的分析能力。
-```C#
+```Csharp
 public static string? Slugify(string? value)
 {
     if (value == null)
@@ -94,14 +94,14 @@ public static string? Slugify(string? value)
 
 `Slugify` 方法如果传入的参数不为 `null`，那么返回值就不是 `null`， 这样的代码其实并不需要做 `null check`。
 
-```C#
+```Csharp
 var slug = Slugify("This is a test");
 Console.WriteLine(slug.Length); /
 ```
 
 如果我们在方法中添加代码注解，那么编译器就能知道返回值不为  null.
 
-```C#
+```Csharp
 [return: NotNullIfNotNull("value")]
 public static string? Slugify(string? value)
 {

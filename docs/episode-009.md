@@ -42,7 +42,7 @@
 
 在使用对象的方法之前，需要判断一下是否为 `null`
 
-```C#
+```Csharp
 if (instance  != null) 
 {
    instance.DoSomething();
@@ -50,7 +50,7 @@ if (instance  != null)
 ```
 在 `C# 6` 之后，就可以这样使用 
 
-```C#
+```Csharp
 instance?.DoSomething();
 ```
 
@@ -58,7 +58,7 @@ instance?.DoSomething();
 
 如果为 `null` 之后，需要进行其他的操作，通常需要写 `if-else` 语句，在 `C# 8` 之后，可以使用 `??` 开执行 `null` 条件下的语句。
 
-```C#
+```Csharp
 get => instance ??= new Instance();
 ```
 
@@ -66,7 +66,7 @@ get => instance ??= new Instance();
 
 值类型不可以赋值 `null`, 但是引用类型可以赋值 `null`, 这也是很多 `NullReferenceException` 异常的来源，那么在 C# 中，如果给一个变量没有显式的标记为 `nullable` 类型，那么就不能直接赋值 `null`，由于这是一个 break change, 需要手动开启这个功能
 
-```C#
+```Csharp
 string? s = ReturnANullableString();
 if (s is not null) 
 {
@@ -78,7 +78,7 @@ string uppercase2 = s?.ToUpper();
 
 在防御性编程中，需要对输入的参数进行校验，如果为 `null` ,  则抛出异常，通常需要写很多 `if-else` 语句。 在 `.NET 6` 和 `C# 10` 中可以简化这个流程
 
-```C#
+```Csharp
 public void Foo(string s)
 {
     ArgumentNullException.ThrowIfNull(s);
@@ -97,7 +97,7 @@ public void Foo(string s)
 
 我们都知道在 `C#` 中，字面字符串支持的还是不够好，虽然说可以通过 `@""` 完成，但是还是需要填上大量转义的字符， 因此该提案借鉴了 `Python` 的方式，比如
 
-```C#
+```Csharp
 var xml = """
 <element attr="content"/>
 """;

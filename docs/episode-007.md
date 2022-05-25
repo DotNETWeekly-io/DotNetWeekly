@@ -27,7 +27,7 @@
 
 在任何一个应用程序中日志是非常重要的，在 `.NET` 中广泛使用的日志库就是 `Microsoft.Extensions.Logger` ，但是在使用的时候如果使用不注意，会导致性能方面的问题。 
 
-```C#
+```Csharp
 private ILogger<Program> _logger;
 public void Method() {
    _logger.LogInformation("This is the {0} days",  days);
@@ -35,7 +35,7 @@ public void Method() {
 ```
 
 当 `_logger` 的输出 level 小于或者等于 `Infomation` 的时候，才会输出结果。但是 `LogInformation` 的方法的签名是 
-```C#
+```Csharp
 public static void LogInformation(this ILogger logger, string? message, params object?[] args)
 {
      logger.Log(LogLevel.Information, message, args);
@@ -44,7 +44,7 @@ public static void LogInformation(this ILogger logger, string? message, params o
 
 所以即使 `LogLevel=Warning`，也会带来了装箱（Box）的过程，增加了内存的消耗。因此需要在日志输出前进行判断。
 
-```C#
+```Csharp
 public void Method() {
    if (_logger.IsEnable(LogLevel.Infomation) 
    {
@@ -58,7 +58,7 @@ public void Method() {
 ![](https://dotnetweeklypics.blob.core.windows.net/007/datetimeoffset.png)
 
 `DataTime` 是在  `C#` 中广泛使用地类型，但是它最大地问题是它没有包含时区信息，而是根据运行系统确定时区，所以导致了这样一个问题。
-```C# 
+```Csharp 
 var rightNow = new DateTime(2022, 1, 30, 10, 50, 0);
 rightNow.ToLocalTime(); // 1/30/2022 6:50:00 PM
 rightNow.ToUniversalTime(); // 1/30/2022 2:50:00 AM
@@ -69,7 +69,7 @@ rightNow.ToUniversalTime(); // 1/30/2022 2:50:00 AM
 
 这样导致了在不同的机器上执行的结果是不一致的，这是我们需要 `DataTimeOffset` 类型，其包含了时区信息。
 
-```C#
+```Csharp
 var rightNow = new DateTime(2022, 1, 30, 10, 50, 0);
 DateTimeOffset rightNowHere = new DateTimeOffset(rightNow);
 rightNowHere.ToLocalTime(); // 1/30/2022 10:50:00 AM +08:00
@@ -94,7 +94,7 @@ rightNow.ToUniversalTime(); //  1/30/2022 2:50:00 AM
 
 防御性编程要求在函数在接受参数的时候，验证这些参数的合法性，比如说 
 
-```C#
+```Csharp
 public Person(string name, int age)
 {
     if (name == null)
@@ -112,7 +112,7 @@ public Person(string name, int age)
 ```
 这样的话参数越多，函数中验证部分的逻辑就越长。`Guard` 这个库可以帮助我们的很好地验证函数地参数。
 
-```C#
+```Csharp
 using Dawn; // Bring Guard into scope.
 
 public Person(string name, int age)

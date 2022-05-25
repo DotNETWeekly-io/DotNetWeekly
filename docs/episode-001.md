@@ -64,7 +64,7 @@
 
 不管在什么单元测试框架中，单元测试的形式一般如下
 
-```C#
+```Csharp
 var result = GetResult();
 Assert.AreEqual("Hello World", result);
 ```
@@ -73,7 +73,7 @@ Assert.AreEqual("Hello World", result);
 
 而 `FluentAssertions` 就非常直接
 
-```C#
+```Csharp
 var result = GetResult();
 result.Should().Be("Hello World");
 ```

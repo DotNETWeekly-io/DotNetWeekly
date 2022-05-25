@@ -10,7 +10,7 @@ Result 和 GetResult 的区别
 
 那么这两种方法有什么区别呢？
 使用 `Result` 方法，如果结果抛出异常，则会包装成一个 `AggregateException` 对象，在下面的例子中， catch `HttpException` 异常会被忽略。
-```C#
+```Csharp
 try
 {
     _ = GetSomethingAsync().Result;
@@ -27,7 +27,7 @@ catch(AggregateException ae)
 
 但是如果使用 `GetAwaiter().GetResult()` 则将正确的异常抛出
 
-```C#
+```Csharp
 try
 {
     _ = GetSomethingAsync().GetAwaiter().GetResult();

@@ -26,7 +26,7 @@
 
 本周 `.NET` 宣布了一个热点更新，主要内容可以用一行代码表示。之前在方法参数 `null` 检查如下
 
-```C#
+```Csharp
 void M(object arg)
 {
     if (arg is null)
@@ -38,7 +38,7 @@ void M(object arg)
 
 转变成
 
-```C#
+```Csharp
 void M(object arg!!)
 {
     ...
@@ -71,7 +71,7 @@ void M(object arg!!)
 
 在防御性编程中，我们通常需要对接受到的参数进行校验，以便脏数据导致程序运行的非正常行为，比如说
 
-```C#
+```Csharp
 public static void IsNotNull<T>(T value)
 {
     if (value is null)
@@ -83,7 +83,7 @@ public static void IsNotNull<T>(T value)
 
 那么这样调用的结果是
 
-```C#
+```Csharp
 List<int> list = null;
 IsNotNull(list);
 ```
@@ -92,7 +92,7 @@ IsNotNull(list);
 
 但是这样在日志中并不会知道究竟是哪个穿入的参数导致了 `Null`。如果 `IsNotNull` 的方法这样定义
 
-```C#
+```Csharp
 public static void IsNotNull<T>(T value, [CallerArgumentExpression("value")] string message = "")
 {
     if (value is null)
@@ -112,7 +112,7 @@ public static void IsNotNull<T>(T value, [CallerArgumentExpression("value")] str
 
 `C#` 是一个强类型开发语言，类型之前转换需要进行 `Cast`, 那么 `Cast` 的性能消耗怎样的，有没有更好的方法呢？
 
-```C#
+```Csharp
 public ITuple UnsafeCastArgument(object o)
 {
 	return Unsafe.As<ITuple>(o);
@@ -145,7 +145,7 @@ ret
 
 而更加安全的 `Cast` 的汇编代码如下
 
-```C#
+```Csharp
 sub       rsp,28
 mov       rcx,offset MT_System.Runtime.CompilerServices.ITuple
 call      CORINFO_HELP_CHKCASTINTERFACE
