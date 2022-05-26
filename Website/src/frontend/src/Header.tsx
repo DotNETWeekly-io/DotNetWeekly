@@ -19,12 +19,14 @@ export class Header extends React.Component {
                 }}
             >
                 <StackItem>
-                    <img
-                        src={dotnet}
-                        alt="Logo"
-                        width="35px"
-                        style={{ marginLeft: '10px' }}
-                    />
+                    <a href={window.origin}>
+                        <img
+                            src={dotnet}
+                            alt="Logo"
+                            width="35px"
+                            style={{ marginLeft: '10px' }}
+                        />
+                    </a>
                 </StackItem>
                 <StackItem>
                     <Label>.NET 周刊</Label>
