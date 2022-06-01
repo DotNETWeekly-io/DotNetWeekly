@@ -4,9 +4,12 @@
 
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
+    using Microsoft.Extensions.Options;
     using Microsoft.Net.Http.Headers;
 
     using Models;
+
+    using Options;
 
     using System;
     using System.Linq;
@@ -22,15 +25,19 @@
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IDataRepository _dataRepository;
 
+        private readonly EpisodeSyncOption _episodeSyncOption;
+
         private Timer? _timer;
 
         public UpdateEpisodeHostedService(
             IHttpClientFactory httpClientFactory,
             IDataRepository dataRepository,
+            IOptionsSnapshot<EpisodeSyncOption> episodeSyncOptionAccessor,
             ILogger<UpdateEpisodeHostedService> logger)
         {
             _httpClientFactory = httpClientFactory;
             _dataRepository = dataRepository;
+            _episodeSyncOption = episodeSyncOptionAccessor.Value;
             _logger = logger;
         }
 
@@ -41,8 +48,11 @@
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Updating episodes");
-            _timer = new Timer(Update, null, TimeSpan.Zero, TimeSpan.FromDays(1));
+            if (_episodeSyncOption.Enable)
+            {
+                _logger.LogInformation("Updating episodes");
+                _timer = new Timer(Update, null, TimeSpan.Zero, TimeSpan.FromDays(1));
+            }
 
             return Task.CompletedTask;
         }

@@ -2,8 +2,17 @@
     padding-left: 10px;
     padding-bottom: 60px;
     text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h1 {
+    text-align: center;
 }
 
 img {
-    max-width: 500px;
+    max-width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

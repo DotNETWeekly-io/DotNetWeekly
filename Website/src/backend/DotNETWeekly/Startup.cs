@@ -11,6 +11,8 @@
     using Microsoft.Extensions.DependencyInjection;
 
     using Services;
+    using Options;
+    using Microsoft.Extensions.Options;
 
     public class Startup
     {
@@ -51,6 +53,12 @@
             .WithOrigins(Configuration["Frontend"])));
             services.AddMemoryCache();
             services.AddHttpClient();
+            services.Configure<EpisodeSyncOption>(Configuration.GetSection("EpisodSync"));
+            services.AddOptions();
+            services.AddSingleton(
+                typeof(IOptionsSnapshot<>),
+                typeof(OptionsManager<>)
+            );
             services.AddHostedService<UpdateEpisodeHostedService>();
         }
 
