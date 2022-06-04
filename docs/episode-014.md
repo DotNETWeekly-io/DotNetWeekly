@@ -5,11 +5,13 @@
 Result 和 GetResult 的区别
 
 如果代码中存在异步方法，一般而言建议是尽可能使用异步代码，但是有时候我们还是不得已继续使用同步方法来调用异步方法，那么既有两种方式获取异步结果返回的值
-- `Result` 
+
+- `Result`
 - `GetAwaiter().GetResult()`
 
 那么这两种方法有什么区别呢？
 使用 `Result` 方法，如果结果抛出异常，则会包装成一个 `AggregateException` 对象，在下面的例子中， catch `HttpException` 异常会被忽略。
+
 ```Csharp
 try
 {
@@ -50,7 +52,7 @@ catch(HttpExcpetion e)
 
 ![](https://dotnetweeklypics.blob.core.windows.net/014/gprcjson.png)
 
-`gPRC` 和  `REST JSON` 是两种广泛使用的 Web API 数据通信的格式，两者各有优劣。其中 `gPRC` 在性能方面有显著的优势，但是 `REST JSON` 更加格式更加友好，在 `Debug` 的时候更加方便。那么有没有办法同时支持两种方式呢？
+`gPRC` 和 `REST JSON` 是两种广泛使用的 Web API 数据通信的格式，两者各有优劣。其中 `gPRC` 在性能方面有显著的优势，但是 `REST JSON` 更加格式更加友好，在 `Debug` 的时候更加方便。那么有没有办法同时支持两种方式呢？
 
 `Microsoft.AspNetCore.Grpc.JsonTranscoding` 包可以帮助我们完成这个目标，我们可以在 `proto` 文件中定义好 `REST` 请求的方式，比如
 
@@ -85,6 +87,7 @@ message HelloReply {
 1、[M.E.DependencyInjection 添加服务的方法](https://www.youtube.com/watch?v=iQ8cNI7a6mk&ab_channel=NickChapsas)
 
 `Microsoft.Extensions.DependencyInjection` 是微软提供的依赖注入的包，其中可以通过 `ISeriviceCollection` 接口添加相应的服务，那么 `AddSingleton`, `TryAddSingleton` 和 `TryAddEnumerable` 的区别是哪些呢？
+
 - AddSingleton 是将实现接口的服务添加到依赖注入的容器中，不过后来添加的实现优先级大于先添加的
 - TryAddSingleton 是尝试将服务添加到实现的接口中，如果接口实现已经存在了，则不会添加进去
 - TryAddEnuermable 是尝试将服务添加到容器中，不过判断的标准是接口和实现的类型，如果存在就不再添加
@@ -102,13 +105,6 @@ Azure Cosmos DB 是 Azure 中的 NoSQL 数据库产品，最近他们分享了�
 4、[使用 C# 实现 k-NN 分类](https://visualstudiomagazine.com/articles/2022/05/19/weighted-k-nn-classification.aspx)
 
 K-NN 分类是著名的无监督分类方法，那么如果使用 C# 实现呢？
-
-5、[使用 C# 实现贝叶斯分类](https://visualstudiomagazine.com/articles/2022/05/02/naive-bayes-classification-csharp.aspx)
-
-![](https://dotnetweeklypics.blob.core.windows.net/014/bayes.png)
-
-朴素贝叶斯分类是机器学习中一种重要的分类方法， 对于离散型数值分类有着广泛的应用。这篇文章介绍如何使用 `C#` 实现一个简单的朴素贝叶斯分类器。
-
 
 ## 开源项目
 
