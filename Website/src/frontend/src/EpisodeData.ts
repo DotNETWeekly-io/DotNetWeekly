@@ -1,36 +1,27 @@
 import { http } from './http';
-export enum Category {
-    News,
-    OpenSource,
-    Article,
-}
-
-export interface Record {
-    id: number;
-    title: string;
-    link: string;
-    content: string;
-    episodeId: number;
-    category: Category;
-    createTime: Date;
-}
-
 export interface Episode {
     id: number;
     title: string;
     content: string;
-    records: Record[];
     createTime: Date;
 }
 
-export async function getEpisodes(): Promise<Episode[]> {
-    const result = await http<Episode[]>({ path: '/episodes' });
+export interface EpisodeSummary {
+    id: number;
+    title: string;
+    image: string;
+    digist: string;
+    createTime: Date;
+}
+
+export async function getEpisodeSummaries(): Promise<EpisodeSummary[]> {
+    const result = await http<EpisodeSummary[]>({ path: '/episodes/summary' });
     if (result.ok && result.body) {
         return result.body;
     } else {
         return [];
     }
-};
+}
 
 export async function getEpisodeById(id: number): Promise<Episode | null> {
     const result = await http<Episode>({ path: `/episodes/${id}` });
@@ -39,4 +30,4 @@ export async function getEpisodeById(id: number): Promise<Episode | null> {
     } else {
         return null;
     }
-};
+}

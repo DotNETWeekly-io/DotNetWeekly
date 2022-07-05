@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DotNETWeekly.Services
+namespace DotNETWeekly.Data
 {
     using Models;
     public interface IEpisodeService
@@ -17,7 +18,13 @@ namespace DotNETWeekly.Services
 
         Task AddEpisode(Episode episode, CancellationToken token);
 
+        Task<Episode> GetEpisode(int id, CancellationToken token);
+
         Task UpdateEpisode(int id, Episode episode, CancellationToken token);
-        
+
+        Task DeleteEpisodeSummary(int id, CancellationToken token);
+
+        Task DeleteEpisode(int id, CancellationToken token);
+
     }
 }

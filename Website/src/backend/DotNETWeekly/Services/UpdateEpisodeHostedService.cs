@@ -2,6 +2,9 @@
 {
     using Data;
 
+    using Markdig.Syntax;
+    using Markdig.Syntax.Inlines;
+
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
@@ -12,8 +15,11 @@
     using Options;
 
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Net.Http;
+    using System.Security.Cryptography;
+    using System.Text;
     using System.Text.Json;
     using System.Text.RegularExpressions;
     using System.Threading;
@@ -23,7 +29,7 @@
     {
         private readonly ILogger<UpdateEpisodeHostedService> _logger;
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly IDataRepository _dataRepository;
+        private readonly IEpisodeService _episodeSerivce;
 
         private readonly EpisodeSyncOption _episodeSyncOption;
 
@@ -31,12 +37,12 @@
 
         public UpdateEpisodeHostedService(
             IHttpClientFactory httpClientFactory,
-            IDataRepository dataRepository,
+            IEpisodeService episodeService,
             IOptionsSnapshot<EpisodeSyncOption> episodeSyncOptionAccessor,
             ILogger<UpdateEpisodeHostedService> logger)
         {
             _httpClientFactory = httpClientFactory;
-            _dataRepository = dataRepository;
+            _episodeSerivce = episodeService;
             _episodeSyncOption = episodeSyncOptionAccessor.Value;
             _logger = logger;
         }
@@ -61,7 +67,7 @@
         {
             var httpRequestMessage = new HttpRequestMessage(
                 HttpMethod.Get,
-                "https://api.github.com/repos/gaufung/DotNetWeekly/contents/docs")
+                "https://api.github.com/repos/DotNETWeekly-io/DotNetWeekly/contents/docs")
             {
                 Headers =
                 {
@@ -80,16 +86,12 @@
                 {
                     PropertyNameCaseInsensitive = true,
                 });
-                if (files == null)
+                if (files == null || files.Length == 0)
                 {
                     return;
                 }
-                var existingEpisodes = await _dataRepository.GetEpisodesAsync();
-                foreach (var file in files)
-                {
-                    var episode = existingEpisodes.FirstOrDefault(p => p.Title == file.Title);
-                    await UpdateEpisode(file, episode);
-                }
+                var episodeSummaries = await _episodeSerivce.GetEpisodeSummaries(default);
+                await UpdateEpisodes(files, episodeSummaries);
             }
             else
             {
@@ -97,52 +99,96 @@
             }
         }
 
-        private async Task UpdateEpisode(GithubFile file, Episode? episode)
+        private async Task UpdateEpisodes(IEnumerable<GithubFile> files,  IEnumerable<EpisodeSummary> episodeSummaries)
         {
-            var httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, file.Url)
+            IEnumerable<int> episodeIds = files.Select(p => p.Id);
+            IEnumerable<int> removedIds = episodeSummaries.Where(p => !episodeIds.Contains(p.Id)).Select(p => p.Id);
+
+            foreach (var removedId in removedIds)
             {
-                Headers =
+                await _episodeSerivce.DeleteEpisodeSummary(removedId, default);
+                await _episodeSerivce.DeleteEpisode(removedId, default);
+            }
+
+            foreach (var file in files)
+            {
+                var httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, file.Url)
+                {
+                    Headers =
                 {
                     { HeaderNames.Accept, "application/vnd.github.v3+json" },
                     { HeaderNames.UserAgent, "dotnetweekly" }
                 }
-            };
-            var httpClient = _httpClientFactory.CreateClient();
-            var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
-            if (httpResponseMessage.IsSuccessStatusCode)
-            {
-                _logger.LogInformation($"Fetch {file.Name} successfully");
-                using var contentStream = await httpResponseMessage.Content.ReadAsStreamAsync();
-                var fileContent = await JsonSerializer.DeserializeAsync<GithubFileContent>(contentStream, new JsonSerializerOptions()
+                };
+                var httpClient = _httpClientFactory.CreateClient();
+                var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
+                if (httpResponseMessage.IsSuccessStatusCode)
                 {
-                    PropertyNameCaseInsensitive = true,
-                });
-                if (fileContent == null)
-                {
-                    _logger.LogWarning($"Failed to read {file.Name} content");
-                }
-                if (episode == null)
-                {
-                    await _dataRepository.AddEpisodeAsync(new Episode()
+                    _logger.LogInformation($"Fetch {file.Name} successfully");
+                    using var contentStream = await httpResponseMessage.Content.ReadAsStreamAsync();
+                    var fileContent = await JsonSerializer.DeserializeAsync<GithubFileContent>(contentStream, new JsonSerializerOptions()
                     {
-                        Title = file.Title,
-                        Content = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(fileContent.Content)),
+                        PropertyNameCaseInsensitive = true,
                     });
+                    if (fileContent == null)
+                    {
+                        _logger.LogWarning($"Failed to read {file.Name} content");
+                        continue;
+                    }
+
+                    var episodeSummary = episodeSummaries.FirstOrDefault(p => p.Id == file.Id);
+                    
+                    if (episodeSummary == null)
+                    {
+                        var digist = ComputeDigist(fileContent.Content);
+                        var imageLink = GetFirstOrDefaultImage(fileContent.Content);
+                        await _episodeSerivce.AddEpsidoeSummary(new EpisodeSummary
+                        {
+                            Id = file.Id,
+                            Title = file.Title,
+                            Digest = digist,
+                            Image = imageLink,
+                            CreateTime = DateTime.UtcNow,
+                        }, default);
+                        await _episodeSerivce.AddEpisode(new Episode
+                        {
+                            Id = file.Id,
+                            Content = fileContent.Content,
+                            Title = file.Title,
+                            CreateTime = DateTime.UtcNow,
+                        }, default);
+                    }
+                    else
+                    {
+                        var digist = ComputeDigist(fileContent.Content);
+                        if (episodeSummary.Digest != digist)
+                        {
+                            var imageLink = GetFirstOrDefaultImage(fileContent.Content);
+                            await _episodeSerivce.UpdateEpisodeSummary(file.Id, new EpisodeSummary
+                            {
+                                Id = file.Id,
+                                Title = file.Title,
+                                Digest = digist,
+                                Image = imageLink,
+                                CreateTime = DateTime.UtcNow,
+                            }, default);
+                            await _episodeSerivce.UpdateEpisode(file.Id, new Episode
+                            {
+                                Id = file.Id,
+                                Content = fileContent.Content,
+                                Title = file.Title,
+                                CreateTime = DateTime.UtcNow,
+                            }, default);
+                        }
+                    }
                 }
                 else
                 {
-                    await _dataRepository.UpdateEpisodeAsync(new Episode()
-                    {
-                        Id = episode.Id,
-                        Title = file.Title,
-                        Content = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(fileContent.Content)),
-                    });
+                    _logger.LogWarning($"Failed to fetch {file.Name}. Status code {httpResponseMessage.StatusCode}");
                 }
             }
-            else
-            {
-                _logger.LogWarning($"Failed to fetch {file.Name}. Status code {httpResponseMessage.StatusCode}");
-            }
+
+            
         }
 
         public Task StopAsync(CancellationToken cancellationToken)
@@ -153,39 +199,60 @@
             return Task.CompletedTask;
         }
 
+        private static string ComputeDigist(string content)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(content));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        private static string GetFirstOrDefaultImage(string content)
+        {
+            var doc = Markdig.Markdown.Parse(content);
+            var link = doc.Descendants<ParagraphBlock>().SelectMany(x => x.Inline.Descendants<LinkInline>()).FirstOrDefault(l => l.IsImage);
+            return link?.Url; 
+        }
+
         class GithubFile
         {
-            private static Regex regex = new Regex(@"episode-(?<index>\d+)\.md"); 
+            private static Regex regex = new Regex(@"episode-(?<index>\d+)\.md");
 
-            public string Name { get; set; }
+            private string _name;
+            public string Name
+            {
+                get => _name; 
+                set
+                {
+                    _name = value;
+                    ParseEpisode(value);
+                }
+            }
 
             public string Url { get; set; }
 
             public string Type { get; set; }
 
-            private string _title;
+            public int Id { get; private set; }
 
-            internal string Title
+            public string Title { get; private set; }
+
+            private void ParseEpisode(string name)
             {
-                get
+                var match = regex.Match(name);
+                if (match.Success)
                 {
-                    if (string.IsNullOrEmpty(_title))
-                    {
-                        var match = regex.Match(Name);
-                        if (match.Success)
-                        {
-                            var index = int.Parse(match.Groups["index"].Value);
-
-                            _title =  $".NET 周刊第 {index} 期";
-                        }
-                        else
-                        {
-                            _title = string.Empty;
-                        }
-                    }
-                    return _title;
+                    Id = int.Parse(match.Groups["index"].Value);
+                    Title =  $".NET 周刊第 {Id} 期";
                 }
             }
+
         }
 
         class GithubFileContent

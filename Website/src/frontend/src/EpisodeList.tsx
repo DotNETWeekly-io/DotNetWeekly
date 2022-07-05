@@ -1,6 +1,6 @@
 import React from 'react';
-import { Episode } from './EpisodeData';
-import { getEpisodes } from './EpisodeData';
+import { Episode, EpisodeSummary } from './EpisodeData';
+import { getEpisodeSummaries } from './EpisodeData';
 import {
     Separator,
     Stack,
@@ -32,7 +32,7 @@ const cardStyles: IDocumentCardStyles = {
 };
 
 export interface EpisodeListState {
-    episodes: Episode[][];
+    episodeSummaries: EpisodeSummary[][];
     loading: boolean;
 }
 
@@ -43,23 +43,23 @@ export class EpisodeList extends React.Component<any, EpisodeListState> {
     constructor(any: {}) {
         super(any);
         this.state = {
-            episodes: [],
+            episodeSummaries: [],
             loading: true,
         };
     }
 
     async componentDidMount(): Promise<void> {
         try {
-            const episodes = await getEpisodes();
-            const episodesGroup: Episode[][] = [];
+            const episodes = await getEpisodeSummaries();
+            const episodesGroup: EpisodeSummary[][] = [];
             episodes.sort((a, b) => {
                 if (a.createTime < b.createTime) {
                     return 1;
                 }
                 return -1;
             });
-            for (let i = 0; i < episodes.length;) {
-                const row: Episode[] = [];
+            for (let i = 0; i < episodes.length; ) {
+                const row: EpisodeSummary[] = [];
                 for (let j = 0; j < column && i < episodes.length; j++) {
                     row.push(episodes[i]);
                     i++;
@@ -67,10 +67,10 @@ export class EpisodeList extends React.Component<any, EpisodeListState> {
                 episodesGroup.push(row);
             }
             this.setState({
-                episodes: episodesGroup,
+                episodeSummaries: episodesGroup,
                 loading: false,
             });
-        } catch (error) { }
+        } catch (error) {}
     }
 
     retrieveImgeSource(episode: Episode): string {
@@ -86,18 +86,28 @@ export class EpisodeList extends React.Component<any, EpisodeListState> {
     render(): JSX.Element {
         return (
             <>
-                {
-                    this.state.loading ? (<Stack verticalFill verticalAlign="center" horizontalAlign="center" styles={{
-                        root: {
-                            position: "fixed",
-                            top: "50%",
-                            left: "50%",
-                            transform: 'translate(-50%,-50%)',
-                        }
-                    }}>
-                        <Spinner label="Loading" labelPosition="bottom" size={SpinnerSize.large}>
-                        </Spinner>
-                    </Stack>) : (<Stack
+                {this.state.loading ? (
+                    <Stack
+                        verticalFill
+                        verticalAlign="center"
+                        horizontalAlign="center"
+                        styles={{
+                            root: {
+                                position: 'fixed',
+                                top: '50%',
+                                left: '50%',
+                                transform: 'translate(-50%,-50%)',
+                            },
+                        }}
+                    >
+                        <Spinner
+                            label="Loading"
+                            labelPosition="bottom"
+                            size={SpinnerSize.large}
+                        ></Spinner>
+                    </Stack>
+                ) : (
+                    <Stack
                         styles={{
                             root: {
                                 height: '100px',
@@ -106,7 +116,7 @@ export class EpisodeList extends React.Component<any, EpisodeListState> {
                     >
                         {
                             // eslint-disable-next-line array-callback-return
-                            this.state.episodes.map((episodes) => (
+                            this.state.episodeSummaries.map((summaries) => (
                                 <>
                                     <Separator />
                                     <Stack
@@ -116,23 +126,23 @@ export class EpisodeList extends React.Component<any, EpisodeListState> {
                                     >
                                         {
                                             // eslint-disable-next-line array-callback-return
-                                            episodes.map((episode) => (
+                                            summaries.map((summary) => (
                                                 <DocumentCard
                                                     styles={cardStyles}
-                                                    onClickHref={`/episode/${episode.id}`}
+                                                    onClickHref={`/episode/${summary.id}`}
                                                 >
                                                     <DocumentCardImage
                                                         height={120}
                                                         imageFit={
                                                             ImageFit.centerContain
                                                         }
-                                                        imageSrc={this.retrieveImgeSource(
-                                                            episode,
-                                                        )}
+                                                        imageSrc={summary.image}
                                                     />
                                                     <DocumentCardDetails>
                                                         <DocumentCardTitle
-                                                            title={episode.title}
+                                                            title={
+                                                                summary.title
+                                                            }
                                                             shouldTruncate
                                                         ></DocumentCardTitle>
                                                     </DocumentCardDetails>
@@ -143,8 +153,8 @@ export class EpisodeList extends React.Component<any, EpisodeListState> {
                                 </>
                             ))
                         }
-                    </Stack>)
-                }
+                    </Stack>
+                )}
             </>
         );
     }

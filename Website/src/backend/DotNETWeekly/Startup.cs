@@ -54,6 +54,7 @@
             services.AddMemoryCache();
             services.AddHttpClient();
             services.Configure<EpisodeSyncOption>(Configuration.GetSection("EpisodSync"));
+            services.Configure<CosmosDbOptions>(Configuration.GetSection("CosmosDb"));
             services.AddOptions();
             services.AddSingleton(
                 typeof(IOptionsSnapshot<>),
