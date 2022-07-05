@@ -50,7 +50,7 @@ namespace DotNETWeekly.Data
             return episodes;
         }
 
-        public async Task<Episode> GetEpisode(int id, CancellationToken token)
+        public async Task<Episode> GetEpisode(string id, CancellationToken token)
         {
             var container = await GetOrCreateContainer(false, true, token);
             PartitionKey key = new (id);
@@ -74,13 +74,13 @@ namespace DotNETWeekly.Data
             return episodeSummary;    
         }
 
-        public async Task UpdateEpisode(int id, Episode episode, CancellationToken token)
+        public async Task UpdateEpisode(string id, Episode episode, CancellationToken token)
         {
             var container = await GetOrCreateContainer(false, false, token);
             await container.UpsertItemAsync<Episode>(episode);
         }
 
-        public async Task UpdateEpisodeSummary(int id, EpisodeSummary episodeSummary, CancellationToken token)
+        public async Task UpdateEpisodeSummary(string id, EpisodeSummary episodeSummary, CancellationToken token)
         {
             var container = await GetOrCreateContainer(true, false, token);
             await container.UpsertItemAsync<EpisodeSummary>(episodeSummary);
@@ -94,18 +94,18 @@ namespace DotNETWeekly.Data
             return container;
         }
 
-        public async Task DeleteEpisodeSummary(int id, CancellationToken token)
+        public async Task DeleteEpisodeSummary(string id, CancellationToken token)
         {
             var container = await GetOrCreateContainer(true, false, token);
             PartitionKey key = new(id);
-            await container.DeleteItemAsync<EpisodeSummary>(id.ToString(), key, cancellationToken: token);
+            await container.DeleteItemAsync<EpisodeSummary>(id, key, cancellationToken: token);
         }
 
-        public async Task DeleteEpisode(int id, CancellationToken token)
+        public async Task DeleteEpisode(string id, CancellationToken token)
         {
             var container = await GetOrCreateContainer(false, false, token);
             PartitionKey key = new(id);
-            await container.DeleteItemAsync<Episode>(id.ToString(), key, cancellationToken: token);
+            await container.DeleteItemAsync<Episode>(id, key, cancellationToken: token);
         }
     }
 }

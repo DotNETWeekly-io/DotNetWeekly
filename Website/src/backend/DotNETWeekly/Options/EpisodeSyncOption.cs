@@ -2,6 +2,6 @@
 {
     public class EpisodeSyncOption
     {
-        public bool Enable { get; set; }
+        public bool Enabled { get; set; }
     }
 }

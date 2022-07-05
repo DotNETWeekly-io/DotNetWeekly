@@ -25,36 +25,22 @@
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("DefaultConnection");
-            EnsureDatabase.For.SqlDatabase(connectionString);
-            var upgrader = DeployChanges.To
-                .SqlDatabase(connectionString, null)
-                .WithScriptsEmbeddedInAssembly(System.Reflection.Assembly.GetExecutingAssembly())
-                .WithTransaction()
-                .LogToConsole()
-                .Build();
-
-            if (upgrader.IsUpgradeRequired())
-            {
-                upgrader.PerformUpgrade();
-            }
             services.AddAuthentication(sharedOptions =>
             {
                 sharedOptions.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddAzureAdBearer(options => Configuration.Bind("AzureAd", options));
-            services.AddSingleton<IDataRepository, DataRepository>();
             services.AddMvc();
             services.AddEndpointsApiExplorer();
-            //services.AddSwaggerGen();
             services.AddCors(option => option.AddPolicy("CorsPolicy", builder=>
             builder.AllowAnyMethod()
             .AllowAnyHeader()
             .WithOrigins(Configuration["Frontend"])));
             services.AddMemoryCache();
             services.AddHttpClient();
-            services.Configure<EpisodeSyncOption>(Configuration.GetSection("EpisodSync"));
+            services.Configure<EpisodeSyncOption>(Configuration.GetSection("EpisodeSync"));
             services.Configure<CosmosDbOptions>(Configuration.GetSection("CosmosDb"));
+            services.AddSingleton<IEpisodeService, CosmosDbEpisodeService>();
             services.AddOptions();
             services.AddSingleton(
                 typeof(IOptionsSnapshot<>),
@@ -65,11 +51,6 @@
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
         {
-           /* if (environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }*/
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

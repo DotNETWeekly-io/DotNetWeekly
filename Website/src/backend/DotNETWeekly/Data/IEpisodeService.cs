@@ -12,19 +12,19 @@ namespace DotNETWeekly.Data
 
         Task AddEpsidoeSummary(EpisodeSummary episodeSummary, CancellationToken token);
 
-        Task UpdateEpisodeSummary(int id, EpisodeSummary episodeSummary, CancellationToken token);
+        Task UpdateEpisodeSummary(string id, EpisodeSummary episodeSummary, CancellationToken token);
 
         Task<IEnumerable<Episode>> GetEpisodes(CancellationToken token);
 
         Task AddEpisode(Episode episode, CancellationToken token);
 
-        Task<Episode> GetEpisode(int id, CancellationToken token);
+        Task<Episode> GetEpisode(string id, CancellationToken token);
+        
+        Task UpdateEpisode(string id, Episode episode, CancellationToken token);
 
-        Task UpdateEpisode(int id, Episode episode, CancellationToken token);
+        Task DeleteEpisodeSummary(string id, CancellationToken token);
 
-        Task DeleteEpisodeSummary(int id, CancellationToken token);
-
-        Task DeleteEpisode(int id, CancellationToken token);
+        Task DeleteEpisode(string id, CancellationToken token);
 
     }
 }

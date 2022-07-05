@@ -1,13 +1,13 @@
 import { http } from './http';
 export interface Episode {
-    id: number;
+    id: string;
     title: string;
     content: string;
     createTime: Date;
 }
 
 export interface EpisodeSummary {
-    id: number;
+    id: string;
     title: string;
     image: string;
     digist: string;

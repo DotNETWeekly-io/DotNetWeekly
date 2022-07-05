@@ -54,7 +54,7 @@
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            if (_episodeSyncOption.Enable)
+            if (_episodeSyncOption.Enabled)
             {
                 _logger.LogInformation("Updating episodes");
                 _timer = new Timer(Update, null, TimeSpan.Zero, TimeSpan.FromDays(1));
@@ -90,6 +90,7 @@
                 {
                     return;
                 }
+                files = files.Where(p => p.Name.StartsWith("episode")).ToArray();
                 var episodeSummaries = await _episodeSerivce.GetEpisodeSummaries(default);
                 await UpdateEpisodes(files, episodeSummaries);
             }
@@ -101,8 +102,8 @@
 
         private async Task UpdateEpisodes(IEnumerable<GithubFile> files,  IEnumerable<EpisodeSummary> episodeSummaries)
         {
-            IEnumerable<int> episodeIds = files.Select(p => p.Id);
-            IEnumerable<int> removedIds = episodeSummaries.Where(p => !episodeIds.Contains(p.Id)).Select(p => p.Id);
+            IEnumerable<string> episodeIds = files.Select(p => p.Id);
+            IEnumerable<string> removedIds = episodeSummaries.Where(p => !episodeIds.Contains(p.id)).Select(p => p.id);
 
             foreach (var removedId in removedIds)
             {
@@ -136,15 +137,15 @@
                         continue;
                     }
 
-                    var episodeSummary = episodeSummaries.FirstOrDefault(p => p.Id == file.Id);
-                    
+                    fileContent.Content = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(fileContent.Content));
+                    var episodeSummary = episodeSummaries.FirstOrDefault(p => p.id == file.Id);
                     if (episodeSummary == null)
                     {
                         var digist = ComputeDigist(fileContent.Content);
                         var imageLink = GetFirstOrDefaultImage(fileContent.Content);
                         await _episodeSerivce.AddEpsidoeSummary(new EpisodeSummary
                         {
-                            Id = file.Id,
+                            id = file.Id,
                             Title = file.Title,
                             Digest = digist,
                             Image = imageLink,
@@ -152,7 +153,7 @@
                         }, default);
                         await _episodeSerivce.AddEpisode(new Episode
                         {
-                            Id = file.Id,
+                            id = file.Id,
                             Content = fileContent.Content,
                             Title = file.Title,
                             CreateTime = DateTime.UtcNow,
@@ -166,7 +167,7 @@
                             var imageLink = GetFirstOrDefaultImage(fileContent.Content);
                             await _episodeSerivce.UpdateEpisodeSummary(file.Id, new EpisodeSummary
                             {
-                                Id = file.Id,
+                                id= file.Id,
                                 Title = file.Title,
                                 Digest = digist,
                                 Image = imageLink,
@@ -174,7 +175,7 @@
                             }, default);
                             await _episodeSerivce.UpdateEpisode(file.Id, new Episode
                             {
-                                Id = file.Id,
+                                id = file.Id,
                                 Content = fileContent.Content,
                                 Title = file.Title,
                                 CreateTime = DateTime.UtcNow,
@@ -239,7 +240,7 @@
 
             public string Type { get; set; }
 
-            public int Id { get; private set; }
+            public string Id { get; private set; }
 
             public string Title { get; private set; }
 
@@ -248,8 +249,9 @@
                 var match = regex.Match(name);
                 if (match.Success)
                 {
-                    Id = int.Parse(match.Groups["index"].Value);
-                    Title =  $".NET 周刊第 {Id} 期";
+                    var index = int.Parse(match.Groups["index"].Value);
+                    Id = index.ToString();
+                    Title =  $".NET 周刊第 {index} 期";
                 }
             }
 

@@ -53,7 +53,7 @@ export class EpisodeList extends React.Component<any, EpisodeListState> {
             const episodes = await getEpisodeSummaries();
             const episodesGroup: EpisodeSummary[][] = [];
             episodes.sort((a, b) => {
-                if (a.createTime < b.createTime) {
+                if (Number(a.id) < Number(b.id)) {
                     return 1;
                 }
                 return -1;

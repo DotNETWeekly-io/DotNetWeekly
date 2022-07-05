@@ -41,7 +41,7 @@ namespace DotNETWeekly.Controllers
             {
                 return Ok(episode);
             }
-            episode =  await _episodeService.GetEpisode(episodeId, token);
+            episode =  await _episodeService.GetEpisode(episodeId.ToString(), token);
             if (episode == null)
             {
                 return NotFound();
