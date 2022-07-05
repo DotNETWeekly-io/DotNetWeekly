@@ -12,10 +12,11 @@
 
 1、[C# 11 抢先看](https://devblogs.microsoft.com/dotnet/early-peek-at-csharp-11-features/)
 
-![](https://dotnetweeklypics.blob.core.windows.net/010/csharp-11.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/010/csharp-11.png)
 
 随着 `Visual Studio 17.1` 发布，`C# 11` 已经可以尝试了。
 首先需要修改 `.csproj` 文件
+
 ```
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
@@ -39,8 +40,7 @@ var v = $"Count ist: { this.Is.Really.Something()
                                     to.Wrap()] }.";
 ```
 
-
-2. List Pattern 
+2. List Pattern
 
 模式匹配现在可以支持数组或者列表，比如
 
@@ -55,6 +55,7 @@ public static int CheckSwitch(int[] values)
         [..] => 50
     };
 ```
+
 也可以捕获列表中的切片变量
 
 ```Csharp
@@ -68,7 +69,8 @@ public static string CaptureSlice(int[] values)
 
 3. 参数 null 检查
 
-过去需要在函数/方法中对输入的参数进行 null 检查 
+过去需要在函数/方法中对输入的参数进行 null 检查
+
 ```Csharp
 public static void M(string s)
 {
@@ -81,20 +83,22 @@ public static void M(string s)
 ```
 
 现在只需要在参数中使用双感叹号（`!!`）， 也能达到同样的效果。
+
 ```Csharp
 public static void M(string s!!)
 {
     // Body of the method
 }
-``` 
+```
 
 ## 文章推荐
 
 1、[Dictionary 循环的比较](https://code-maze.com/csharp-iterate-through-dictionary/)
 
 对于一个 `Dictionary` 有多少中循环方式呢？
-假设存在一个字典如下 
-```Csharp 
+假设存在一个字典如下
+
+```Csharp
 var monthsInYear = new Dictionary<int, string>();
 ```
 
@@ -137,19 +141,20 @@ public static void SubDictionaryParallelEnumerable(Dictionary<int, string> month
 
 那么结果比较结果如何呢？
 
-|                           Method |          Mean |       Error |      StdDev |
-|--------------------------------- |--------------:|------------:|------------:|
-|       WhenDictionaryUsingForEach |     4.7635 ns |   0.0314 ns |   0.0245 ns |
-|       WhenDictionaryUsingForLoop |     0.5715 ns |   0.0475 ns |   0.0421 ns |
+| Method                           |          Mean |       Error |      StdDev |
+| -------------------------------- | ------------: | ----------: | ----------: |
+| WhenDictionaryUsingForEach       |     4.7635 ns |   0.0314 ns |   0.0245 ns |
+| WhenDictionaryUsingForLoop       |     0.5715 ns |   0.0475 ns |   0.0421 ns |
 | WhenDictionaryParallelEnumerable | 7,662.7620 ns | 150.1402 ns | 172.9016 ns |
 
-显而易见， `For` 和  `Foreach` 的性能更好点，而且 `For` 的性能还更好点。
+显而易见， `For` 和 `Foreach` 的性能更好点，而且 `For` 的性能还更好点。
 
 2、[如何使用 Visual Studio 进行 Debug](https://code-maze.com/debugging-csharp-visual-studio/)
 
-![](https://dotnetweeklypics.blob.core.windows.net/010/vs-debug.jpeg)
+![](https://dotnetweeklyimages.blob.core.windows.net/010/vs-debug.jpeg)
 
-Visual Studio 被誉为 
+Visual Studio 被誉为
+
 > 宇宙第一 IDE
 
 它的强大不仅仅在于编写代码，而是强大的 `Debug` 功能，这篇文章基本上介绍 `Visual Studio` Debug 功能
@@ -162,16 +167,17 @@ Visual Studio 被誉为
 
 3、[在 .NET 中使用 GitHub Action](https://devblogs.microsoft.com/dotnet/dotnet-loves-github-actions/)
 
-![](https://dotnetweeklypics.blob.core.windows.net/010/github-action.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/010/github-action.png)
 
 GitHub Action 是一套 CI/CD 的的工具，通过它能够实现自动化运维的目的，比如自动测试，自动构建和自动部署等功能。对于 .NET 用户而言需要掌握这些 GitHub Action 的功能。
 
 4、[.NET 存在的 6 个误解](https://blog.devgenius.io/6-net-myths-dispelled-celebrating-21-years-of-net-652795c2ea27)
 
-![](https://dotnetweeklypics.blob.core.windows.net/010/mispell-dotnet.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/010/mispell-dotnet.png)
 
 `.NET` 已经存在了 20 年了，但是大家仍然对他存在误解，这里挑选了 6 个误解并且解释它们
-- .NET 只为 Windows 
+
+- .NET 只为 Windows
 - .NET 比 Node，Python，Go，Rust 慢
 - .NET 是一个老旧的开发平台
 - .NET 开发工具太贵了
@@ -186,19 +192,19 @@ Ngnix 是著名的反向代理工具， 微软开源了一款用 `C#` 编写的�
 
 2、[MoreLinq 来增强 Linq 的功能](https://morelinq.github.io/)
 
-![](https://dotnetweeklypics.blob.core.windows.net/010/morelinq.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/010/morelinq.png)
 
 Linq 是 `C#` 最受欢迎的功能之一，但是内置的 `Linq to Object` 的功能还是无法满足部分开发需求，因此 `MoreLinq` 扩展了这部分内容。
 
 3、[stryker 测试你的单元测试](https://stryker-mutator.io/docs/stryker-net/introduction)
 
-![](https://dotnetweeklypics.blob.core.windows.net/010/stryke.svg)
+![](https://dotnetweeklyimages.blob.core.windows.net/010/stryke.svg)
 
 单元测试是软件开发中重要组成部分，通常我们评价单元测试好坏使用的是**覆盖率**。但是实时真的如此吗？如果单元测试用例正好通过了代码分支，而且是一个特殊用例，这样说明这个单元测试质量并不好。`Stryker.NET` 包能够帮助我们检查我们单元测试质量。
 
-首先它引入了 `Mutation` 的的概念，它是修改我们代码中的部分片段，比如 `+` 修改为 `-`,  `i++` 修改为 `i--` 等等，然后再去执行我们单元测试，这是会有两种情况：
+首先它引入了 `Mutation` 的的概念，它是修改我们代码中的部分片段，比如 `+` 修改为 `-`, `i++` 修改为 `i--` 等等，然后再去执行我们单元测试，这是会有两种情况：
 
 - `Killed`: 表明单元测试在修改之后失败
 - `Survived`: 表明单元测试在修改之后仍然通过
 
- `Killed` 情况越多表明单元测试质量越高。
+`Killed` 情况越多表明单元测试质量越高。

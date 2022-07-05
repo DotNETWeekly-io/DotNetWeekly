@@ -4,7 +4,7 @@
 
 Global Using 怎么使用？
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ5jTllKhTtpGK5u_kKhoO9r9tlTx1pFBvvw&usqp=CAU)
+![](https://dotnetweeklyimages.blob.core.windows.net/016/globalusing.jfif)
 
 `using` 关键字在 `C#` 中有多种用途，最主要的是引入命名空间，以方便该文件中的代码可以使用这些命名空间中的类，委托等等。但是在 `C# 10` 之前，`Using` 的作用域是文件级别的，也就是说不同的文件，都要包含响应的的 `using` 语句，这些难免有写繁琐。在 `C# 10` 引入了 `Global using` 的功能，它主要有两种实现方式，当然也可以混合使用。
 
@@ -32,13 +32,13 @@ global using MyNamespace;
 
 1、[.NET 用户态线程要来了？](https://twitter.com/davidfowl/status/1532880744732758018)
 
-![](https://i.imgur.com/ukJGtOb.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/016/greenthread.png)
 
 总所周知，线程上下文切换是非常耗时的操作，在 `.NET` 的 `async` 和 `await` 都是交给线程池来处理。 `.NET` 团队打算实现一种用户态的线程，也叫做 `Green Thread`，它是由 `runtime` 来控制，并且非常轻量，就跟 `Go` 语言中的 `goroutine` 一样。
 
-2、[.NET VSCode 插件不再开源？](https://twitter.com/sinclairinat0r/status/1529521744444276736)
+2、[.NET VSCode 插件不再开源？](https://github.com/OmniSharp/omnisharp-vscode/issues/5276)
 
-![image](https://user-images.githubusercontent.com/11272110/175775592-01385acf-4182-476e-863d-4d0a5e335234.png)
+![image](https://dotnetweeklyimages.blob.core.windows.net/016/omnisharp.png)
 
 最近 `.NET` 社区又一个充满争议的话题出现了，我们都知道在使用 `VS Code` 开发 `.NET` 项目的时候，`OmniSharp` 是一个不可缺少的插件，但是由于历史的原因改插件没有采用 `LSP` 协议。现在微软打算不使用开源协议方式，开发新的 `VS Code` 插件，这个在社区引发了剧烈的讨论。大多人认为这个违反了 `Microsoft Love Open Source` 的宣传。
 
@@ -46,31 +46,31 @@ global using MyNamespace;
 
 1、[Exchange Online 迁移 .NET Core](https://devblogs.microsoft.com/dotnet/exchange-online-journey-to-net-core/)
 
-![](https://petri-media.s3.amazonaws.com/2017/10/exchange-online-hero-1.jpg)
+![](https://dotnetweeklyimages.blob.core.windows.net/016/exchange.jpg)
 
 `CosmosDB` 和 `GraphAPI` 之后，微软的另一个重要服务 `Exchange Online` 也尝试将之前的 `.NET Framework` 迁移到 `.NET Core`。由于 `Exchange Online` 的庞大的仓库，首先从使用量不大的 `Pop3` 和 `IMap4` 开始，逐步从 `.NET Framework` 到 `.NET Core 3.1` ，再到 `.NET 5` `.NET 6` 等等，答案是显著的，不管是内存使用，CPU 的使用量，以及 GC 的时间和次数，都得到了显著的提升。
 
 2、[AWS Lambda 推广者关于 .NET 的故事](https://fbouteruche.medium.com/why-i-have-been-in-love-with-c-and-net-for-more-than-15-years-34af4ddce0d8)
 
-![image](https://user-images.githubusercontent.com/11272110/175773144-55dab826-73b1-4286-a4d2-f3af8ee04e68.png)
+![image](https://dotnetweeklyimages.blob.core.windows.net/016/lambdadotnet.png)
 
 这个一篇来自 `.NET` 开发者的文章，他回顾了自己 `.NET` 经历的开端，然后分析了 `.NET` 社区的缺陷和进步，并且分析了 `AWS` 中 的 `Lambda` 中使用 `.NET` 的故事。
 
 3、[MAUI 教程](https://jesseliberty.com/2022/06/05/learning-net-maui-posting-0/)
 
-![image](https://user-images.githubusercontent.com/11272110/175773742-93916ea7-a535-4a95-848b-0a94e7d12e40.png)
+![image](https://dotnetweeklyimages.blob.core.windows.net/016/maui.png)
 
 `MAUI` 已经发布了一段时间了，这一系列文章列出了 `MAUI` 的学习资源。
 
 4、[.NET 内存测验](https://tooslowexception.com/net-quiz-check-your-level-of-knowledge-about-net-memory-management/)
 
-![image](https://user-images.githubusercontent.com/11272110/175773866-01ef6dd2-9b92-4205-a893-6dcea79c4f16.png)
+![image](https://dotnetweeklyimages.blob.core.windows.net/016/memory.png)
 
 这是这是一些列测试题目问卷，考察一下你对 `.NET` 内存的了解程度。
 
 5、[string.Empty 和 "" 比较](https://www.youtube.com/watch?v=qWBi32-Njm8&ab_channel=NickChapsas)
 
-![image](https://user-images.githubusercontent.com/11272110/175774538-5516b02c-ee79-48b7-8217-e856d3956179.png)
+![image](https://dotnetweeklyimages.blob.core.windows.net/016/stringempty.png)
 
 在 `C#` 中， `string.Empty` 和 `""` 是一样的吗？首先 `string.Empty` 不是一个字面常量，也就是说它不能作为一个函数的默认参数。那么他们之间有什么性能上的差别吗？
 
@@ -109,7 +109,7 @@ L0032: call 0x719cc280
 
 6、[为什么你需要关心 .NET GC 的问题](https://tooslowexception.com/why-should-you-care-about-net-gc/)
 
-![](https://prodotnetmemory.com/slides/UnderstadingGC/images/poster2.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/016/gc.png)
 
 很多时候，我们并不关心 `.NET` GC 的问题，因为它看上去好像跟我们没有什么关系。`.NET` 的抽象已经将这些细节全部隐藏起来了， 只需要关心使用即可。但是仅仅是抽象是不够的，因为
 
@@ -131,7 +131,7 @@ L0032: call 0x719cc280
 
 1、[Enum 增强版](https://github.com/andrewlock/NetEscapades.EnumGenerators)
 
-![image](https://user-images.githubusercontent.com/11272110/175772476-9eb93ba8-22d6-4788-8bdf-c36928e0aaaa.png)
+![image](https://dotnetweeklyimages.blob.core.windows.net/016/enum.png)
 
 `Enum` 类型是 `.NET` 中重要的类型，它的很多方法是采用反射的方式实现，比如 `ToString`， `IsDefined` 或者 `TryParse` 方法。我们都知道反射的都是非常慢，因此 `NetEscapades.EnumGenerators` 这个库可以帮你解决这个问题，它主要采用 `.NET 6` 的 `Source Generator` 方法，通过自动生成相关的代码来避免反射带来的开销。
 
@@ -189,11 +189,4 @@ public class EnumRunner
 }
 ```
 
-| Method             |       Mean |     Error |    StdDev |     Median |  Gen 0 | Allocated |
-| ------------------ | ---------: | --------: | --------: | ---------: | -----: | --------: |
-| ColorToString      | 14.3427 ns | 0.3169 ns | 0.3391 ns | 14.3067 ns | 0.0029 |      24 B |
-| ColorToStringFast  |  1.1420 ns | 0.0224 ns | 0.0209 ns |  1.1356 ns |      - |         - |
-| ColorIsDefined     | 76.1128 ns | 0.6382 ns | 0.5970 ns | 76.0329 ns | 0.0029 |      24 B |
-| ColorIsDefinedFast |  0.0046 ns | 0.0092 ns | 0.0086 ns |  0.0000 ns |      - |         - |
-| ColorTryParse      | 39.4555 ns | 0.3003 ns | 0.2950 ns | 39.4848 ns |      - |         - |
-| ColorTryParseFase  |  7.1406 ns | 0.0431 ns | 0.0403 ns |  7.1369 ns |      - |         - |
+![](https://dotnetweeklyimages.blob.core.windows.net/016/benchmark.png)

@@ -44,13 +44,13 @@ catch(HttpExcpetion e)
 
 1、[.NET 7 中 正则表达式性能提升](https://devblogs.microsoft.com/dotnet/regular-expression-improvements-in-dotnet-7/)
 
-![](https://dotnetweeklypics.blob.core.windows.net/014/regex.jpeg)
+![](https://dotnetweeklyimages.blob.core.windows.net/014/regex.jpeg)
 
 正则表达式是 `.NET` 中字符串操作必不可少工具，在 `.NET 7` 中重新设计了正则表达式，在性能上取得了很大的提升。
 
 2、[gRPC 和 Rest JSON 互转换](https://devblogs.microsoft.com/dotnet/announcing-grpc-json-transcoding-for-dotnet/)
 
-![](https://dotnetweeklypics.blob.core.windows.net/014/gprcjson.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/014/gprcjson.png)
 
 `gPRC` 和 `REST JSON` 是两种广泛使用的 Web API 数据通信的格式，两者各有优劣。其中 `gPRC` 在性能方面有显著的优势，但是 `REST JSON` 更加格式更加友好，在 `Debug` 的时候更加方便。那么有没有办法同时支持两种方式呢？
 
@@ -94,7 +94,7 @@ message HelloReply {
 
 2、[Azure Cosmos DB .NET 6 之旅](https://devblogs.microsoft.com/dotnet/the-azure-cosmos-db-journey-to-net-6/)
 
-![](https://dotnetweeklypics.blob.core.windows.net/014/cosmosdb.jpeg)
+![](https://dotnetweeklyimages.blob.core.windows.net/014/cosmosdb.jpeg)
 
 Azure Cosmos DB 是 Azure 中的 NoSQL 数据库产品，最近他们分享了一篇迁移到 `.NET 6` 之后，在性能上得到的成就。
 
@@ -110,6 +110,6 @@ K-NN 分类是著名的无监督分类方法，那么如果使用 C# 实现呢�
 
 1、[CoreWCF 发布](https://github.com/corewcf/corewcf)
 
-![](https://dotnetweeklypics.blob.core.windows.net/014/wcf.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/014/wcf.png)
 
 WCF 是 .NET Framework 3.0 推出的一套服务间通信的标准，随着 `.NET Core` 的推出，微软宣布不再支持 `WCF`, 将全部交给社区维护，近日 `CoreWCF` 1.0 版本正式发布。

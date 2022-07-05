@@ -1,4 +1,5 @@
 # .NET 每周分享第 4 期
+
 ## 开卷语
 
 欢迎来到 2022 年！
@@ -12,7 +13,7 @@ Console.WriteLine("Hello .NET 2022!");
 
 1、[using 语句的使用](https://www.youtube.com/watch?v=iqt7bqAm27U&ab_channel=NickChapsas)
 
-![](https://dotnetweeklypics.blob.core.windows.net/004/using.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/004/using.png)
 
 我们都知道使用 `using(var obj = new SomeClass())` 语句可以帮助我们安全的释放需要的内存，从本质上来讲，这是一个编译器的语法糖，上面的语句转换为如下
 
@@ -69,7 +70,7 @@ class LogHandler: IDisposable
 
 3、[readonly 和 const 的区别](https://medium.com/@serhat21zor/c-readonly-vs-const-43a1799fd07d)
 
-![](https://dotnetweeklypics.blob.core.windows.net/004/const-readonly.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/004/const-readonly.png)
 
 `readonly` 和 `const` 广泛使用在 `C#` 代码中，它们的主要目的是降低程序中的可变性。它们的主要区别如下
 
@@ -112,15 +113,15 @@ Console.WriteLine(MyLib.StatusCode); // 200
 
 1.  返回非 2xx 的状态码，然后在 body 中填写响应的错误信息；
 
-![](https://dotnetweeklypics.blob.core.windows.net/004/non200.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/004/non200.png)
 
 2. 返回 200 的状态码，然后在 Body 中填写响应的错误信息
 
-![](https://dotnetweeklypics.blob.core.windows.net/004/status-200.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/004/status-200.png)
 
 两者有本质上的不同，第一种叫做 `error.info`, 而第二种叫做 `message`。 其实标准的做法叫做 **Problem Details** (RFC7807)
 
-![](https://dotnetweeklypics.blob.core.windows.net/004/error-body.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/004/error-body.png)
 
 这里的字段都是有特定的意义。
 
@@ -128,6 +129,6 @@ Console.WriteLine(MyLib.StatusCode); // 200
 
 1、[2021 最活跃的 .NET 项目](https://twitter.com/sbwalker/status/1476976431972462601)
 
-![](https://dotnetweeklypics.blob.core.windows.net/004/dotnet-oss.png)
+![](https://dotnetweeklyimages.blob.core.windows.net/004/dotnet-oss.png)
 
 这里是 2021 年最活跃的 `.NET` 开源项目列表，主要 `Pull Request`， `Commit` 和 `New Contributor` 三个指标统计。注意这里并不包含由 Microsoft 维护或者支持的项目。

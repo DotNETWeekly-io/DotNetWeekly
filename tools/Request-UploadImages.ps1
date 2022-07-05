@@ -6,7 +6,7 @@ param (
 
     [Parameter(Mandatory=$false)]
     [string]
-    $StorageAccountName = 'dotnetweeklypics',
+    $StorageAccountName = 'dotnetweeklyimages',
 
     [Parameter(Mandatory=$true)]
     [string]
@@ -33,6 +33,7 @@ function Get-ImageMimeMapping {
         '.bmp'                          = 'image/bmp'
         '.svg'                          = 'image/svg+xml'
         '.webp'                         = 'image/webp'
+        '.jfif'                         = 'image/jfif'
     }
 
     return $mimeTypeMap[$extension];
