@@ -2,17 +2,16 @@
 {
     using Data;
 
-    using DbUp;
-
     using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Options;
+
+    using Options;
 
     using Services;
-    using Options;
-    using Microsoft.Extensions.Options;
 
     public class Startup
     {
