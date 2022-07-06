@@ -352,3 +352,4 @@ MigrationBackup/
 Website/src/frontend/build/*
 Website/src/backend/DotnetWeekly/Properties/*
 Website/src/backend/DotnetWeekly/appsettings.Production.json
+Samples/DotNetWeeklySample/.idea/
