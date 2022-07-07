@@ -1,13 +1,12 @@
-[![Build Status](https://dev.azure.com/tindi/DotNETWeekly/_apis/build/status/DotNETWeekly-io.DotNetWeekly?branchName=master)](https://dev.azure.com/tindi/DotNETWeekly/_build/latest?definitionId=8&branchName=master)
-
 .NET 周刊是一个专注于`.NET`生态的资源中心，它的目标是收集`.NET` 生态中的有价值的内容，并且每周定期发布。它受到[科技爱好者周刊](https://github.com/ruanyf/weekly)和[Go 语言爱好者周刊](https://github.com/polaris1119/golangweekly) 的启发。
 
-欢迎投稿，请[提交 issue](https://github.com/gaufung/DotNetWeekly/issues)。
+欢迎投稿，请[提交 issue](https://github.com/DotNETWeekly-io/DotNetWeekly/issues)。
 
 我们打算在两个平台上发布
 
 - GitHub
-- [网站](https://dotnetweekly.azurewebsites.net/)
+- [Web](https://dotnetweekly.azurewebsites.net/)
+  - [源码](https://github.com/DotNETWeekly-io/DotNetWeeklyWeb)
 
 ## 周刊
 
