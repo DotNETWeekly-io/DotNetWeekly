@@ -6,7 +6,7 @@
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/017/ienumerable.png)
 
-C# 基础库中包含了很多集合，比如 `List`, `Array` 或者 `HashSet`， 他们都实现了 `IEnumerable<T>` 接口。这样就会给编码的时候代码带来困惑，究竟使用哪种方式来实现呢？接下来分三种情况来考虑：
+C# 基础库中包含了很多集合，比如 `List`, `Array` 或者 `HashSet`， 它们都实现了 `IEnumerable<T>` 接口。这样就会给编码的时候代码带来困惑，究竟使用哪种方式来实现呢？接下来分三种情况来考虑：
 
 1. 集合作为方法的参数
 
@@ -112,7 +112,7 @@ class Example4
 }
 ```
 
-`Newtonsoft.Json` 库都支持上面方案的序列化和反序列化。实际上除了第二种，剩下的都反序列化成一个 `List<string>` 类型。但是更加倾向于选择 `Example2` 类型，应为他是一个不可变类型，并且提供了 `Count` 属性。
+`Newtonsoft.Json` 库都支持上面方案的序列化和反序列化。实际上除了第二种，剩下的都反序列化成一个 `List<string>` 类型。但是更加倾向于选择 `Example2` 类型，因为它是一个不可变类型，并且提供了 `Count` 属性。
 
 ## 文章推荐
 
@@ -120,7 +120,7 @@ class Example4
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/017/memory.png)
 
-在 `C#` 中有两个主要类型，值类型和引用类型。一般我们认为值类型分配在栈上，而引用类型分配在堆上。事实果真如此吗？答案是一般正确，引用类型分配在堆上，而值类型会根据下面情况分别处理
+在 `C#` 中有两个主要类型，值类型和引用类型。一般我们认为值类型分配在栈上，而引用类型分配在堆上。事实果真如此吗？答案是一半正确，引用类型分配在堆上，而值类型会根据下面情况分别处理：
 
 1. 声明在方法中的值类型 => 栈上
 2. 声明在方法参数中的值类型 => 栈上
@@ -144,7 +144,7 @@ class Example4
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/017/regex.png)
 
-正则表达式是字符串处理的利器，在 `C#` 中 `Regex` 类包含了正则表达式处理的全部功能，这边文章介绍了如何使用他们，包括
+正则表达式是字符串处理的利器，在 `C#` 中 `Regex` 类包含了正则表达式处理的全部功能，这篇文章介绍了如何使用它们，包括
 
 - 匹配
 - 计数
@@ -254,7 +254,7 @@ Visual Studio Code 是广泛使用的编辑器，其丰富的插件使得生态�
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/017/hava.png)
 
-`IKVM`是一个有意思的开源项目，它可以将 `Java` 编写的 `Jar` 包转换成 `dll`, 并且可以在普通的 `C#` 应用程序中引用这个库。通常它要求 `Jar` 包使用的式 `JDK` 包含的标准库，否则出现错误的概率会非常大。
+`IKVM`是一个有意思的开源项目，它可以将 `Java` 编写的 `Jar` 包转换成 `dll`, 并且可以在普通的 `C#` 应用程序中引用这个库。通常它要求 `Jar` 包使用的是 `JDK` 包含的标准库，否则出现错误的概率会非常大。
 
 3、[Ant Design Blazor](https://github.com/ant-design-blazor/ant-design-blazor)
 
