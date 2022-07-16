@@ -23,11 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryApplication", "Memory
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Episode18", "Episode18", "{82D145E5-15B7-41DF-A1A7-610920387B6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnsafeSample", "UnsafeSample\UnsafeSample.csproj", "{5B51BC75-4C81-42C5-BA6D-CD54E68A15F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnsafeSample", "UnsafeSample\UnsafeSample.csproj", "{5B51BC75-4C81-42C5-BA6D-CD54E68A15F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientSample", "HttpClientSample\HttpClientSample.csproj", "{0B8705A5-4D26-47FD-880B-9F9AD11C6926}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientSample", "HttpClientSample\HttpClientSample.csproj", "{0B8705A5-4D26-47FD-880B-9F9AD11C6926}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientSampleTest", "HttpClientSampleTest\HttpClientSampleTest.csproj", "{7D09BF36-BE94-4F85-BE52-0B15ED03166B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientSampleTest", "HttpClientSampleTest\HttpClientSampleTest.csproj", "{7D09BF36-BE94-4F85-BE52-0B15ED03166B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexSample", "IndexSample\IndexSample.csproj", "{F4D226BB-CBE1-4F02-891F-E3C762A8769D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{7D09BF36-BE94-4F85-BE52-0B15ED03166B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D09BF36-BE94-4F85-BE52-0B15ED03166B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D09BF36-BE94-4F85-BE52-0B15ED03166B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4D226BB-CBE1-4F02-891F-E3C762A8769D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D226BB-CBE1-4F02-891F-E3C762A8769D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D226BB-CBE1-4F02-891F-E3C762A8769D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4D226BB-CBE1-4F02-891F-E3C762A8769D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{5B51BC75-4C81-42C5-BA6D-CD54E68A15F9} = {82D145E5-15B7-41DF-A1A7-610920387B6B}
 		{0B8705A5-4D26-47FD-880B-9F9AD11C6926} = {82D145E5-15B7-41DF-A1A7-610920387B6B}
 		{7D09BF36-BE94-4F85-BE52-0B15ED03166B} = {82D145E5-15B7-41DF-A1A7-610920387B6B}
+		{F4D226BB-CBE1-4F02-891F-E3C762A8769D} = {82D145E5-15B7-41DF-A1A7-610920387B6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86C26A52-4632-4CF7-B22A-321921D53A47}
