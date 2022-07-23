@@ -43,8 +43,10 @@ function Get-ImageMimeMapping {
     return $mimeTypeMap[$extension];
 }
 
-if (Get-ChildItem Env: | Where-Object {$_.Name -eq 'DotNETWeeklyStorageKey'}) {
-    $AccessKey = Get-ChildItem Env: | Where-Object {$_.Name -eq 'DotNETWeeklyStorageKey'} | Select-Object -ExpandProperty Value
+if (-not $AccessKey) {
+    if (Get-ChildItem Env: | Where-Object {$_.Name -eq 'DotNETWeeklyStorageKey'}) {
+        $AccessKey = Get-ChildItem Env: | Where-Object {$_.Name -eq 'DotNETWeeklyStorageKey'} | Select-Object -ExpandProperty Value
+    }
 }
 
 if (-not $AccessKey) {
