@@ -12,6 +12,10 @@ param (
     [string]
     $EpisodeName,
 
+    [Parameter(Mandatory = $false)]
+    [string]
+    $AccessKey,
+
     [Parameter(Mandatory = $true)]
     [string]
     $ImagesDirPath
