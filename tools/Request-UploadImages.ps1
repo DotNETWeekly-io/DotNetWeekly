@@ -41,19 +41,28 @@ function Get-ImageMimeMapping {
 
 $ImageFilePaths = get-ChildItem $ImagesDirPath | Select-Object -ExpandProperty FullName
 
-$accessToken = Get-AzAccessToken;
-if (-not $accessToken -or $accessToken.ExpiresOn.UtcDateTime -gt [System.DateTime]::UtcNow) {
-    Connect-AzAccount
+if (-not $AccessKey) {
+    if (Get-ChildItem Env: | Where-Object { $_.Name -eq 'DotNETWeeklyStorageKey' }) {
+        $AccessKey = Get-ChildItem Env: | Where-Object { $_.Name -eq 'DotNETWeeklyStorageKey' } | Select-Object -ExpandProperty Value
+    }
 }
 
-$storageAccount = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName
+if (-not $AccessKey) {
+    $accessToken = Get-AzAccessToken;
+    if (-not $accessToken -or $accessToken.ExpiresOn.UtcDateTime -gt [System.DateTime]::UtcNow) {
+        Connect-AzAccount
+    }
+    $storageAccount = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName
 
-if (-not $storageAccount) {
-    Write-Error "Storage Account $($StorageAccountName) doesn't exist in the $($ResourceGroupName) resource group";
-    return
+    if (-not $storageAccount) {
+        Write-Error "Storage Account $($StorageAccountName) doesn't exist in the $($ResourceGroupName) resource group";
+        return
+    }
+    $context = $storageAccount.Context 
 }
-
-$context = $storageAccount.Context 
+else {
+    $context = New-AzStorageContext -StorageAccountName $StorageAccountName -StorageAccountKey $AccessKey
+}
 
 $container = Get-AzStorageContainer -Context $context -Container $EpisodeName
 
