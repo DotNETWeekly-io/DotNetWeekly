@@ -16,6 +16,7 @@ jobs:
     - script: >-
         docker run \
           -e RUN_LOCAL=true \
+          -e VALIDATE_MARKDOWN=true \
           -v $(System.DefaultWorkingDirectory):/tmp/lint \
           github/super-linter
       displayName: 'Run Linter'
