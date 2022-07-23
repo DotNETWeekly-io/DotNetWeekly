@@ -1,57 +1,72 @@
 [CmdletBinding()]
 param (
-    [Parameter(Mandatory=$false)]
+    [Parameter(Mandatory = $false)]
     [string]
     $ResourceGroupName = 'dotnetweekly',
 
-    [Parameter(Mandatory=$false)]
+    [Parameter(Mandatory = $false)]
     [string]
     $StorageAccountName = 'dotnetweeklyimages',
 
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]
     $EpisodeName,
 
-    [Parameter(Mandatory=$true)]
-    [string[]]
-    $ImageFilePaths
+    [Parameter(Mandatory = $false)]
+    [string]
+    $AccessKey,
+
+    [Parameter(Mandatory = $true)]
+    [string]
+    $ImagesDirPath
 )
 
 function Get-ImageMimeMapping {
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [string]
         $fileName
     )
     $extension = [System.IO.Path]::GetExtension($fileName);
     $mimeTypeMap = @{
-        '.png'                          = 'image/png'
-        '.jpe'                          = 'image/jpeg'
-        '.jpeg'                         = 'image/jpeg'
-        '.jpg'                          = 'image/jpeg'
-        '.gif'                          = 'image/gif'
-        '.bmp'                          = 'image/bmp'
-        '.svg'                          = 'image/svg+xml'
-        '.webp'                         = 'image/webp'
-        '.jfif'                         = 'image/jfif'
+        '.png'  = 'image/png'
+        '.jpe'  = 'image/jpeg'
+        '.jpeg' = 'image/jpeg'
+        '.jpg'  = 'image/jpeg'
+        '.gif'  = 'image/gif'
+        '.bmp'  = 'image/bmp'
+        '.svg'  = 'image/svg+xml'
+        '.webp' = 'image/webp'
+        '.jfif' = 'image/jfif'
     }
 
     return $mimeTypeMap[$extension];
 }
 
-$accessToken = Get-AzAccessToken;
-if (-not $accessToken -or $accessToken.ExpiresOn.UtcDateTime -gt [System.DateTime]::UtcNow) {
-    Connect-AzAccount
+$ImageFilePaths = get-ChildItem $ImagesDirPath | Select-Object -ExpandProperty FullName
+
+if (-not $AccessKey) {
+    if (Get-ChildItem Env: | Where-Object { $_.Name -eq 'DotNETWeeklyStorageKey' }) {
+        $AccessKey = Get-ChildItem Env: | Where-Object { $_.Name -eq 'DotNETWeeklyStorageKey' } | Select-Object -ExpandProperty Value
+    }
 }
 
-$storageAccount = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName
+if (-not $AccessKey) {
+    $accessToken = Get-AzAccessToken;
+    if (-not $accessToken -or $accessToken.ExpiresOn.UtcDateTime -gt [System.DateTime]::UtcNow) {
+        Connect-AzAccount
+    }
+    $storageAccount = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName
 
-if (-not $storageAccount) {
-    Write-Error "Storage Account $($StorageAccountName) doesn't exist in the $($ResourceGroupName) resource group";
-    return
+    if (-not $storageAccount) {
+        Write-Error "Storage Account $($StorageAccountName) doesn't exist in the $($ResourceGroupName) resource group";
+        return
+    }
+    $context = $storageAccount.Context 
 }
-
-$context = $storageAccount.Context 
+else {
+    $context = New-AzStorageContext -StorageAccountName $StorageAccountName -StorageAccountKey $AccessKey
+}
 
 $container = Get-AzStorageContainer -Context $context -Container $EpisodeName
 
@@ -70,7 +85,7 @@ $ImageFilePaths | Foreach-Object {
         Blob             = $fileName
         Context          = $context
         StandardBlobTier = 'Cool'
-        Properties         = @{"ContentType" = $contentType }
+        Properties       = @{"ContentType" = $contentType }
     }
     $blob = Set-AzStorageBlobContent @blob2HT
     $uri = $blob.ICloudBlob.Uri
