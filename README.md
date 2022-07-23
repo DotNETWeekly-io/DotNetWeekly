@@ -12,7 +12,7 @@
 
 ### 2022
 
-**七月份**: [第 017 期](docs/episode-017.md) :high_brightness:
+**七月份**: [第 018 期](docs/episode-018.md) :high_brightness: | [第 017 期](docs/episode-017.md)
 
 **六月份**: [第 016 期](docs/episode-016.md) | [第 015 期](docs/episode-015.md)
 
