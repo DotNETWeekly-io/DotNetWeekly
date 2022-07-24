@@ -1,3 +1,5 @@
+[![linter](<https://dev.azure.com/tindi/DotNETWeekly/_apis/build/status/DotNETWeekly-io.DotNetWeekly%20(1)?branchName=master>)](https://dev.azure.com/tindi/DotNETWeekly/_build/latest?definitionId=10&branchName=master)
+
 # 介绍
 
 .NET 周刊是一个专注于`.NET`生态的资源中心，它的目标是收集`.NET` 生态中的有价值的内容，并且每周定期发布。它受到[科技爱好者周刊](https://github.com/ruanyf/weekly)和[Go 语言爱好者周刊](https://github.com/polaris1119/golangweekly) 的启发。
