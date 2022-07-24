@@ -17,6 +17,7 @@ jobs:
         docker run \
           -e RUN_LOCAL=true \
           -e VALIDATE_MARKDOWN=true \
+          -e FILTER_REGEX_INCLUDE=.*docs/.* \
           -v $(System.DefaultWorkingDirectory):/tmp/lint \
           github/super-linter
       displayName: 'Run Linter'
