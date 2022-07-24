@@ -1,9 +1,9 @@
-trigger:
+pr:
  branches:
-   exclude:
+   include:
      - master
  paths:
-  include:
+   include:
     - docs/*
 
 jobs:
