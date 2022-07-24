@@ -12,12 +12,12 @@
 
 1、[C# 11 抢先看](https://devblogs.microsoft.com/dotnet/early-peek-at-csharp-11-features/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/010/csharp-11.png)
+![csharp11](https://dotnetweeklyimages.blob.core.windows.net/010/csharp-11.png)
 
 随着 `Visual Studio 17.1` 发布，`C# 11` 已经可以尝试了。
 首先需要修改 `.csproj` 文件
 
-```
+```xml
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -29,7 +29,7 @@
 </Project>
 ```
 
-1.  插入字符串支持新行
+1. 插入字符串支持新行
 
 在过去如果多行字符串中添加新行，需要使用 `\r\n` 来进行转义，但是在 `C# 11` 中，我们可以直接使用原始多行字符串
 
@@ -151,7 +151,7 @@ public static void SubDictionaryParallelEnumerable(Dictionary<int, string> month
 
 2、[如何使用 Visual Studio 进行 Debug](https://code-maze.com/debugging-csharp-visual-studio/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/010/vs-debug.jpeg)
+![vs](https://dotnetweeklyimages.blob.core.windows.net/010/vs-debug.jpeg)
 
 Visual Studio 被誉为
 
@@ -167,13 +167,13 @@ Visual Studio 被誉为
 
 3、[在 .NET 中使用 GitHub Action](https://devblogs.microsoft.com/dotnet/dotnet-loves-github-actions/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/010/github-action.png)
+![action](https://dotnetweeklyimages.blob.core.windows.net/010/github-action.png)
 
 GitHub Action 是一套 CI/CD 的的工具，通过它能够实现自动化运维的目的，比如自动测试，自动构建和自动部署等功能。对于 .NET 用户而言需要掌握这些 GitHub Action 的功能。
 
 4、[.NET 存在的 6 个误解](https://blog.devgenius.io/6-net-myths-dispelled-celebrating-21-years-of-net-652795c2ea27)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/010/mispell-dotnet.png)
+![net](https://dotnetweeklyimages.blob.core.windows.net/010/mispell-dotnet.png)
 
 `.NET` 已经存在了 20 年了，但是大家仍然对他存在误解，这里挑选了 6 个误解并且解释它们
 
@@ -192,13 +192,13 @@ Ngnix 是著名的反向代理工具， 微软开源了一款用 `C#` 编写的�
 
 2、[MoreLinq 来增强 Linq 的功能](https://morelinq.github.io/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/010/morelinq.png)
+![morelinq](https://dotnetweeklyimages.blob.core.windows.net/010/morelinq.png)
 
 Linq 是 `C#` 最受欢迎的功能之一，但是内置的 `Linq to Object` 的功能还是无法满足部分开发需求，因此 `MoreLinq` 扩展了这部分内容。
 
 3、[stryker 测试你的单元测试](https://stryker-mutator.io/docs/stryker-net/introduction)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/010/stryke.svg)
+![stryker](https://dotnetweeklyimages.blob.core.windows.net/010/stryke.svg)
 
 单元测试是软件开发中重要组成部分，通常我们评价单元测试好坏使用的是**覆盖率**。但是实时真的如此吗？如果单元测试用例正好通过了代码分支，而且是一个特殊用例，这样说明这个单元测试质量并不好。`Stryker.NET` 包能够帮助我们检查我们单元测试质量。
 

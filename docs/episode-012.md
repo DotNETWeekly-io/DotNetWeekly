@@ -2,9 +2,9 @@
 
 ## 行业资讯
 
-1、[GitHub Code Copilot for Visual Studio 正式发布 ](https://github.blog/2022-03-29-github-copilot-now-available-for-visual-studio-2022/)
+1、[GitHub Code Copilot for Visual Studio 正式发布](https://github.blog/2022-03-29-github-copilot-now-available-for-visual-studio-2022/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/012/github-co-pilot.webp)
+![copilot](https://dotnetweeklyimages.blob.core.windows.net/012/github-co-pilot.webp)
 
 去年 `GitHub` 发布了 `Code Copilot` 之后，引起了行业内巨大的反馈，~人工智能取代程序员的日子即将到来~，但是只支持 `Visual Studio Code`。最近 `GitHub` 发布了 `Code Copilot` for `Visual Studio` 的插件，这样在宇宙第一 IDE 中编写代码，尤其是 `.NET` 的相关代码，也能得到人工智能的加持。
 
@@ -14,7 +14,7 @@
 
 3、[Nuget 统一包依赖管](https://devblogs.microsoft.com/nuget/introducing-central-package-management/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/012/nuget.png)
+![nuget](https://dotnetweeklyimages.blob.core.windows.net/012/nuget.png)
 
 `NuGet` 是 `.NET` 平台上使用的包管理工具，而依赖管理是包管理的核心功能，历史上 `.NET` 有两种方式管理项目的依赖
 
@@ -57,7 +57,7 @@
 
 2、[CancellationToken 的介绍](https://blog.stephencleary.com/2022/02/cancellation-1-overview.html)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/012/cancellation.jpg)
+![ct](https://dotnetweeklyimages.blob.core.windows.net/012/cancellation.jpg)
 
 `CancellationToken` 是 `.NET` 平台统一的取消模型，通过它可以取消某些操作，比如超时，取消事件发生等等。当然也有一些注意点
 
@@ -172,7 +172,7 @@ void DoSomethingForever(CancellationToken cancellationToken)
 
 3、[Timer 类介绍](https://code-maze.com/timer-csharp/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/012/Timer.png)
+![timer](https://dotnetweeklyimages.blob.core.windows.net/012/Timer.png)
 
 定时器 (Timer) 广泛使用在应用程序开发中，在达到一定的事件后，执行相关的操作。那么关于 `System.Timers.Timer` 类，由哪些需要注意的地方呢？
 
@@ -210,7 +210,7 @@ Console.WriteLine(textinfo.ToTitleCase("a tale oF tWo citIes")); // A Tale of Tw
 
 1、[Avaloniaui 开源 UI 库](http://avaloniaui.net/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/012/avaloniaui.png)
+![Avaloniaui](https://dotnetweeklyimages.blob.core.windows.net/012/avaloniaui.png)
 
 **Avaloniaui** 是 `.NET` 开源 UI 库，相对于 `MAUI`, 它更加是一种桌面跨平台 UI 平台，主要支持
 
@@ -222,6 +222,6 @@ Console.WriteLine(textinfo.ToTitleCase("a tale oF tWo citIes")); // A Tale of Tw
 
 2、[.NET nanoFramework](https://www.nanoframework.net/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/012/nano.png)
+![net](https://dotnetweeklyimages.blob.core.windows.net/012/nano.png)
 
 开发 `IoT` 或者嵌入式设备的应用程序，通常会选择 `C/C++` 这样的开发语言，`C#` 这类带 GC 的语言通常不在考虑的范围之内，`NanoFramework` 这个开源项目提供了一种选择，它通过裁剪过的 `runtime` 和 `library`，是 `.NET` 应用程序运行在 `IoT` 这样内存和闪存有限的设备中。

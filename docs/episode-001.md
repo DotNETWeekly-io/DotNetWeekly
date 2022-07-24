@@ -2,7 +2,7 @@
 
 ## 开卷语
 
-![](https://dotnetweeklyimages.blob.core.windows.net/001/world-of-dotnet.svg)
+![open](https://dotnetweeklyimages.blob.core.windows.net/001/world-of-dotnet.svg)
 
 各种各样的原因，`.NET` 在国内的流行程度仍然赶不上 `Java`, `C/C++` 这样的编程语言。作为 `.NET` 生态的参与者，常常想能不能做一些事情来改变这个情况。由于语言的原因，很多外网 `.NET` 社区的内容并没有在国内传播过来。因此 `DotNET Weekly` 将会专注于分享全球 `.NET` 社区内容，通常会包含下面三种的类型的资源：
 

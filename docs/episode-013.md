@@ -17,7 +17,7 @@ string s = GetValue();
 
 这里的 `s` 既可以表示为普通的字符串，也可以表示为一个`null`。在 `C#` 工程文件中，可以通过这种方式开启 `NRT`
 
-```
+```xml
 <Nullable>enable</Nullable>
 ```
 
@@ -134,7 +134,7 @@ Console.WriteLine(slug.Length); // All good! Known to be not null
 
 1、[Visual Studio 中浏览 IEnumerable 对象](https://github.blog/2022-03-29-github-copilot-now-available-for-visual-studio-2022/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/013/ienumerable.gif)
+![vs](https://dotnetweeklyimages.blob.core.windows.net/013/ienumerable.gif)
 
 在 `Visual Studio` 中如果调试 `IEnumerable` 对象的时候，通常是比较难受的体验，因为需要挨个查看其中的每个对象。在 Visual Studio 17.2. Preview 2 中，可以使用表格的方式渲染每个对象，每一行是代表每个对象，而每一列则是对象的属性，表格甚至可以用 Excel 打开。
 
@@ -142,9 +142,9 @@ Console.WriteLine(slug.Length); // All good! Known to be not null
 
 1、[MAUI 尝试](https://codeblog.jonskeet.uk/2022/04/16/taking-net-maui-for-a-spin/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/013/jonskeet.jpg)
+![maui](https://dotnetweeklyimages.blob.core.windows.net/013/jonskeet.jpg)
 
-_Jon Skeet_ 是 `.NET` 社区大名鼎鼎的人物，近期尝试了 `MAUI` 的最新版本，将他之前的 `Windows-only` 的应用扩展成一个 `MacOS` 和移动端的应用程序。
+Jon Skeet 是 `.NET` 社区大名鼎鼎的人物，近期尝试了 `MAUI` 的最新版本，将他之前的 `Windows-only` 的应用扩展成一个 `MacOS` 和移动端的应用程序。
 总结起来两点：
 
 1. 这个一个非常有用的平台，因为它扩展了原本的限制；
@@ -152,24 +152,24 @@ _Jon Skeet_ 是 `.NET` 社区大名鼎鼎的人物，近期尝试了 `MAUI` 的�
 
 2、[格式化 C# 代码](https://blog.stephencleary.com/2022/02/cancellation-1-overview.html)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/013/format.png)
+![csharp](https://dotnetweeklyimages.blob.core.windows.net/013/format.png)
 
 `.NET 6` 将 `dotnet format` 命令集成进来，这个工具可以帮助我们格式化代码，使他们符合我们定义好的规则，通常这些规则定义在 `.editorconfig` 文件中，否则就使用一些默认的规则，或者分析器的规则。
 虽然目前 IDE 已经集成了这个工程，但是每个 IDE 都是不一样的，而且开发者需要记住这些命令，因此使用
 
-```
+```bash
 dotnet format
 ```
 
 更加是更加好的选择，而
 
-```
+```bash
 dotnet format --verify-no-changes
 ```
 
 可以将违反规则的代码展示出来，并且返回非 0 的返回码，比如说
 
-```
+```bash
 Run dotnet format --verify-no-changes
 Warning: /home/runner/work/dotnet-format/dotnet-format/DotnetFormatExample/Calculator.cs(7,13):
 warning IDE0007: use 'var' instead of explicit type
@@ -181,7 +181,7 @@ Error: Process completed with exit code 2.
 
 3、[ASP.NET Core 面试](https://khalidabuhakmeh.com/aspnet-core-interview-questions-and-answers)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/013/interview.webp)
+![aspnetcore](https://dotnetweeklyimages.blob.core.windows.net/013/interview.webp)
 
 作为一个 `ASP.NET Core` 开发人员，那么如果面试中，问了这些问题，你该如何回答呢？
 
@@ -193,19 +193,19 @@ Error: Process completed with exit code 2.
 
 4、[C# 程序员学习 C++](https://www.jacksondunstan.com/articles/5530)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/013/cpp.png)
+![c++](https://dotnetweeklyimages.blob.core.windows.net/013/cpp.png)
 
 对于 `Unity` 开发人员来说，`C#` 是一门必须要掌握的开发语言。但是对于其他游戏开发引擎而言，`C++` 则是一门更加通用的开发语言，这个教程介绍了 `C#` 开发人员如何学习 `C++`，并且比较他们的异同点。
 
 5、[C# 代码规则](https://christianfindlay.com/2022/04/24/code-rules/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/013/roslyn.png)
+![rule](https://dotnetweeklyimages.blob.core.windows.net/013/roslyn.png)
 
 `Roslyn` 是 C# 编译器，它包含了各种代码规范的规则。在开发过程中，打开 `Roslyn` 分析器可以帮助我们写出更好的代码。
 
 6、[Microsoft Graph 迁移到 .NET 6](https://devblogs.microsoft.com/dotnet/microsoft-graph-dotnet-6-journey/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/013/graphapi.png)
+![graph](https://dotnetweeklyimages.blob.core.windows.net/013/graphapi.png)
 
 Microsoft Graph 团队分享了代码库从之前的 `.NET Framework` 迁移到 `.NET 6` 的过程。结果是显而易见的，在性能上取得了巨大的成功，而且为将来引入更多先进的功能提供了可能。在文章中也给出了迁移的步骤：
 
@@ -226,6 +226,6 @@ Microsoft Graph 团队分享了代码库从之前的 `.NET Framework` 迁移到 
 
 2、[使用 C# 实现贝叶斯分类](https://visualstudiomagazine.com/articles/2022/05/02/naive-bayes-classification-csharp.aspx)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/013/bayes.png)
+![bayes](https://dotnetweeklyimages.blob.core.windows.net/013/bayes.png)
 
 朴素贝叶斯分类是机器学习中一种重要的分类方法， 对于离散型数值分类有着广泛的应用。这篇文章介绍如何使用 `C#` 实现一个简单的朴素贝叶斯分类器。

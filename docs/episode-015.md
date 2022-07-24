@@ -165,7 +165,7 @@ class Program
 
 1、[MAUI 已经 General Available](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/015/maui.png)
+![maui](https://dotnetweeklyimages.blob.core.windows.net/015/maui.png)
 
 前一阵子 `MAUI` 宣布 GA，这篇文章进一步介绍了 `MUAI` 的内容，主要包含
 
@@ -179,14 +179,14 @@ class Program
 
 2、[MS Build Twitter 文字直播](https://twitter.com/sinclairinat0r/status/1529521744444276736)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/015/msbuild.png)
+![msbuild](https://dotnetweeklyimages.blob.core.windows.net/015/msbuild.png)
 想要了解 `MS build` 大会的实时内容，可以访问这个 Twitter thread。
 
 ## 文章推荐
 
 1、[自动格式化文件](https://www.talkingdotnet.com/code-cleanup-on-save-in-visual-studio-2022/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/015/cleanup.png)
+![format](https://dotnetweeklyimages.blob.core.windows.net/015/cleanup.png)
 
 我们知道 `dotnet format` 可以格式化我们的代码，使之更加符合标准。那么在 `Visual Studio` 中能否在保存文件的时候就将格式化呢？答案是肯定在 `2022 17.2.2` 版本中可以配置该功能:
 Tools -> Options -> Text Editor -> Code Cleanup ->Run Code Cleanup profile on Save.
@@ -197,7 +197,7 @@ MAUI 系列视频教程
 
 3、[ASP.NET 应用迁移到 ASP.NET Core 方案](https://devblogs.microsoft.com/dotnet/incremental-asp-net-to-asp-net-core-migration/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/015/aspnetcore.jpg)
+![aspnetcore](https://dotnetweeklyimages.blob.core.windows.net/015/aspnetcore.jpg)
 
 `ASP.NET Core` 作为现代化 Web 开发平台，拥有很多开发优势。但是由于很多历史包袱问题，仍然有很多应用程序仍然使用 `ASP.NET` 框架，该文章介绍了如何从 `ASP.NET` 迁移到 `ASP.NET Core` 的方法
 
@@ -206,9 +206,9 @@ MAUI 系列视频教程
 1. 对于大型项目，如何增量式的迁移
 2. 如何决绝 `System.Web.dll` 带来的问题
 
-4、[如何缓存 ASP.NET Core 应用的响应 ](https://code-maze.com/aspnetcore-response-caching/)
+4、[如何缓存 ASP.NET Core 应用的响应](https://code-maze.com/aspnetcore-response-caching/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/015/cache.png)
+![aspnetcore](https://dotnetweeklyimages.blob.core.windows.net/015/cache.png)
 
 缓存 `Cache` 是提高应用程序性能的常规手段，在 `Web` 服务中，通常使用 `cache-control` header 的字段来控制响应的缓存策略。那么在 `Asp.NET Core` 中提供了 `ResponseCache` 属性（attribute）来辅助 `Controller` 来自定义这些内容。
 
@@ -222,7 +222,7 @@ public IActionResult Get()
 
 那么请求访问这个 `Controller` 的时候，返回的 Header 中的内容如下
 
-```
+```plain
 cache-control: public, max-age=120
 ```
 
@@ -230,7 +230,7 @@ cache-control: public, max-age=120
 
 1、[HttpClient 单元测试](https://code-maze.com/csharp-mock-httpclient-with-unit-tests/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/015/httpclient.png)
+![httpclient](https://dotnetweeklyimages.blob.core.windows.net/015/httpclient.png)
 
 在软件开发过程中，经常会通过网络访问外部资源。那么就会使用 `HttpClient` 这个类，那么该如何如何进行单元测试呢？
 
@@ -298,13 +298,13 @@ _msgHandler.Expect("https://reqres.in/api/users/*")
 
 2、[命令行 GUI](https://github.com/migueldeicaza/gui.cs)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/015/gui.png)
+![gui](https://dotnetweeklyimages.blob.core.windows.net/015/gui.png)
 
 对于 `console` 应用程序，黑乎乎的命令行有时候仍然不满足我们的需求，我们需要更加丰富的 `GUI` 来满足我们的要求。而 `gui.cs` 是基于 `.NET Core` 的库，这也意味着，它具备了跨平台的能力。
 
 1、[ASP.NET Core 必需的库](https://procodeguide.com/asp-net-core/10-essential-nuget-libraries/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/015/nuget.png)
+![aspnetcore](https://dotnetweeklyimages.blob.core.windows.net/015/nuget.png)
 
 开发 `ASP.NET Core` 应用程序，这些库是非常有必要的
 

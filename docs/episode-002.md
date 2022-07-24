@@ -2,7 +2,7 @@
 
 ## 开卷语
 
-![](https://dotnetweeklyimages.blob.core.windows.net/002/anders.jpeg)
+![andersHejlberg](https://dotnetweeklyimages.blob.core.windows.net/002/anders.jpeg)
 
 最近 `C#` 之父 _Anders Hejlsberg_ 接受了一个专访，回顾了一下在 `C#` 开发过程中历程和对最新版本的思考。有趣的是，采访的主持人是 _Anders_ 的亲弟弟。
 
@@ -27,7 +27,7 @@
 
 Reddit 有人发布了一张 `.NET` 的发展历程
 
-![](https://dotnetweeklyimages.blob.core.windows.net/002/dotnetroadmap.png)
+![.netroadmap](https://dotnetweeklyimages.blob.core.windows.net/002/dotnetroadmap.png)
 
 - 上面是操作系统，Visual Studio， C# 语言
 - 下面是 CLR 的版本
@@ -50,7 +50,7 @@ catch (Exception e)
 }
 ```
 
-对于早期*刀耕火种*的时期日志，这样做是没有问题的，但是现代日志有更加丰富的功能，称之为语义化日志或者结构化日志。在遇到异常的时候，`runtime` 会在栈向上查找，在匹配后展开（unwind），这样的问题就会将日志的上下文丢弃了。而 `.NET` 支持异常过滤器，如果在异常过滤器中记录日志，就能保留下日志的上下文。
+对于早期刀耕火种的时期日志，这样做是没有问题的，但是现代日志有更加丰富的功能，称之为语义化日志或者结构化日志。在遇到异常的时候，`runtime` 会在栈向上查找，在匹配后展开（unwind），这样的问题就会将日志的上下文丢弃了。而 `.NET` 支持异常过滤器，如果在异常过滤器中记录日志，就能保留下日志的上下文。
 
 ```Csharp
 try
@@ -75,9 +75,9 @@ public static bool False(Action action)
 
 - PowerShell 诞生的三个节点
 
-  1.  在处理 `XML` 的时候，需要一种管道的处理方式
-  2.  尝试用 `.NET` 实现通用的 Shell
-  3.  编写了 Monad Manifesto
+1. 在处理 `XML` 的时候，需要一种管道的处理方式
+2. 尝试用 `.NET` 实现通用的 Shell
+3. 编写了 Monad Manifesto
 
 - Linux 是一种基于文件的操作系统，而 Windows 是基于 API。这个也就导致了 `Bash` 基于文本这种非结构化数据，而 `PowerShell` 更专注于结构化数据。
 - 对于 `PowerShell` 的推广，我们更加关注于别人是否用了我们的工具取得了更大的成功，而不是他们是否在使用我们的工具。
@@ -101,7 +101,7 @@ using(var httpClient = new HttpClient())
 
 1、 [构建 Resilient 的引用程序 - Polly](https://github.com/App-vNext/Polly)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/002/polly.jpeg)
+![polly](https://dotnetweeklyimages.blob.core.windows.net/002/polly.jpeg)
 
 我们都知道一个最基本的事实
 

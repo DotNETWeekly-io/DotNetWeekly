@@ -8,7 +8,7 @@
 
 1、[优化 .NET 性能的 11 个最佳实践](https://michaelscodingspot.com/cpu-bound-memory-bound/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/007/performance.jpeg)
+![net](https://dotnetweeklyimages.blob.core.windows.net/007/performance.jpeg)
 
 应用程序的性能通常会分为两种
 
@@ -19,7 +19,7 @@
 
 2、[.NET Framework 和 .NET Core 介绍](https://procodeguide.com/dotnet/getting-started-net-core-framework/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/007/dotnet-core-framework.png)
+![netfxcore](https://dotnetweeklyimages.blob.core.windows.net/007/dotnet-core-framework.png)
 
 `.NET Framework` 和 `.NET Core` 是 `.NET` 世界讨论最多的两个话题。一个代表了过去，一个代表了现在和未来。这系列文章能够再一次帮你回顾一下它们的联系和区别。
 
@@ -56,7 +56,7 @@ public void Method() {
 
 4、[使用 DateTimeOffset](https://ardalis.com/why-use-datetimeoffset/?utm_sq=gyiamfvfod)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/007/datetimeoffset.png)
+![datetimeoffset](https://dotnetweeklyimages.blob.core.windows.net/007/datetimeoffset.png)
 
 `DataTime` 是在 `C#` 中广泛使用地类型，但是它最大地问题是它没有包含时区信息，而是根据运行系统确定时区，所以导致了这样一个问题。
 
@@ -80,11 +80,11 @@ rightNow.ToUniversalTime(); //  1/30/2022 2:50:00 AM
 
 4、[ASP.NET Core 6 中性能提升](https://devblogs.microsoft.com/dotnet/performance-improvements-in-aspnet-core-6/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/007/aspnet-core-performance.png)
+![aspnetcore](https://dotnetweeklyimages.blob.core.windows.net/007/aspnet-core-performance.png)
 
 得益于 `.NET 6` 在性能方面的提升，`ASP.NET Core 6` 在性能方面也到了提升，这边文章带你展示了这些提升的示例。
 
-- Span<T>：使用 `Span<T>` 可以大幅提高字符串操作方面性能的提升。
+- Span`<T>`：使用 `Span<T>` 可以大幅提高字符串操作方面性能的提升。
 - Idle Connection: 在 `ASP.NET Core` 应用程序中广泛使网络链接，`ASP.NET Core 6` 中通过三种类型的数据类型来提高性能。
 - Blazor： 之前 `byte[]` 和 `Javascript` 中进行数据交换的使用 `Base64` 编码，这并不是一个高效的做饭，在 `ASP.NET Core` 中使用 `byte[]` 和 `Uint8Array` 进行转换。
 - ...
@@ -93,7 +93,7 @@ rightNow.ToUniversalTime(); //  1/30/2022 2:50:00 AM
 
 1、[防御性编程](https://github.com/safakgur/guard)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/007/guard.png)
+![guard](https://dotnetweeklyimages.blob.core.windows.net/007/guard.png)
 
 防御性编程要求在函数在接受参数的时候，验证这些参数的合法性，比如说
 
@@ -128,6 +128,6 @@ public Person(string name, int age)
 
 2、[PowerShell RDP](https://github.com/DarkCoderSc/PowerRemoteDesktop)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/007/powershell-rdp.png)
+![ps](https://dotnetweeklyimages.blob.core.windows.net/007/powershell-rdp.png)
 
 我们都知道 `PowerShell` 很 `Power`, 这个开源项目实现了通过 `PowerShell` 实现了 `RDP (Remote Desktop Protocols)` 。

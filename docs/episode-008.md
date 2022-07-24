@@ -4,7 +4,7 @@
 
 `.NET` 已经 20 周年啦。现在[官网](https://dotnet.microsoft.com/en-us/?utm_source=dotnetblog&utm_medium=banner&utm_campaign=.netanniversary)正在举办一系列活动。
 
-![](https://dotnetweeklyimages.blob.core.windows.net/008/dotnet-20.jpeg)
+![net](https://dotnetweeklyimages.blob.core.windows.net/008/dotnet-20.jpeg)
 
 > Check it out
 
@@ -51,13 +51,13 @@ void M(object arg!!)
 
 1、[Web Form 到 .NET 6](https://www.poppastring.com/blog/modernizing-dasblog-from-web-forms-to-net-6)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/008/das-blog.jpeg)
+![webform](https://dotnetweeklyimages.blob.core.windows.net/008/das-blog.jpeg)
 
 这边播客介绍如何将一个 19 年历史基于 `.NET` Web Forms 的播客转换为一个 `.NET 6` 的跨平台的应用程序。这里讨论了如何移除已有的解决方案，并且选择开源社区的解决的各种决策。
 
 2、[Miguel de Icaza 访谈](https://www.dotnetrocks.com/default.aspx?ShowNum=1779)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/008/miguel-de-icaza.jpeg)
+![migueldeicaza](https://dotnetweeklyimages.blob.core.windows.net/008/miguel-de-icaza.jpeg)
 
 这篇播客是和 `Miguel de Icaza` 讨论一下 `.NET` 20 周年，他是 `Mono Project` 的发起人，之后他创造了 `Mono Touch`, `Xamarin` 等等。在这里对话中，他讨论了开源的演化，科技公司对开源项目的影响还有开源项目维护者在将来的展望。
 
@@ -65,7 +65,7 @@ void M(object arg!!)
 
 一张图了解如何实现返回值拆包。
 
-![](https://dotnetweeklyimages.blob.core.windows.net/008/deconstructor.jpeg)
+![unwrap](https://dotnetweeklyimages.blob.core.windows.net/008/deconstructor.jpeg)
 
 4、[Ｃ# 日志处理新方法](https://www.youtube.com/watch?v=MHIheQ2_Yb4&t=329s&ab_channel=NickChapsas)
 
@@ -97,7 +97,7 @@ public static void IsNotNull<T>(T value, [CallerArgumentExpression("value")] str
 {
     if (value is null)
     {
-	throw new ArgumentNullException(message);
+        throw new ArgumentNullException(message);
     }
 }
 ```
@@ -115,11 +115,11 @@ public static void IsNotNull<T>(T value, [CallerArgumentExpression("value")] str
 ```Csharp
 public ITuple UnsafeCastArgument(object o)
 {
-	return Unsafe.As<ITuple>(o);
+    return Unsafe.As<ITuple>(o);
 }
 public ITuple RegularCastArgument(object o)
 {
-	return (ITuple)o;
+    return (ITuple)o;
 }
 ```
 
@@ -170,4 +170,4 @@ ret
 
 对 `.NET` 后端程序员程序员，查看一下 2022 年的 `Roadmap`
 
-![](https://dotnetweeklyimages.blob.core.windows.net/008/Backend-.NET-Developer-Roadmap-2022.png)
+![roadmap](https://dotnetweeklyimages.blob.core.windows.net/008/Backend-.NET-Developer-Roadmap-2022.png)

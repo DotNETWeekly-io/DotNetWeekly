@@ -4,7 +4,7 @@
 
 微软公司选择在每年的 11 月份发布新的 `.NET` 版本，主要分为两种类型
 
-![](https://dotnetweeklyimages.blob.core.windows.net/018/DotnetEdition.png)
+![net](https://dotnetweeklyimages.blob.core.windows.net/018/DotnetEdition.png)
 
 - Long Term Support (LTS): 长期支持版本，通常为偶数版，比如 `.NET 6`
 - Current: 是当前版本，通常为奇数版，比如 `.NET 5`.
@@ -69,7 +69,7 @@ public static string GetLastMethod1(string[] names)
 }
 ```
 
-    这里引入了一个结构 `Index`，它接受一个参数表示索引值，第二个参数表示是否从尾部开始；而对于从尾部开始，可以使用语法糖 `^`。
+这里引入了一个结构 `Index`，它接受一个参数表示索引值，第二个参数表示是否从尾部开始；而对于从尾部开始，可以使用语法糖 `^`。
 
 ```csharp
 public static string GetLastMethod2(string[] names)
@@ -87,7 +87,7 @@ public static string GetLastMethod2(string[] names)
     public Range(Index start, Index end);
 ```
 
-    注意 `start` 表示包含，而 `end` 则是不包含。
+注意 `start` 表示包含，而 `end` 则是不包含。
 
 ```csharp
 public static string[] GetFirstTwoElements(string[] arr)
@@ -99,7 +99,7 @@ public static string[] GetFirstTwoElements(string[] arr)
 }
 ```
 
-    和 `Index` 一样，Range 也支持语法糖方式
+和 `Index` 一样，Range 也支持语法糖方式
 
 ```csharp
 public static string[] GetAll(string[] arr)

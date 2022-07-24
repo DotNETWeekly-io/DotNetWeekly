@@ -4,7 +4,7 @@
 
 Global Using 怎么使用？
 
-![](https://dotnetweeklyimages.blob.core.windows.net/016/globalusing.jfif)
+![using](https://dotnetweeklyimages.blob.core.windows.net/016/globalusing.jfif)
 
 `using` 关键字在 `C#` 中有多种用途，最主要的是引入命名空间，以方便该文件中的代码可以使用这些命名空间中的类，委托等等。但是在 `C# 10` 之前，`Using` 的作用域是文件级别的，也就是说不同的文件，都要包含响应的的 `using` 语句，这些难免有写繁琐。在 `C# 10` 引入了 `Global using` 的功能，它主要有两种实现方式，当然也可以混合使用。
 
@@ -32,7 +32,7 @@ global using MyNamespace;
 
 1、[.NET 用户态线程要来了？](https://twitter.com/davidfowl/status/1532880744732758018)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/016/greenthread.png)
+![greenthread](https://dotnetweeklyimages.blob.core.windows.net/016/greenthread.png)
 
 总所周知，线程上下文切换是非常耗时的操作，在 `.NET` 的 `async` 和 `await` 都是交给线程池来处理。 `.NET` 团队打算实现一种用户态的线程，也叫做 `Green Thread`，它是由 `runtime` 来控制，并且非常轻量，就跟 `Go` 语言中的 `goroutine` 一样。
 
@@ -46,7 +46,7 @@ global using MyNamespace;
 
 1、[Exchange Online 迁移 .NET Core](https://devblogs.microsoft.com/dotnet/exchange-online-journey-to-net-core/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/016/exchange.jpg)
+![exchagneonline](https://dotnetweeklyimages.blob.core.windows.net/016/exchange.jpg)
 
 `CosmosDB` 和 `GraphAPI` 之后，微软的另一个重要服务 `Exchange Online` 也尝试将之前的 `.NET Framework` 迁移到 `.NET Core`。由于 `Exchange Online` 的庞大的仓库，首先从使用量不大的 `Pop3` 和 `IMap4` 开始，逐步从 `.NET Framework` 到 `.NET Core 3.1` ，再到 `.NET 5` `.NET 6` 等等，答案是显著的，不管是内存使用，CPU 的使用量，以及 GC 的时间和次数，都得到了显著的提升。
 
@@ -109,7 +109,7 @@ L0032: call 0x719cc280
 
 6、[为什么你需要关心 .NET GC 的问题](https://tooslowexception.com/why-should-you-care-about-net-gc/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/016/gc.png)
+![gc](https://dotnetweeklyimages.blob.core.windows.net/016/gc.png)
 
 很多时候，我们并不关心 `.NET` GC 的问题，因为它看上去好像跟我们没有什么关系。`.NET` 的抽象已经将这些细节全部隐藏起来了， 只需要关心使用即可。但是仅仅是抽象是不够的，因为
 
@@ -189,4 +189,4 @@ public class EnumRunner
 }
 ```
 
-![](https://dotnetweeklyimages.blob.core.windows.net/016/benchmark.png)
+![benchmark](https://dotnetweeklyimages.blob.core.windows.net/016/benchmark.png)
