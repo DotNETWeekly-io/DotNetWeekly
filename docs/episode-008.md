@@ -12,7 +12,7 @@
 
 1、[.NET MAUI Preview 12 发布](https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-12/)
 
-![](https://dotnetweeklyimages.blob.core.windows.net/008/maui-12.png)
+![maui](https://dotnetweeklyimages.blob.core.windows.net/008/maui-12.png)
 
 `.NET MAUI` 发布新的 Preview 版本，该版本包含了如下
 
