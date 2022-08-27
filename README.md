@@ -16,7 +16,7 @@
 
 ### 2022
 
-**八月份**: [第 020 期](docs/episode-020.md) :high_brightness: | [第 019 期](docs/episode-019.md)
+**八月份**: [第 021 期](docs/episode-021.md) :high_brightness: | [第 020 期](docs/episode-020.md) | [第 019 期](docs/episode-019.md)
 
 **七月份**: [第 018 期](docs/episode-018.md) | [第 017 期](docs/episode-017.md)
 
