@@ -2,7 +2,7 @@
 
 ## 卷首语
 
-[MAUI Blazor App 教程 ](https://www.c-sharpcorner.com/article/build-a-blazor-hybrid-app-with-net-maui-for-cross-platform-application)
+[MAUI Blazor App 教程](https://www.c-sharpcorner.com/article/build-a-blazor-hybrid-app-with-net-maui-for-cross-platform-application)
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/023/NET%20MAUI%20Blazor%20App.png)
 
@@ -45,7 +45,7 @@
 
 毫无疑问，一年一度的 `.NET` 发布日期即将到来。最近 `.NET 7 RC1` 已经发布了，包含以下的重点
 
-- MAUI 
+- MAUI
 - Cloud Native 支持
 - ARM 64 性能提升
 - Modernization 无痛升级
@@ -97,15 +97,15 @@ Mads 目前是 `C#` 语言的首席架构师，这篇播客是对他的采访，
 - C# 的语言和 `.NET` 版本的分离对开发的体验
 - 如何对 `C#` 社区做出贡献
 
-2、[Seal class 有助于提高性能 ](https://www.youtube.com/watch?v=d76WWAD99Yo&ab_channel=NickChapsas)
+2、[Seal class 有助于提高性能](https://www.youtube.com/watch?v=d76WWAD99Yo&ab_channel=NickChapsas)
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/023/Seal%20class%20有助于提高性能.png)
 
 `Sealed` 修饰符 `C#` 语法的一部分，它表示这个类不能被继承，不为人知道的是它在性能上有很好的提升。
 如果 `sealed` 修饰的类，那么得到下面的好处
 
--  `override` 方法可以直接调用而不是查看虚方法表，也就是这些方法可以内联
--  `is` 和 `as` 这样的类型转换可以高效实现，因为不需要比较类型本身而不是潜在的继承关系
+- `override` 方法可以直接调用而不是查看虚方法表，也就是这些方法可以内联
+- `is` 和 `as` 这样的类型转换可以高效实现，因为不需要比较类型本身而不是潜在的继承关系
 - 数组不需要进行考虑协变的问题
 - 创建 `Span` 类型的时候不要验证其真正的类型
 
