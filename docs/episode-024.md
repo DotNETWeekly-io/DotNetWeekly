@@ -32,7 +32,11 @@ Entity Framework Core RC2现在已经发布，RC2版本包含GA版本计划的�
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/024/dotnetCallJS.png)
 
-`.NET 7` 为在基于 `JavaScript` 的应用程序中的 `WebAssembly` 提供了改进的支持，包括丰富的 `JavaScript` 互操作机制。 .NET 7 中的 `WebAssembly` 支持是 `Blazor WebAssembly` 应用程序的基础，但也可以独立于 Blazor 使用。现有的 `JavaScript` 应用程序可以使用 .NET 7 中扩展的 `WebAssembly` 支持来重用 `JavaScript` 中的 .NET 库或构建全新的基于 .NET 的应用程序和框架。 `Blazor WebAssembly` 应用程序还可以使用新的 `JavaScript` 互操作机制来优化与 `JavaScript` 和 `Web` 平台的交互。在这篇文章中，我们将了解 .NET 7 中新的 `JavaScript` 互操作支持，并使用它来构建经典的 `TodoMVC` 示例应用程序。
+`.NET 7` 为在基于 `JavaScript` 的应用程序中的 `WebAssembly` 提供了改进的支持，包括丰富的 `JavaScript` 互操作机制。
+.NET 7 中的 `WebAssembly` 支持是 `Blazor WebAssembly` 应用程序的基础，但也可以独立于 Blazor 使用。
+现有的 `JavaScript` 应用程序可以使用 .NET 7 中扩展的 `WebAssembly` 支持来重用 `JavaScript` 中的 .NET 库或构建全新的基于 .NET 的应用程序和框架。
+`Blazor WebAssembly` 应用程序还可以使用新的 `JavaScript` 互操作机制来优化与 `JavaScript` 和 `Web` 平台的交互。
+在这篇文章中，我们将了解 .NET 7 中新的 `JavaScript` 互操作支持，并使用它来构建经典的 `TodoMVC` 示例应用程序。
 
 2、[Linq 学习](https://anthonygiretti.com/2022/09/29/net-learn-linq-as-you-never-have-before/?utm_source=isaacl&utm_medium=twitter&utm_campaign=link&WT.mc_id=link-twitter-isaacl)
 
