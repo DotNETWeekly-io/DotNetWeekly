@@ -72,7 +72,7 @@ stopwatch.Stop();
 Timespan ts = stopwatch.Elapsed;
 ```
 
-对于简单的应用程序，这样没有任何问题。但是 `Stopwatch` 是一个 `Class` 类型，也就是说每次操作都会在栈上分配一个空间。对于 `hot path` 路径中的代码，对内存压力还是比较大。
+对于简单的应用程序，这样没有任何问题。但是 `Stopwatch` 是一个 `Class` 类型，也就是说每次操作都会在堆上分配一个空间。对于 `hot path` 路径中的代码，对内存压力还是比较大。
 
 `Stopwatch` 类中有一些静态方法，它可以避免内存的分配
 
@@ -82,7 +82,7 @@ var start = Stopwatch.GetTimestamp();
 var elapse = Stopwatch.GetElapsedTime(start);
 ```
 
-如果更近一步，将他们封装一个 `ValueStopwatch` 结构
+如果更近一步，将它们封装一个 `ValueStopwatch` 结构
 
 ```csharp
 public struct ValueStopwatch

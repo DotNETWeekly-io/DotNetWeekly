@@ -43,7 +43,7 @@ C# 中的 `WaitAll` 可以接受一些列异步的 `Task` 并且等所有的 `Ta
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/025/httpquery.png)
 
-标准的 `HTTP` 请求方法有 `GET`, `POST`, `PUT` 等等。那么如果想要自定义一个方法，比如 `QUERY`，改如何实现呢？ `ASP.NET Core` 非常有扩展性，这篇文章介绍了怎么完成这件事。
+标准的 `HTTP` 请求方法有 `GET`, `POST`, `PUT` 等等。那么如果想要自定义一个方法，比如 `QUERY`，改如何实现呢？ `ASP.NET Core` 有很强的扩展性，这篇文章介绍了怎么完成这件事。
 
 4、[C# 最差实践](https://code-maze.com/csharp-programming-mistakes/)
 

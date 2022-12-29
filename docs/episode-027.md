@@ -14,7 +14,7 @@
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/027/fleet.png)
 
-`Fleet` 是 JetBrains 公司最新推出的集成开发环境，它支持远程开发，并且通过 LSP 支持个多种开发语言。最近 `JetBrains` 宣布 `Fleet` 已经支持 C# 语言
+`Fleet` 是 JetBrains 公司最新推出的集成开发环境，它支持远程开发，并且通过 LSP 支持个多种开发语言。最近 `JetBrains` 宣布 `Fleet` 已经支持 C# 语言。
 
 2、[JetBrains .NET Day 视频汇总](https://www.youtube.com/playlist?list=PLQ176FUIyIUbSS1HBVrqEyNHpfSh166KW)
 

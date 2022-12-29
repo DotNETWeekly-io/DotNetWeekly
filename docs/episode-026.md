@@ -119,6 +119,22 @@ var value = random.Next();
 return value;
 ```
 
+但是他们并不是真正的随机数，因为只要给定了了相同的 `Seed`，就会生成相同的随机数列。如果不给定，就是用系统时钟。所以下面的两个 `Random` 实例可能产生相同的数列
+
+```csharp
+Random rand1 = new Random(42);
+Random rand2 = new Random(42);
+```
+
+`.NET 6` 推出了新的随机数列，有更强的随机性
+
+```csharp
+var r = RandomNumberGenerator.Create();
+var bytes = new byte[sizeof(int)];
+r.GetNonZeroBytes(bytes);
+Console.WriteLine($"{BitConverter.ToInt32(bytes)}");
+```
+
 7、[异步锁的使用方法](https://dfederm.com/async-mutex/)
 
 我们都知道，`Mutex` 是不能用在异步方法中的，应为 `mutex` 的释放必须要求使用同一个线程。那么我们改怎么顶一个异步`mutex` 呢？
