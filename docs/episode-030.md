@@ -37,7 +37,7 @@ static (string, int, double) QueryCityData(string name)
 }
 ```
 
-1.  显式指定字段类型
+1. 显式指定字段类型
 
 ```csharp
 (string city1, int population1, double area1) = QueryCityData("New York City");
