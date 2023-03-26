@@ -2,15 +2,15 @@
 
 ## 卷首语
 
-之前微软发布了一篇名为 [为什么选择.NET](https://devblogs.microsoft.com/dotnet/why-dotnet/) 的文章。作者对它进行了思考
+之前微软发布了一篇名为 [为什么选择.NET](https://devblogs.microsoft.com/dotnet/why-dotnet/) 的文章，作者对它进行了思考
 
-1.  这篇文章是给谁看的
+1.  这篇文章的目标读者是谁？
 
-这篇文章对于 `.NET` 初学者而言，太复杂了；而对于老手而言，又太简单了。所以这篇文章是那些使用其他的语言，并且对其他编程语言进行评估。
+这篇文章对于新手来说有些复杂，而对于老手则过于简单。它更适合那些已经在使用其他语言的开发人员对其他编程语言进行评估的人阅读。
 
 2. `.NET` 的设计点是什么
 
-原文提出了四个设计点：生产力，性能，安全和可靠性。作者认为最大的地方在于生产力 （Productivity）。最新的 `.NET 7` 对于一个简单的 ASP.NET Core 的应用程序只需要三四行代码
+该文章提出了四个设计原则：生产力、性能、安全和可靠性。然而，作者认为最重要的原则是生产力。最新版本的 .NET 7，例如，只需要三到四行代码就可以创建一个简单的 ASP.NET Core 应用程序：
 
 ```csharp
 var app = WebApplication.Create();
@@ -18,11 +18,11 @@ app.MapGet("/", (string? name) => "Hello {name ?? "World"}!");
 app.Run();
 ```
 
-而且现在微软积极的拥抱行业标准，比如 `gPRC` 和 `OpenTelemtry` 等等。
+此外，微软正在积极采用行业标准，例如 gRPC 和 OpenTelemetry 等。
 
-3. 它会改变人们的看法吗
+3. 这篇文章会改变人们对 .NET 的看法吗？
 
-它只会对那些已经对 `.NET` 感兴趣或者开始考虑使用它的人有作用。
+这篇文章只会对已经对 .NET 感兴趣或者正在考虑使用它的人有所帮助。
 
 ## 行业资讯
 
@@ -30,7 +30,7 @@ app.Run();
 
 ![image](https://dotnetweeklyimages.blob.core.windows.net/033/dotnetupgrade.png)
 
-微软发布了一款 `Visual Studio` 插件，可以帮助你升级你的 `.NET` 应用程序到最新的版本，同样也支持从 `.NET Framework` 迁移到 `.NET Core` 版本。它支持的类型有
+微软发布了一个 Visual Studio 插件，它可以帮助你将 .NET 应用程序升级到最新的版本，也支持从 .NET Framework 迁移到 .NET Core 版本。它支持的类型有：
 
 - ASP.NET
 - 类库

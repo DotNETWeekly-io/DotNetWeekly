@@ -47,10 +47,10 @@ public static void LogInformation(this ILogger logger, string? message, params o
 
 ```Csharp
 public void Method() {
-   if (_logger.IsEnable(LogLevel.Infomation)
-   {
-           _logger.LogInformation("This is the {0} days",  days);
-   }
+    if (_logger.IsEnable(LogLevel.Infomation)
+    {
+        _logger.LogInformation("This is the {0} days",  days);
+    }
 }
 ```
 
