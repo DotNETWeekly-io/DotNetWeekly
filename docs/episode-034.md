@@ -2,7 +2,7 @@
 
 ## 卷首语
 
-上周有人朋友问了一个问题，怎么实现在多线程中使用 `Dictionary`, 最直接想法是使用 `ConcurrentDictionary` 类型。但是这个类太重了， 因为在性能重要的应用场景中，并不是一个很好的选择。如果直接使用 `lock` 方法，又太简单粗暴，因为更多使用场景是多线程读，而不是写。后来就问了一下 `ChatGPT`，看到它又什么建议：
+上周有个朋友问了一个问题，怎么实现在多线程中使用 `Dictionary`, 最直接想法是使用 `ConcurrentDictionary` 类型。但是这个类太重了， 因为在性能重要的应用场景中，并不是一个很好的选择。如果直接使用 `lock` 方法，又太简单粗暴，因为更多使用场景是多线程读，而不是写。后来就问了一下 `ChatGPT`，看到它又什么建议：
 
 Q: How to use the C# dictionary in in multiple threads?
 
