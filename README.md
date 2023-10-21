@@ -16,7 +16,9 @@
 
 ### 2023
 
-**九月份**： [第 042 期](docs/episode-042.md) :high_brightness: | [第 041 期](docs/episode-041.md)
+**十月份**： [第 042 期](docs/episode-043.md) :high_brightness: 
+
+**九月份**： [第 042 期](docs/episode-042.md) | [第 041 期](docs/episode-041.md)
 
 **八月份**： [第 040 期](docs/episode-040.md)
 
