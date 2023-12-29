@@ -9,14 +9,13 @@
 我们打算在两个平台上发布
 
 - GitHub
-- [Web](https://dotnetweekly.azurewebsites.net/)
-  - [源码](https://github.com/DotNETWeekly-io/DotNetWeeklyWeb)
+- [Web](https://www.fungkao.net/searchByTag/.NET%20Weekly)
 
 ## 周刊
 
 ### 2023
 
-**十二月份**： [第 046 期](docs/episode-046.md) :high_brightness:
+**十二月份**： [第 046 期](docs/episode-047.md) :high_brightness: | [第 046 期](docs/episode-046.md)
 
 **十一月份**： [第 045 期](docs/episode-045.md) | [第 044 期](docs/episode-044.md)
 

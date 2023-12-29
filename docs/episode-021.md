@@ -44,7 +44,7 @@ static async Task<IEnumerable<int>> FetchItems()
 
 不幸的是出现编译错误
 
-> The body of 'Program.FetchItems()' cannot be an iterator block because 'Task<IEnumerable<int>>' is not an iterator interface type
+> The body of 'Program.FetchItems()' cannot be an iterator block because `Task<IEnumerable<int>>` is not an iterator interface type
 
 这时候需要换成 `IAsyncEnuermable` 类型
 
