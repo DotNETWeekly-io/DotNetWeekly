@@ -13,9 +13,13 @@
 
 ## 周刊
 
+### 2024
+
+**一月份**： [第 048 期](docs/episode-048.md) :high_brightness: 
+
 ### 2023
 
-**十二月份**： [第 046 期](docs/episode-047.md) :high_brightness: | [第 046 期](docs/episode-046.md)
+**十二月份**： [第 047 期](docs/episode-047.md) | [第 046 期](docs/episode-046.md)
 
 **十一月份**： [第 045 期](docs/episode-045.md) | [第 044 期](docs/episode-044.md)
 
