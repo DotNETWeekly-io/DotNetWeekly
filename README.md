@@ -15,7 +15,9 @@
 
 ### 2024
 
-**一月份**：  [第 049 期](docs/episode-049.md) :high_brightness: | [第 048 期](docs/episode-048.md)
+**二月份**： [第 050 期](docs/episode-050.md) :high_brightness:
+
+**一月份**：  [第 049 期](docs/episode-049.md) | [第 048 期](docs/episode-048.md)
 
 ### 2023
 
