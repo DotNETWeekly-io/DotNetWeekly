@@ -2,7 +2,7 @@
 
 ## 开卷语
 
-![andersHejlberg](https://dotnetweeklyimages.blob.core.windows.net/002/anders.jpeg)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/78799ce0-0770-4f0e-843b-30af6e86c6f2)
 
 最近 `C#` 之父 _Anders Hejlsberg_ 接受了一个专访，回顾了一下在 `C#` 开发过程中历程和对最新版本的思考。有趣的是，采访的主持人是 _Anders_ 的亲弟弟。
 
@@ -27,7 +27,7 @@
 
 Reddit 有人发布了一张 `.NET` 的发展历程
 
-![.netroadmap](https://dotnetweeklyimages.blob.core.windows.net/002/dotnetroadmap.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/45f0b132-26f0-406c-82f2-96ca05ee578c)
 
 - 上面是操作系统，Visual Studio， C# 语言
 - 下面是 CLR 的版本
@@ -101,7 +101,7 @@ using(var httpClient = new HttpClient())
 
 1、 [构建 Resilient 的引用程序 - Polly](https://github.com/App-vNext/Polly)
 
-![polly](https://dotnetweeklyimages.blob.core.windows.net/002/polly.jpeg)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/92393e7a-eccd-4faa-9801-4603cf0aee17)
 
 我们都知道一个最基本的事实
 

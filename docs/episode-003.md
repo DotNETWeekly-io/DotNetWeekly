@@ -2,7 +2,7 @@
 
 ## 开卷语
 
-![xmas](https://dotnetweeklyimages.blob.core.windows.net/003/xmas.webp)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/2ef63404-4614-4c26-b15d-8b3242d471c6)
 
 圣诞节快乐！
 
@@ -16,11 +16,11 @@
 
 与 Windows 11 中的 Widget 一下，Visual Studio 团队打算为其增加一个类似 Kanban 的功能 `Widget`，通过它可以避免在不同的应用程序之间跳转。
 
-![widget](https://dotnetweeklyimages.blob.core.windows.net/003/vs-widget.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/0ecc0c0e-c7e6-46b6-b21e-4a6f913f284c)
 
 3、[.NET Conf 2021 中国大会回顾](https://www.cnblogs.com/shanyou/p/15707498.html)
 
-![conf](https://dotnetweeklyimages.blob.core.windows.net/003/dotnet-conf-china.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/e8ea64a7-f964-4a4a-a1b1-66e2c8f3257c)
 
 上周一年一度的中国 `.NET Conf` 圆满落幕，这是中国 `.NET` 开发者的峰会，也是学习，分享和拓展 `.NET` 生态的重要途径。由于疫情原因，今年的大会全部由线上举办。但是大会的质量并没有因此而下降，这篇文章带你回顾一下本次大会。
 
@@ -46,7 +46,7 @@
 
 3、[Linq via C#](https://weblogs.asp.net/dixin/linq-via-csharp)
 
-![linq](https://dotnetweeklyimages.blob.core.windows.net/003/linq.jpeg)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/94574dab-1638-447c-b3f6-a90c966ce308)
 
 `Linq` 是 `C#` 开发者中的*利器*， 但是很多时候，我们知道如何使用 `API`, 但是关于 `Linq` 背后的实现又掌握多少呢？这一些列文章可以帮你了解 `Linq` 的种种，主要分为三块
 
@@ -58,7 +58,7 @@
 
 1、[依赖注入框架 Autofac](https://autofac.org/)
 
-![autofac](https://dotnetweeklyimages.blob.core.windows.net/003/autofac.jpeg)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/b81d481a-080d-4deb-ab5e-0cb5c7628182)
 
 `Microsoft.Extension.DependencyInjection` 是在 `ASP.NET Core` 中广泛使用的依赖注入框架，在 `.NET` 生态中还有一个著名的框架叫 `autofac`。作为一个老牌的依赖注入框架，它提供了很多 `M.E.DependencyInjection` 不具备的功能
 
@@ -71,7 +71,7 @@
 
 2、[Entity Framework Plus](https://entityframework-plus.net/)
 
-![efplus](https://dotnetweeklyimages.blob.core.windows.net/003/ef-plus.jpeg)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/c0f05558-5077-48fd-a212-39ddb4e1e80d)
 
 `Entity Framework` 是一个优秀的 `ORM` 框架，但是由于设计取舍的问题，一些必要（Must Have）的特性的缺失在一些情况下会导致性能不够理想。因此 `Entity Framework Plus` 插件可以解决这个问题，它主要有一下的功能
 

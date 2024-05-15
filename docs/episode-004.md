@@ -13,7 +13,7 @@ Console.WriteLine("Hello .NET 2022!");
 
 1、[using 语句的使用](https://www.youtube.com/watch?v=iqt7bqAm27U&ab_channel=NickChapsas)
 
-![using](https://dotnetweeklyimages.blob.core.windows.net/004/using.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/a68a8dc0-69de-474c-a9fa-30606bd400eb)
 
 我们都知道使用 `using(var obj = new SomeClass())` 语句可以帮助我们安全的释放需要的内存，从本质上来讲，这是一个编译器的语法糖，上面的语句转换为如下
 
@@ -70,7 +70,7 @@ class LogHandler: IDisposable
 
 3、[readonly 和 const 的区别](https://medium.com/@serhat21zor/c-readonly-vs-const-43a1799fd07d)
 
-![readonlyconst](https://dotnetweeklyimages.blob.core.windows.net/004/const-readonly.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/53e25614-f10d-4150-aa32-e828fe7a85f1)
 
 `readonly` 和 `const` 广泛使用在 `C#` 代码中，它们的主要目的是降低程序中的可变性。它们的主要区别如下
 
@@ -113,15 +113,15 @@ Console.WriteLine(MyLib.StatusCode); // 200
 
 1. 返回非 2xx 的状态码，然后在 body 中填写响应的错误信息；
 
-![2xx](https://dotnetweeklyimages.blob.core.windows.net/004/non200.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/66df84e8-3652-47d0-86f0-5041cb5a7675)
 
 2. 返回 200 的状态码，然后在 Body 中填写响应的错误信息
 
-![200](https://dotnetweeklyimages.blob.core.windows.net/004/status-200.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/91820f3b-04b1-4a9e-b267-2acc35080b58)
 
 两者有本质上的不同，第一种叫做 `error.info`, 而第二种叫做 `message`。 其实标准的做法叫做 **Problem Details** (RFC7807)
 
-![error](https://dotnetweeklyimages.blob.core.windows.net/004/error-body.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/d0f7752a-32f7-44fa-bea1-5202af18149c)
 
 这里的字段都是有特定的意义。
 
@@ -129,6 +129,6 @@ Console.WriteLine(MyLib.StatusCode); // 200
 
 1、[2021 最活跃的 .NET 项目](https://twitter.com/sbwalker/status/1476976431972462601)
 
-![open](https://dotnetweeklyimages.blob.core.windows.net/004/dotnet-oss.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/dc3b86af-71ee-4c1c-8850-d035561ca819)
 
 这里是 2021 年最活跃的 `.NET` 开源项目列表，主要 `Pull Request`， `Commit` 和 `New Contributor` 三个指标统计。注意这里并不包含由 Microsoft 维护或者支持的项目。
