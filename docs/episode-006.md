@@ -2,7 +2,7 @@
 
 ## 开卷语
 
-![open](https://dotnetweeklyimages.blob.core.windows.net/006/csharp.jpeg)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/9e5eb65f-bd1c-484c-a53d-397ae7de5f0c)
 
 `Tiobe` 公布了 2021 年度语言，`Python` 再一次夺得头名。但是之前都是 `C#` 处于领头羊的位置，只不过在最后一个月被 `Python` 反超。不管怎样，都说明了 `C#` 仍然往好的方向发展。
 
@@ -18,7 +18,7 @@
 
 2、[Visual Studio 2022 格式化文件](https://devblogs.microsoft.com/visualstudio/bringing-code-cleanup-on-save-to-visual-studio-2022-17-1-preview-2/)
 
-![vs](https://dotnetweeklyimages.blob.core.windows.net/006/vs.gif)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/33aab5ed-98d3-4a3b-b999-7bd02f6e1e81)
 
 代码有两个主要目的：
 
@@ -35,7 +35,7 @@ PowerShell 是一个强大的 Shell 工具，这一系列课程帮你学习如�
 
 2、[StringBuilder 探秘](https://www.stevejgordon.co.uk/how-does-the-stringbuilder-work-in-dotnet-part-1-why-do-we-need-a-stringbuilder-and-when-should-we-use-one)
 
-![stringbuilder](https://dotnetweeklyimages.blob.core.windows.net/006/stringbuilder.jpeg)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/f17acd1e-6e75-4ea4-b5fe-b44dcdf85811)
 
 `StringBuilder` 是一个广泛使用的 `C#` 类，关于它有哪些具体的细节可以探索的呢？这一系列文章可以帮你了解它们
 
