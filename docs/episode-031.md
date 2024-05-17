@@ -2,7 +2,7 @@
 
 ## 卷首语
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/031/suvery.png)
+![image](https://user-images.githubusercontent.com/11272110/215267340-db4ef0b9-0a81-49c8-9035-72057a6cbc2d.png)
 
 Jetbrains 公司发起的 `.NET` 生态开发者的调查问卷结果，主要包含下面的问题:
 
@@ -20,7 +20,7 @@ Jetbrains 公司发起的 `.NET` 生态开发者的调查问卷结果，主要�
 
 1、[VS 上搜索体验提升](https://devblogs.microsoft.com/visualstudio/new-better-search-in-visual-studio/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/031/vssearch.png)
+![image](https://user-images.githubusercontent.com/11272110/215264189-2aa8f47d-5814-4cb1-8bd3-dbc17b4fcda4.png)
 
 Visual Studio 提升了搜索的体验，主要分为了代码搜索和功能搜索。选择 `Ctrl + T` 快捷键进行搜索，而且可以使用 `f:` , `t:` 和 `m:` 前缀分别表示文件，类型和成员搜索。
 
@@ -28,7 +28,7 @@ Visual Studio 提升了搜索的体验，主要分为了代码搜索和功能搜
 
 1、[C# 代码加密算法汇总](https://code-maze.com/dotnet-cryptography-implementations/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/031/encryption.png)
+![image](https://user-images.githubusercontent.com/11272110/215088138-9dad6418-847c-40c0-89e3-11683ebbe51b.png)
 
 数据加密是现在计算机网络的基础，通过加密可以确保我们数据的安全性，那么在 `C#` 中如何使用这些加密算法呢？
 
@@ -284,7 +284,7 @@ public string Display
 
 3、C# 构造函数简化
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/031/constructor.png)
+![image](https://user-images.githubusercontent.com/11272110/214998479-c20e5f5d-9097-431f-8b9b-7c565a6caf27.png)
 
 ```csharp
 class Person
@@ -301,25 +301,25 @@ class Person
 
 1、[bflat](https://github.com/bflattened/bflat)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/031/bflat.png)
+![image](https://user-images.githubusercontent.com/11272110/211019633-3564a226-aede-40a5-ba1c-9f8f6d99e425.png)
 
 bflat 是一个开源的 `C#` 编译工具，它可以将 `C#` 代码编译成可执行并且 NativeAOT 的执行文件。它和官方的编译工具的区别在于它可以运行在 `UEFI` 中，而且编译出来的文件体积小。
 
 2、[.NET 平台上的 COBOL 编译器](https://github.com/otterkit/otterkit)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/031/cobol.png)
+![image](https://user-images.githubusercontent.com/11272110/215096315-a1f37f8a-9ea9-43ac-b4b9-5e13dd7ef90d.png)
 
 `Cobol` 是一门古老的编程语言，至今仍然有不少机器任然运行者 Cobol 编写的程序。`.NET` 由于开放性，任何编程语言都可以在上面运行。`otterkit` 即使在 `.NET` 上实现了 `Cobol` 编译器。
 
 3、[QuestPDF](https://github.com/QuestPDF/QuestPDF)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/031/questpdf.png)
+![image](https://user-images.githubusercontent.com/11272110/215103756-c80f6024-cb80-4574-827c-09ac469b3641.png)
 
 `QuestPDF` 是一个开源的 `.NET` PDF 生成器，它可以按照指定的内容生成相应的 PDF 文件。而且它内置了实时浏览工具，可以动态查看生成的 PDF 内容。
 
 4、[MethodTimer](https://github.com/Fody/MethodTimer)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/031/methodtimer.png)
+![image](https://user-images.githubusercontent.com/11272110/215266589-73898067-d23d-470b-9ef5-7c3a3f9a0c3b.png)
 
 我们常常需要测量一个方法执行时间，最直接的方法是使用 `Stopwatch` 测量，比如说
 

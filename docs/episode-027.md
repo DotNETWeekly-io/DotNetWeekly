@@ -4,7 +4,7 @@
 
 [.NET Conf 所有视频列表](https://www.youtube.com/watch?v=8V_BUGFKdaI&list=PLdo4fOcmZ0oVlqu_V8EXUDDnPsYwemxjn&index=1&ab_channel=dotnet)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/027/.netconfi.png)
+![image](https://user-images.githubusercontent.com/11272110/202850822-1828190a-2c0f-4596-a261-2e99802a614d.png)
 
 `.NET Conf 2022` 已经结束了，这里的 Youtube 播放清单是今年的所有视频集合。
 
@@ -12,13 +12,13 @@
 
 1、[Fleet 支持 C#](https://blog.jetbrains.com/dotnet/2022/11/17/csharp-support-in-fleet/?utm_campaign=fleet&utm_content=blog-post-cs-fleet&utm_medium=referral&utm_source=twitter)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/027/fleet.png)
+![image](https://user-images.githubusercontent.com/11272110/203999481-005cb558-8ec6-4512-8bfc-ac996f48a95c.png)
 
 `Fleet` 是 JetBrains 公司最新推出的集成开发环境，它支持远程开发，并且通过 LSP 支持个多种开发语言。最近 `JetBrains` 宣布 `Fleet` 已经支持 C# 语言。
 
 2、[JetBrains .NET Day 视频汇总](https://www.youtube.com/playlist?list=PLQ176FUIyIUbSS1HBVrqEyNHpfSh166KW)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/027/.netopenday.png)
+![image](https://user-images.githubusercontent.com/11272110/203999025-33cfbb87-2166-4e47-87be-f1ede93bd941.png)
 
 今年 10 月 25 号，`JetBrains` 公司举办了 `.NET Day`, 会议是线上举办的，但是丝毫不影响会议的质量，这里是分享视频汇总。
 
@@ -26,19 +26,19 @@
 
 1、[Stackoverflow 使用 .NET](https://devblogs.microsoft.com/visualstudio/learn-github-in-visual-studio-learning-series/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/027/so.png)
+![image](https://user-images.githubusercontent.com/11272110/202849977-34d2b4d9-5cdf-41da-9972-1ffad254bbaf.png)
 
 [Stack Overflow](https://stackoverflow.com/) 是编程行业著名的网站，也是使用 `.NET` 技术开发大型互联网平台的优秀案例。在最近的 `.NET Conf` 上，`Stack Overflow` 的产品经理分享了该网站 `.NET` 迁移带来的性能上提升。
 
 2、[ASP.NET Core 真的有那么快吗？](https://dusted.codes/how-fast-is-really-aspnet-core)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/027/performance.png)
+![image](https://user-images.githubusercontent.com/11272110/202850253-1ad9fdeb-76e7-46c4-9185-4344dfa5d4e6.png)
 
 这张图也许大家并不陌生，常常用来宣传 `.NET` 的性能比其他编程语言的优势，该结果是基于 `TechEmpower` 的性能测试平台。这篇文章详细分析了测试的实现，发现事实上性能优势并没有这样夸张。
 
 3、[C#11 实例展示](https://www.youtube.com/watch?v=cqCBhkNroDI&ab_channel=NickChapsas)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/027/Csharp11.png)
+![image](https://user-images.githubusercontent.com/11272110/203996282-c1fb71a8-13c9-465c-b290-efb218fc1fee.png)
 
 随着 `.NET 7` 的发布， `C#` 11 也已经发布，这个通过实例详细介绍了 `C#11` 的特性，比如
 
@@ -133,7 +133,7 @@ dbContext
 
 6、[循环迭代的优化方法](https://www.youtube.com/watch?v=cwBrWn4m9y8&ab_channel=NickChapsas)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/027/span.png)
+![image](https://user-images.githubusercontent.com/11272110/204003943-006d6c09-ad6b-4917-9894-86646df99d13.png)
 
 `Span` 是 `C#` 中的一大优化，通常对于数组和列表，在访问他们的时候可以提高性能，在最近的版本中，`CollectionsMarshal` 和 `MemoryMarshal` 包含了优化的空间
 
@@ -152,7 +152,7 @@ for (int i = 0; i < asSpan.Length; i++)
 
 1、[Humanizer](https://github.com/Humanizr/Humanizer)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/027/humanizer.png)
+![image](https://user-images.githubusercontent.com/11272110/204072581-bfaca282-307e-476d-8d23-be53705dcfa4.png)
 
 在软件开发过程中，少不了将程序的结果和真正的用户交互。那么简单的 `ToString` 方法有时候并不能达到人类可读性的要求。 而 `Humanizer` 可以帮助我们做到这一点。
 

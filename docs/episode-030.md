@@ -8,7 +8,7 @@
 
 1、[Oracle EF Core 库发布](https://medium.com/oracledevs/announcing-oracle-entity-framework-core-7-d89a2495b7db)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/030/oracle.png)
+![image](https://user-images.githubusercontent.com/11272110/211009805-3e070235-6d46-49b9-955d-7ccc65e8ebca.png)
 
 上个月 Oracle 发布了 Entity Framework Core7 支持库。
 
@@ -24,7 +24,7 @@
 
 1、[使用 Tuple 进行拆包](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/deconstruct)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/030/tuple.png)
+![image](https://user-images.githubusercontent.com/11272110/210242292-e1437c0c-25ad-4b43-816f-fedcfba95bdf.png)
 
 Python 语言中一大特色就是 `tuple`，通过它可以返回多个数据。C# 中的 `Tuple` 类型也能完成同样的事情，比如定义一个这样的方法
 
@@ -145,7 +145,7 @@ p.Deconstruct(out var fName, out var lName, out var city,  out var state) ;
 
 2、[接口默认方法](https://code-maze.com/csharp-default-interface-method/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/030/defaultmethod.png)
+![image](https://user-images.githubusercontent.com/11272110/211012577-002b2ec0-9921-40e0-acee-fb740d902f52.png)
 
 `C# 8` 改进了 `Interface` 的行为，除了定义方法之外，还可以提供具体的默认方法，比如说下面的方法：
 
@@ -271,16 +271,16 @@ Kevin Gosse 是 `.NET` 社区著名的开发者，尤其是在编译器方面，
 
 1、[C# 初学者教程](https://www.youtube.com/watch?v=Z5JS36NlJiU&ab_channel=dotnet)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/030/csharpbeginner.png)
+![image](https://user-images.githubusercontent.com/11272110/211013829-1ed2af2c-57e9-42ec-a9d4-6c703c836116.png)
 
 最近微软推出了 `C#` 初学者教学视频，通过网页版交互式学习方式对入门者也是非常友好。
 
 2、[ScottPlot](https://github.com/dfinke/PowerShellScottPlot)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/030/scottplot.png)
+![image](https://user-images.githubusercontent.com/11272110/211014338-08236273-6b98-482d-abac-9bd64e1a8da8.png)
 
 `Polyglot` 是微软推出的 `Jupyter` 的 `.NET` 核，通过它可以在 `Jupyter Notebook` 中编写 `C#` , `F#` 或者 `Powershell` 代码。`ScottPlot` 是 `Powershell` 支持的扩展，通过它可以绘制出精美的统计图。
 
 3、[2022 年 .NET Foundation 最活跃的项目](https://www.dfnprojets.com)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/030/opensource.png)
+![image](https://user-images.githubusercontent.com/11272110/210233640-d3dad59b-c031-4c43-9b25-29e991efe74f.png)

@@ -2,7 +2,7 @@
 
 ## 卷首语
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/javacsharp.png)
+![image](https://user-images.githubusercontent.com/11272110/236653587-6ea89c74-dd27-4704-977c-347a4bf1ac5b.png)
 
 从诞生的第一天起， `C#` 就被认为是 `Java` 的模仿者。从历史来看，我们不能否认这一个观点。现在，每个编程语言都借鉴了其他的编程语言，那么从 `.NET Core` 之后，`C#` 又从 `Java` 中借鉴了什么呢？主要包含三个
 
@@ -64,7 +64,7 @@ _ => "unknown"
 
 1、[.NET 虚拟大会](https://devblogs.microsoft.com/dotnet/lets-learn-dotnet-anywhere-in-the-world/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/virutalevent.png)
+![image](https://user-images.githubusercontent.com/11272110/236820658-47b690f6-6821-49f3-ae8a-78d50cee9c83.png)
 
 通常而言，英语是 `.NET` 社区常用的沟通语言。但是最近 `.NET` 社区举办了全球的虚拟大会，而且在不同的时区和不同语言，值得大家参加。
 
@@ -72,7 +72,7 @@ _ => "unknown"
 
 1、[.NET 的 Timer](https://www.meziantou.net/too-many-timers-in-dotnet.htm)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/timer.png)
+![image](https://user-images.githubusercontent.com/11272110/236653020-bf7ece45-8b52-4b8b-b1fa-73f3958331f2.png)
 
 C# 中包含了很多 `Timer` 类，一般都用来进行一些定时的操作。主要分为两大类：
 
@@ -140,13 +140,13 @@ while (await periodicTimer.WaitForNextTickAsync(cts.Token))
 
 2、[.NET Standard 介绍](https://andrewlock.net/understanding-the-dotnet-ecosystem-the-introduction-of-dotnet-standard/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/netstandard.png)
+![image](https://user-images.githubusercontent.com/11272110/236672547-1cf6df5c-9c43-4eb3-ba3f-e04b45c33f71.png)
 
 `.NET Standard` 作为一个短暂的技术名词，在 `.NET` 历史中存在过一段时间。主要目的是解决 `.NET` 各个平台的之间代码的复用性，比如 `.NET Framework`, `Mono` 或者 `.NET Core`。它是一组 `API` 定义的集合，而各个平台包含这些 `API` 的实现。
 
 3、[String 和对象互转换](https://csharp.christiannagel.com/2023/04/14/iparsable/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/stringobject.png)
+![image](https://user-images.githubusercontent.com/11272110/236677011-5a48702c-6e3d-400e-a930-0e186609374e.png)
 
 将一个对象实例和字符串之间相互转换是很常见的要求，在 `C#` 中定义了接口来进行这些转换。
 
@@ -223,17 +223,17 @@ Person person = "Bill,Gates,US".Parse<Person>();
 
 4、[Azure OpenAI 使用](https://devblogs.microsoft.com/dotnet/getting-started-azure-openai-dotnet/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/openai.png)
+![image](https://user-images.githubusercontent.com/11272110/236678446-2beba9bd-f95c-46c1-a1ad-13c399d0b812.png)
 
 作为一名 `.NET` 开发者，该如何上手 `Azure OpenAI` 呢？这篇官方博客给出了建议。
 
 5、ASP.NET Core 中间件处理流程
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/aspnetcore.png)
+![image](https://user-images.githubusercontent.com/11272110/232258877-48fa89b7-f301-4a5c-aa19-562aa09c04e7.png)
 
 6、[WASM 介绍](https://speakerdeck.com/christianweyer/wasm-wasi-wtf-webassembly-101-for-net-developers)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/wasm.png)
+![image](https://user-images.githubusercontent.com/11272110/236679233-ab5ad9d4-20bb-41a7-b74a-54133be79ba8.png)
 
 WASM 是新的技术，`.NET` 也不能落后，这个幻灯片介绍了 `WASM` 和 `C#` 入门知识。
 
@@ -245,10 +245,10 @@ Mutation Test 是用来检测单元测试的质量，这个视频详细介绍这
 
 1、[Powershell 中的 chatgpt](https://dfinke.github.io/powershellai,%20powershell,%20chatgpt/2023/04/04/PowerShellAI-ChatGPT-Conversation-Mode.html)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/ai.png)
+![image](https://user-images.githubusercontent.com/11272110/236672985-799d6e49-74db-4394-ad27-0d9185580d3c.png)
 
 `ChatGPT` 火了，各种针对 `OpenAI` 的 API 开发的 AI 应用程序也数不胜数。 `PowerShellAI` 是一个开源的 PowerShell 库，使用它我们可以在 `Powershell` 中使用我们的人工智能助手。
 
 2、.NET 知名开源库
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/035/package.png)
+![image](https://user-images.githubusercontent.com/11272110/232258945-ec412741-b552-4c72-a311-97537cdfdd2b.png)

@@ -100,7 +100,7 @@ Visual Studio 17.5 已经发布，该版本改进了以下几个方面
 
 2、[Azure Developer - .NET Day](https://devblogs.microsoft.com/dotnet/announcing-azure-developers-dotnet-day/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/034/dotnetday.png)
+![image](https://user-images.githubusercontent.com/11272110/227718552-e3c8a845-e18a-46f3-89ad-9339cb551e2d.png)
 
 在西雅图时间的 4 月 5 日，微软将主办 .NET 专场的 Azure Developer 活动，届时将有演讲嘉宾出席。
 
@@ -108,25 +108,25 @@ Visual Studio 17.5 已经发布，该版本改进了以下几个方面
 
 1、[Rider 中使用 Git GUI](https://andrewlock.net/working-with-git-in-jetbrains-rider/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/034/gitrider.png)
+![image](https://user-images.githubusercontent.com/11272110/227676418-5970c60b-5c9f-4eec-a5e4-b6de9c70e4dc.png)
 
 尽管通常情况下人们在命令行中使用 `Git`，但许多集成开发环境（IDE）都集成了 `Git` 的图形用户界面（GUI）操作。在本文中，作者分享了使用 Rider 编辑器时的 Git 使用体验。
 
 2、[.NET 2023 路线图](https://www.youtube.com/watch?v=KCBH1fEIrxc&ab_channel=NickChapsas)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/034/roadmap.png)
+![image](https://user-images.githubusercontent.com/11272110/227678414-c8914541-498c-4833-96b2-4e31895c0223.png)
 
 知名博主 `Nick Chapsas` 分享了他的 .NET 2023 年中期路线图。
 
 3、[ChatGPT 4 重构代码](https://www.youtube.com/watch?v=y_NHMGZMb14&ab_channel=NickChapsas)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/034/refactor.png)
+![image](https://user-images.githubusercontent.com/11272110/227678848-a992b7e8-bccb-49dd-91ce-78ca9f99f958.png)
 
 大家都知道 `ChatGPT` 可以协助我们编写代码，而经过进一步升级的 `ChatGPT 4` 在编程方面有了更为显著的进步。在这个视频中，我们让 `ChatGPT 4` 对代码进行了重构，并提出了相应的要求。结果表明，`ChatGPT 4` 在这项任务中表现出色。
 
 4、[.NET 生态发展历程](https://andrewlock.net/understanding-the-dotnet-ecosystem-the-evolution-of-dotnet-into-dotnet-7/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/034/dotnethistory.png)
+![image](https://user-images.githubusercontent.com/11272110/227717925-a85bc9dc-36ae-4f1f-b681-f2e803c30628.png)
 
 本文探讨了.NET 的发展历程，主要内容包括：
 
@@ -144,13 +144,13 @@ Visual Studio 17.5 已经发布，该版本改进了以下几个方面
 
 1、[ChatGPT .NET SDK](https://github.com/marcominerva/ChatGptNet)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/034/sdk.png)
+![image](https://user-images.githubusercontent.com/11272110/227678245-e6009243-c3c9-4218-a20f-b3f321f1d9db.png)
 
 ChatGPT 是目前备受瞩目的技术创新，而且随着 OpenAPI 开放 WebAPI 接口，各行各业都可以利用 ChatGPT 来提高生产力。ChatGptNET 是一个开源库，将 WebAPI 封装成 SDK，为大家提供了更便捷的接入方式。
 
 2、[FluentValidation](https://github.com/FluentValidation/FluentValidation)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/034/validator.png)
+![image](https://user-images.githubusercontent.com/11272110/227680071-d40240d4-438e-4056-a8c6-f482a4b70d4a.png)
 
 FluentValidation 是一个开源的 `C#` 验证库，它可以验证某个对象事否满足要求。
 
@@ -195,7 +195,7 @@ results.Errors.ForEach(Console.WriteLine);
 
 3、[CSharpREPL](https://github.com/waf/CSharpRepl)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/034/repl.png)
+![image](https://user-images.githubusercontent.com/11272110/227718745-9ec34e93-7286-4c97-a21e-2c1822cdb7e7.png)
 
 `CSharpRepl` 时一个开源的 `C#` 的 REPL，它有一下的功能
 

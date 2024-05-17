@@ -4,8 +4,6 @@
 
 [MAUI Blazor App 教程](https://www.c-sharpcorner.com/article/build-a-blazor-hybrid-app-with-net-maui-for-cross-platform-application)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/muai.png)
-
 在本文中介绍了下列内容：
 
 - 什么是 Hybrid Blazor App
@@ -35,13 +33,13 @@
 
 1、[ASP.NET Core RC1 发布](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-rc-1)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/aspdotnetcore7.png)
+![image](https://user-images.githubusercontent.com/11272110/192072695-b629ade8-7e7f-4591-95ac-b65f27088b85.png)
 
 随着 `.NET 7` RC1 发布， `ASP.NET Core 7` 的 RC 也发布了，其中包含了若干个更新，现在可以体验起来。
 
 2、[.NET 7 RC1 发布](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/dotnet7rc.png)
+![image](https://user-images.githubusercontent.com/11272110/192072275-bb35de37-8ff6-4bda-846a-0a97beb4aa59.png)
 
 毫无疑问，一年一度的 `.NET` 发布日期即将到来。最近 `.NET 7 RC1` 已经发布了，包含以下的重点
 
@@ -53,13 +51,13 @@
 
 3、[.NET 7 在 arm 上性能提升](https://devblogs.microsoft.com/dotnet/arm64-performance-improvements-in-dotnet-7)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/dotnet7arm64.png)
+![image](https://user-images.githubusercontent.com/11272110/192071887-db8cde92-c60e-4665-ae52-8366e1db9068.png)
 
 `.NET` 从 Day 1 就是完全开放的，不仅仅是 `Windows`, `Linux` 或者 `MacOS`，而且能够运行在不同的 `CPU` 指令集中。最近即将发布的 `.NET 7` 在 `ARM64` 上有着很大的性能提升。
 
 4、[Winget 管理 .NET SDK](https://devblogs.microsoft.com/dotnet/dotnet-now-on-windows-package-manager)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/winget.png)
+![image](https://user-images.githubusercontent.com/11272110/192071276-eb699bbb-f526-4997-9496-7ef18b61d4df.png)
 
 `Winget` 是微软官方发布的 `Windows` 包管理器，通过它可以通过命令行安装一些软件和包。现在通过它可以安装 `.NET` SDK。
 
@@ -68,6 +66,7 @@
 - winget uninstall Microsoft.DotNet.SDK.6
 
 `Winget`主要命令如下：
+
 | 命令 | 用途 |
 | --------- | -------------------------- |
 | install | 安装给定的程序包 |
@@ -88,7 +87,7 @@
 
 1、[MadsTorgersen 采访](https://dotnetcore.show/episode-104-c-sharp-with-mads-torgersen)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/madstorgersen.png)
+![image](https://user-images.githubusercontent.com/11272110/189531050-2370ae2f-d61d-45b0-905b-396ebdab7ee0.png)
 
 Mads 目前是 `C#` 语言的首席架构师，这篇播客是对他的采访，主要分为下面几个方面
 
@@ -97,9 +96,9 @@ Mads 目前是 `C#` 语言的首席架构师，这篇播客是对他的采访，
 - C# 的语言和 `.NET` 版本的分离对开发的体验
 - 如何对 `C#` 社区做出贡献
 
-2、[Seal class 有助于提高性能](https://www.youtube.com/watch?v=d76WWAD99Yo&ab_channel=NickChapsas)
+2、[Sealed class 有助于提高性能](https://www.youtube.com/watch?v=d76WWAD99Yo&ab_channel=NickChapsas)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/sealclass.png)
+![image](https://user-images.githubusercontent.com/11272110/192070635-0c56d136-1876-4658-80ab-2d66f79f5f26.png)
 
 `Sealed` 修饰符 `C#` 语法的一部分，它表示这个类不能被继承，不为人知道的是它在性能上有很好的提升。
 如果 `sealed` 修饰的类，那么得到下面的好处
@@ -111,7 +110,7 @@ Mads 目前是 `C#` 语言的首席架构师，这篇播客是对他的采访，
 
 3、[C# 11 的新特性以及它能够解决的问题](https://rubikscode.net/2022/09/19/c-11-top-5-features-in-the-new-c-version)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/csharp11.png)
+![image](https://user-images.githubusercontent.com/11272110/192073685-94e8db85-aa8e-4fb8-8700-593f0acc17d1.png)
 
 `C#11` 即将发布，这里详细分析了 5 个重要的功能
 
@@ -136,7 +135,7 @@ Mads 目前是 `C#` 语言的首席架构师，这篇播客是对他的采访，
 
 4、[使用 PlayWright 测试 ASP.NET Core 应用程序](https://www.twilio.com/blog/test-web-apps-with-playwright-and-csharp-dotnet)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/playwright.png)
+![image](https://user-images.githubusercontent.com/11272110/192077644-f586458d-5797-43df-84a6-d904902f758c.png)
 
 在本篇文章中首先介绍了`Playwright`该库的一些特性，例如：
 
@@ -173,10 +172,6 @@ StackOverflow 中某位用户提出了一个问题：在下列代码中`handler`
 ## 开源项目
 
 1、[Apache Thrift](https://github.com/apache/thrift)
-
-![image](https://dotnetweeklyimages.blob.core.windows.net/023/thrift.png)
-
-图片为 Thrift 架构设计
 
 Thrift 是一个轻量级的、与语言无关的技术栈，可以用于点对点 RPC 实现。Thrift 为数据传输、数据序列化和应用程序级处理提供了清晰的抽象和实现。Thrift 的代码生成系统采用了简单的定义语言作为输入，并生成跨编程语言的代码，通过这些抽象代码来构建可互操作的 RPC 客户端和服务器。
 

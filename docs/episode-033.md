@@ -28,7 +28,7 @@ app.Run();
 
 1、[Visual Studio Extension 升级 .NET 项目](https://devblogs.microsoft.com/dotnet/upgrade-assistant-now-in-visual-studio/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/dotnetupgrade.png)
+![image](https://user-images.githubusercontent.com/11272110/224491081-d82e048e-58d1-47d3-ac5f-8029e75fa9e6.png)
 
 微软发布了一个 Visual Studio 插件，它可以帮助你将 .NET 应用程序升级到最新的版本，也支持从 .NET Framework 迁移到 .NET Core 版本。它支持的类型有：
 
@@ -40,7 +40,7 @@ app.Run();
 
 2、[.NET 8 预览版](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-1/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/dotnet8.png)
+![image](https://user-images.githubusercontent.com/11272110/224482631-3618af5b-02fd-4b2d-a844-65091ad20bfb.png)
 
 .NET 8 的预览版已经发布了，那么有那些方面的更新呢？
 
@@ -56,7 +56,7 @@ app.Run();
 
 1、[VS 代码智能提示](https://devblogs.microsoft.com/visualstudio/intellicode-api-usage-examples/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/vsintelligence.png)
+![image](https://user-images.githubusercontent.com/11272110/224482455-c890daa0-ccf8-468f-ba3c-9be577b9d68d.png)
 
 当我们使用 API 的时候，很多时候希望知道如何使用这些 API，当然查看官方文档是一个正确选择。但是如何我们能够查找大部分在真正项目中的使用方式就更好了。`Visual Studio` 最新的预览版为超过 100 K 的有名的 API 提供了 GitHub 查找功能。
 
@@ -243,7 +243,7 @@ public static double CalculateTax(double price, double percentageOfTax, bool pri
 
 4、[C# Clean Architecture](https://blog.ndepend.com/clean-architecture-for-asp-net-core-solution/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/cleanarchitecture.png)
+![image](https://user-images.githubusercontent.com/11272110/224476505-3e01c667-4437-443d-a199-1a146fe61c9c.png)
 
 对于 `ASP.NET Core` 的应用程序，如遵循 `Clean Architecture` 的设计原则的话，可以拆分为四个部分
 
@@ -320,13 +320,13 @@ public static void PrintCallerNameWithCallerMemberNameAttribute([CallerMemberNam
 
 6、[EF Core 中的 LINQ](https://www.youtube.com/watch?v=1Ld3dtnTrMw&ab_channel=dotnet)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/linq2sql.png)
+![image](https://user-images.githubusercontent.com/11272110/224474127-76d820ad-6588-4137-afed-8b0b46c1e570.png)
 
 LINQ 在 `C#` 编程中广泛使用，但是又不同的用途，比如 `LINQ to Object` ， `LINQ to SQL`。在 `EF Core` 中 `LINQ` 是怎么工作的呢？这个视频详细讨论了这个内容。
 
 7、[为 NuGet 编写高质量 README](https://devblogs.microsoft.com/nuget/write-a-high-quality-readme-for-nuget-packages/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/readme.png)
+![image](https://user-images.githubusercontent.com/11272110/224462144-1e03c722-8b23-4b3e-b002-4d45a7a30531.png)
 
 `README` 文件是客户接触某个工具，库或者软件第一个东西。比如当我们把我们的库推送 `NuGet` 中以方便全世界的开发者使用，那么 `README` 就更加重要了，那么这里有一些建议写出高质量的 `README` 文件
 
@@ -351,7 +351,7 @@ LINQ 在 `C#` 编程中广泛使用，但是又不同的用途，比如 `LINQ to
 
 1、[ONNX](https://devblogs.microsoft.com/dotnet/generate-ai-images-stable-diffusion-csharp-onnx-runtime/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/onnx.png)
+![image](https://user-images.githubusercontent.com/11272110/224481815-11afd250-b336-4671-9fed-d5d9940f57bb.png)
 
 `ONNX` 是一个开源的 AI 模型，而 `ONNX Runtime` 提供了大量的不同开发语言的接口，其中就有 C#，通过它你可以
 

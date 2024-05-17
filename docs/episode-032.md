@@ -4,7 +4,7 @@
 
 [为什么选择 .NET](https://devblogs.microsoft.com/dotnet/why-dotnet/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/dotnet.png)
+![image](https://user-images.githubusercontent.com/11272110/219825763-baa8f119-c799-41b9-9982-1f02d2f80006.png)
 
 最近 `.NET` 团队发布了一篇文章，介绍了自从 `.NET` 开源以来，微软和社区为 `.NET` 的发展和壮大做出的各种努力和付出。这也是为什么我们要选择 `.NET` 的原因。
 
@@ -12,7 +12,7 @@
 
 1、[.NET 语言更新策略](https://devblogs.microsoft.com/dotnet/update-to-the-dotnet-language-strategy/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/languages.png)
+![image](https://user-images.githubusercontent.com/11272110/218291917-aff30019-4d5c-4776-802d-21ed2675fff1.png)
 
 在 `.NET` 平台上有三种编程语言可以运行，分别是 `C#`， `F#` 和 `Visual Basic` 三种语言，那么微软官方对三种语言的支持承若是怎样的呢？
 
@@ -58,7 +58,7 @@ Event Source 是广泛使用的持久化状态的工具， `Marten` 是 `.NET` �
 
 3、[C# Web 安全开发建议](https://dev.to/bytehide/net-security-headers-a-senior-developers-guide-150d)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/security.png)
+![image](https://user-images.githubusercontent.com/11272110/218293000-2b684fb1-a021-468f-a869-1c570e07825b.png)
 
 我们都知道 Web 是不安全的，那么作为 `.NET` Web 开发工程师，需要在服务端做好这些防护工作。
 
@@ -119,7 +119,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 4、[Powershell 入门系列教程](https://twitter.com/khalilApriday/status/1623920383979290624)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/powershell.png)
+![image](https://user-images.githubusercontent.com/11272110/219817957-f0c2582a-9714-427d-b482-2831033f3c3c.png)
 
 这是一个 Powershell 学习资源的 twitter thread， 主要包含一下内容
 
@@ -132,7 +132,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 5、[C# 异步编程模式](https://code-maze.com/asynchronous-programming-patterns-dotnet/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/asynchronous.png)
+![image](https://user-images.githubusercontent.com/11272110/219822754-28e63aba-6f97-4a85-9307-62ce231d4191.png)
 
 在 `C#` 的历史发展过程中，异步编程经历过三种模式，分别为
 
@@ -254,7 +254,7 @@ Console.WriteLine(object.ReferenceEquals(".net weekly", dotnetweekly3));// true;
 
 1、[stride](https://github.com/stride3d/stride)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/033/stride.png)
+![image](https://user-images.githubusercontent.com/11272110/218292385-622972ee-c7ab-4bb2-9ca8-e836bf7ee4ce.png)
 
 Stride 是最近 `C#` 开源的游戏引擎库。
 

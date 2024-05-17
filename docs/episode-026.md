@@ -4,7 +4,7 @@
 
 [`.NET 7` 正式发布](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/.net7.png)
+![image](https://user-images.githubusercontent.com/11272110/201447306-03790fce-8b1b-42da-a9a5-df99a4b5e7c4.png)
 
 这周 `.NET` 社区最大的新闻就是 `.NET 7` 正式发布，在之前的预览版本中，我们已经看到过无数次的文章分析过 `.NET 7` 在各个方面的提升。官方的文章主要包含了一下几个部分：
 
@@ -23,7 +23,7 @@
 
 2、[.NET Conf 2022 发布汇总](https://www.poppastring.com/blog/net-conf-2022-announcements)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/.netconf.png)
+![image](https://user-images.githubusercontent.com/11272110/201447474-902536c5-1d21-4531-8914-b259133c328d.png)
 
 除了 `.NET 7` 的发布，这周还有其他内容的发布，这里给出了汇总
 
@@ -38,7 +38,7 @@
 
 3、[.NET MAUI 支持 Xcode 14 和 iOS 16](https://devblogs.microsoft.com/dotnet-ch/%e5%ae%98%e5%ae%a3-net-maui-%e6%94%af%e6%8c%81-xcode-14-%e5%92%8c-ios-16/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/muai.png)
+![image](https://user-images.githubusercontent.com/11272110/201470554-b500aa55-d536-4ab8-9a21-9e03f753315b.png)
 
 `.NET MAUI` 正式支持 `Xcode 14` 和 `iOS 16`。
 
@@ -46,7 +46,7 @@
 
 1、[Visual Studio + GitHub 学习教程](https://devblogs.microsoft.com/visualstudio/learn-github-in-visual-studio-learning-series/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/githubvs.png)
+![image](https://user-images.githubusercontent.com/11272110/200149224-30c82cb0-47a0-4614-af39-bbda64d0439d.png)
 
 调查显示，有 `34%` 的 Visual Studio 的开发人员没有使用版本控制工具，微软近期开放了学习课程，主要包含下面内容
 
@@ -58,7 +58,7 @@
 
 2、[.NET 应用程序获取 dump 的方式](https://www.meziantou.net/how-to-generate-a-dump-file-of-a-dotnet-application.htm)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/dump.png)
+![image](https://user-images.githubusercontent.com/11272110/200149549-6a969fe8-cac5-4187-bdd1-439485282809.png)
 
 Dump 文件是分析应用程序的重要文件格式，那么 `.NET` 应用程序有那些生成 `Dump` 文件的方式呢？
 
@@ -83,7 +83,7 @@ Dump 文件是分析应用程序的重要文件格式，那么 `.NET` 应用程�
 
 3、[using 语句在 Visual Studio 中高阶使用技巧](https://www.meziantou.net/configuring-visual-studio-to-handle-using-directives-automatically.htm)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/using.png)
+![image](https://user-images.githubusercontent.com/11272110/200150178-d10be51c-2ec6-430c-9848-60f3328743e4.png)
 
 `Using` 语句是 C# 中用来导入命令空间，在 `Visual Studio` 中对 `using` 语句有一些高级选项
 
@@ -94,7 +94,7 @@ Dump 文件是分析应用程序的重要文件格式，那么 `.NET` 应用程�
 
 4、[VS2022 中的特色功能](https://devblogs.microsoft.com/visualstudio/cool-features-in-visual-studio-2022/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/vs2022.png)
+![image](https://user-images.githubusercontent.com/11272110/200150487-d407a9de-b84f-4e46-88a1-70e4cd5ccd91.png)
 
 `Visual Studio 2022` 是 Visual Studio 历史上架构支持最大的更新，原生支持 64 位软件。除此之外，还有一个比较 Cool 的功能：
 
@@ -236,19 +236,19 @@ public sealed class AsyncMutex : IAsyncDisposable
 
 1、[Respwan](https://github.com/jbogard/Respawn)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/respwarn.png)
+![image](https://user-images.githubusercontent.com/11272110/201470154-47c95ee5-9367-4339-a12e-da1bc12b2794.png)
 
 `Respwan` 是测试中的辅助工具库，它可以恢复每个测试过程中对数据的修改。
 
 2、[内嵌 NoSQL 数据库](https://github.com/mbdavid/LiteDB)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/litedb.png)
+![image](https://user-images.githubusercontent.com/11272110/201447187-b7bbb786-5fa2-43b6-824a-b0bea39bc4be.png)
 
 LiteDb 是使用 `C#` 编写的内置 `NoSQL` 数据库，跟 `Sqlite` 一样，非常小巧，可以内置到应用程序中而不依赖外部单独数据库服务器。
 
 3、[CliWrap](https://github.com/Tyrrrz/CliWrap)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/026/cliwrap.png)
+![image](https://user-images.githubusercontent.com/11272110/201447943-b6b393a5-557d-474e-905e-1f2551b22e9c.png)
 
 如果要在 `C#` 中调用一个命令行，一般我们使用的方式是 `Process` 类
 
