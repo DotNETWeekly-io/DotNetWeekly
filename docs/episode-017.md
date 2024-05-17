@@ -4,7 +4,7 @@
 
 可枚举类型的选择
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/ienumerable.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/549bea43-5680-4bfc-8f66-41a1f1c32d7a)
 
 C# 基础库中包含了很多集合，比如 `List`, `Array` 或者 `HashSet`， 它们都实现了 `IEnumerable<T>` 接口。这样就会给编码的时候代码带来困惑，究竟使用哪种方式来实现呢？接下来分三种情况来考虑：
 
@@ -118,7 +118,7 @@ class Example4
 
 1、[.NET 类型的内存分配](https://www.youtube.com/watch?v=jONSIhMST9E&ab_channel=NickChapsas)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/memory.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/2dc70e49-2144-483e-a943-0f04d1b5095c)
 
 在 `C#` 中有两个主要类型，值类型和引用类型。一般我们认为值类型分配在栈上，而引用类型分配在堆上。事实果真如此吗？答案是一半正确，引用类型分配在堆上，而值类型会根据下面情况分别处理：
 
@@ -130,19 +130,19 @@ class Example4
 
 2、[.NET 101](https://dusted.codes/dotnet-basics)
 
-![my-dotnet-bot-mod](https://dotnetweeklyimages.blob.core.windows.net/017/dotnet101.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/2bac1ea3-0713-4f4d-8085-28f76fe669bd)
 
 这篇综述的文章，完整地介绍了 `.NET` 过去和现在，对于新手来说可以很方便地全局了解什么是 `.NET`。
 
 3、[.NET 字符串操作技巧汇总](https://www.youtube.com/watch?v=ioi__WRETk4&ab_channel=IAmTimCorey)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/string.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/bd88f4a7-a235-4e08-810c-96342c382847)
 
 字符串操作几乎是每个应用程序都要关注的内容，这个视频详细介绍了 `C#` 中如何使用操纵字符串。
 
 4、[.NET 中的正则表达式](https://code-maze.com/regular-expressions-csharp/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/regex.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/8db15604-3199-4fc9-9eb8-0c99a8628904)
 
 正则表达式是字符串处理的利器，在 `C#` 中 `Regex` 类包含了正则表达式处理的全部功能，这篇文章介绍了如何使用它们，包括
 
@@ -232,7 +232,7 @@ foreach (T result in listWithDuplicates)
 
 7、[C# Lambda 表达式](https://code-maze.com/lambda-expressions-in-csharp/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/linq.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/44b29386-0fd3-45ea-b6f3-4a09f090ae69)
 
 `Lambda` 表达式式 `C#` 的一个重要的功能，主要会用在如下的情况中
 
@@ -246,25 +246,22 @@ foreach (T result in listWithDuplicates)
 
 1、[.NET interactive 的 VS Code 插件](https://github.com/dotnet/interactive)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/vscode.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/af49b490-29c8-45dd-8a9b-192438bfae06)
 
 Visual Studio Code 是广泛使用的编辑器，其丰富的插件使得生态非常繁荣。`.NET` 的 `interactive` 项目提供了这样的插件，可以在 `VS Code` 中使用 `notebook` 编写 `.NET` 的代码，还支持其他语言，比如 `PowerShell`, `Javascript` 等等。
 
 2、[Java 运行在 .NET 平台上](https://github.com/ikvm-revived/ikvm)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/hava.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/1b1cfe52-ca5d-477f-b15e-1c71e436c76e)
 
 `IKVM`是一个有意思的开源项目，它可以将 `Java` 编写的 `Jar` 包转换成 `dll`, 并且可以在普通的 `C#` 应用程序中引用这个库。通常它要求 `Jar` 包使用的是 `JDK` 包含的标准库，否则出现错误的概率会非常大。
 
 3、[Ant Design Blazor](https://github.com/ant-design-blazor/ant-design-blazor)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/antdesign.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/a768edd7-d2fd-4526-a4b9-e2e96db57229)
 
 Ant Design Blazor 是基于 `Ant Design` 和 `Blazor` 的 UI 应用框架，支持 `.NET 3.1` 以上版本，并且各种主流浏览器。
 
 4、[roslynpad](https://github.com/roslynpad/roslynpad)
 
 通过 Avalonia UI 支持 Win/Mac/Linux，支持.csx——基于 C# 的脚本语言. 支持下载源代码，自行修改编译。
-功能对比 LinqPad 高级版
-
-![image](https://dotnetweeklyimages.blob.core.windows.net/017/roslynpad.png)

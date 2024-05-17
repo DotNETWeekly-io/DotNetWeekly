@@ -4,7 +4,7 @@
 
 微软公司选择在每年的 11 月份发布新的 `.NET` 版本，主要分为两种类型
 
-![net](https://dotnetweeklyimages.blob.core.windows.net/018/DotnetEdition.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/1f3e50d4-9ad8-4b1b-a090-1fa003b42bb1)
 
 - Long Term Support (LTS): 长期支持版本，通常为偶数版，比如 `.NET 6`
 - Current: 是当前版本，通常为奇数版，比如 `.NET 5`.
@@ -21,13 +21,13 @@
 
 1、[MAUI 和 DevOps 结合](https://devblogs.microsoft.com/dotnet/devops-for-dotnet-maui/)
 
-![Maui and DevOps](https://dotnetweeklyimages.blob.core.windows.net/018/MauiAndDevOps.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/2305300a-0e8b-4833-be95-47ae61552763)
 
 MAUI 已经推出很久了，那么如何使用 CI/CD 来构建和部署 MAUI 的应用程序呢？这篇文章提供了参考。
 
 2、[VS Code Server 来了](https://dotnetweeklyimages.blob.core.windows.net/018/VSCodeServer.png)
 
-![VS Code Server](https://dotnetweeklyimages.blob.core.windows.net/018/VSCodeServer.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/704c219c-10e9-4d8e-9cd7-6bc5c9df83b7)
 
 自从微软发布了 `VS Code` 之后，几乎占据了大部分编辑器的市场份额。之前 `VS code` 专注于桌面市场，随着新冠疫情依旧肆虐，居家办公越来越常见，远程开发变得越发流行。之前 `VS Code` 借助 `Remove Development` 插件，实现了远程办公。但是 `VS code` 团队想要更近一步，希望在浏览器上完成开发工作，这样手机，平板上也能进行开发。
 
@@ -35,7 +35,7 @@ MAUI 已经推出很久了，那么如何使用 CI/CD 来构建和部署 MAUI �
 
 3、[一键部署.NET 到 AWS](https://aws.amazon.com/blogs/developer/aws-announces-a-streamlined-deployment-experience-for-net-applications)
 
-![Dotnet publish to AWS](https://dotnetweeklyimages.blob.core.windows.net/018/PublishAWS.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/502db465-f02c-4d00-9c3a-5c5b089061e1)
 
 我们都知道 `Visual Studio` 和 `Azure` 结合的非常好，比如 C# 项目 `Publish` 按纽可以一键部署到 `Azure` 服务上，这也是微软的商业策略。但是不可否认的是 `AWS` 是最大的云服务提供商，最近 Amazon 推出了 `VS` 插件，可以一键将 C#代码部署到 `AWS` 中。
 
@@ -43,13 +43,13 @@ MAUI 已经推出很久了，那么如何使用 CI/CD 来构建和部署 MAUI �
 
 1、[C# 实现神经网络](https://rubikscode.net/2022/07/04/implementing-simple-neural-network-in-c/)
 
-![Neural Network](https://dotnetweeklyimages.blob.core.windows.net/018/NeuralNetwork.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/b1333648-06e7-475f-b71d-36b9c37aeccb)
 
 神经网络是目前人工智能的支持体系，虽然说现在流行的框架比如 PyTourch, TensorFlow 使我们不需要关心神经网络的具体实现，但是从头到尾实现一个神经网络可以是我们的基础更加牢固。这篇文章介绍了如何用 C# 实现一个神经网络，并且复习神经网络的基本知识。
 
 2、[C#中的切片和范围](https://code-maze.com/csharp-ranges-and-indices/)
 
-![Ranges and Indices](https://dotnetweeklyimages.blob.core.windows.net/018/RangesAndIndices.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/87d5ac97-12aa-4507-a2f7-5b6850027cca)
 
 C# 8 引入了索引 （index) 和范围 （range），可以支持类似 python 的索引和范围查询。
 
@@ -125,7 +125,8 @@ public static string[] GetThreeElementsFromMiddle(string[] arr)
 
 3、[FirstOrDefault 和 SingleOrDefault 的区别](https://www.youtube.com/watch?v=ZTWl2s8ScMc&ab_channel=NickChapsas)
 
-![FirstOrDefault and SingleOrDefault](https://dotnetweeklyimages.blob.core.windows.net/018/FirstOrSingle.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/8a2be940-ef8a-4cb5-a2a2-4604e2ab184e)
+
 
 - 如果集合没有元素: `SingleOrDefault` 和 `FirstOrDefault` 都返回类型的默认值
 - 如何集合只有一个元素： `SingleOrDefault` 和 `FirstOrDefault` 都返回该元素
@@ -173,12 +174,10 @@ public static string[] GetThreeElementsFromMiddle(string[] arr)
 
 1、[F#入门文档](https://leanpub.com/essential-fsharp)
 
-![Essential F#](https://dotnetweeklyimages.blob.core.windows.net/018/EssentialFsharp.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/49e6ce72-24b2-4f5b-be77-f14bc9e5c4c4)
 
 F# 入门文档。
 
 2、[Awesome Blazor](https://github.com/AdrienTorris/awesome-blazor)
-
-![Awesome Blazor](https://dotnetweeklyimages.blob.core.windows.net/018/AwesomeBlazor.png)
 
 该项目中汇总了许多与 Blazor 相关的内容，包含但不限于 Blazor 介绍、应用模板、不同种类的示例项目、教程、库和扩展、效率工具、文章、书籍推荐、课程等等。如果想要学习如何编写 Blazor 应用可以在该项目中查找到很多非常有用的推荐内容，同时该项目提供了[网站](https://jsakamoto.github.io/awesome-blazor-browser)可以对项目中的条目进行搜索。

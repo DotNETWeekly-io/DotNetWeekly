@@ -4,7 +4,7 @@
 
 Global Using 怎么使用？
 
-![using](https://dotnetweeklyimages.blob.core.windows.net/016/globalusing.jfif)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/a1a450df-a51b-4ab4-8d62-c9e026548ba1)
 
 `using` 关键字在 `C#` 中有多种用途，最主要的是引入命名空间，以方便该文件中的代码可以使用这些命名空间中的类，委托等等。但是在 `C# 10` 之前，`Using` 的作用域是文件级别的，也就是说不同的文件，都要包含响应的的 `using` 语句，这些难免有写繁琐。在 `C# 10` 引入了 `Global using` 的功能，它主要有两种实现方式，当然也可以混合使用。
 
@@ -32,13 +32,11 @@ global using MyNamespace;
 
 1、[.NET 用户态线程要来了？](https://twitter.com/davidfowl/status/1532880744732758018)
 
-![greenthread](https://dotnetweeklyimages.blob.core.windows.net/016/greenthread.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/67e1c8f3-11ff-4a8f-a04a-532933823b38)
 
 总所周知，线程上下文切换是非常耗时的操作，在 `.NET` 的 `async` 和 `await` 都是交给线程池来处理。 `.NET` 团队打算实现一种用户态的线程，也叫做 `Green Thread`，它是由 `runtime` 来控制，并且非常轻量，就跟 `Go` 语言中的 `goroutine` 一样。
 
 2、[.NET VSCode 插件不再开源？](https://github.com/OmniSharp/omnisharp-vscode/issues/5276)
-
-![image](https://dotnetweeklyimages.blob.core.windows.net/016/omnisharp.png)
 
 最近 `.NET` 社区又一个充满争议的话题出现了，我们都知道在使用 `VS Code` 开发 `.NET` 项目的时候，`OmniSharp` 是一个不可缺少的插件，但是由于历史的原因改插件没有采用 `LSP` 协议。现在微软打算不使用开源协议方式，开发新的 `VS Code` 插件，这个在社区引发了剧烈的讨论。大多人认为这个违反了 `Microsoft Love Open Source` 的宣传。
 
@@ -46,13 +44,13 @@ global using MyNamespace;
 
 1、[Exchange Online 迁移 .NET Core](https://devblogs.microsoft.com/dotnet/exchange-online-journey-to-net-core/)
 
-![exchagneonline](https://dotnetweeklyimages.blob.core.windows.net/016/exchange.jpg)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/fc65ca86-1c57-4169-acb4-0cc96f7a6c5e)
 
 `CosmosDB` 和 `GraphAPI` 之后，微软的另一个重要服务 `Exchange Online` 也尝试将之前的 `.NET Framework` 迁移到 `.NET Core`。由于 `Exchange Online` 的庞大的仓库，首先从使用量不大的 `Pop3` 和 `IMap4` 开始，逐步从 `.NET Framework` 到 `.NET Core 3.1` ，再到 `.NET 5` `.NET 6` 等等，答案是显著的，不管是内存使用，CPU 的使用量，以及 GC 的时间和次数，都得到了显著的提升。
 
 2、[AWS Lambda 推广者关于 .NET 的故事](https://fbouteruche.medium.com/why-i-have-been-in-love-with-c-and-net-for-more-than-15-years-34af4ddce0d8)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/016/lambdadotnet.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/f1d6eda7-4535-45ed-bf38-21b0c5691205)
 
 这个一篇来自 `.NET` 开发者的文章，他回顾了自己 `.NET` 经历的开端，然后分析了 `.NET` 社区的缺陷和进步，并且分析了 `AWS` 中 的 `Lambda` 中使用 `.NET` 的故事。
 
@@ -64,13 +62,13 @@ global using MyNamespace;
 
 4、[.NET 内存测验](https://tooslowexception.com/net-quiz-check-your-level-of-knowledge-about-net-memory-management/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/016/memory.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/da630bd3-a000-4f76-a3c9-b7ca9771db39)
 
 这是这是一些列测试题目问卷，考察一下你对 `.NET` 内存的了解程度。
 
 5、[string.Empty 和 "" 比较](https://www.youtube.com/watch?v=qWBi32-Njm8&ab_channel=NickChapsas)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/016/stringempty.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/4d7a12f4-145d-473d-9bff-40a85865fa91)
 
 在 `C#` 中， `string.Empty` 和 `""` 是一样的吗？首先 `string.Empty` 不是一个字面常量，也就是说它不能作为一个函数的默认参数。那么他们之间有什么性能上的差别吗？
 
@@ -109,7 +107,7 @@ L0032: call 0x719cc280
 
 6、[为什么你需要关心 .NET GC 的问题](https://tooslowexception.com/why-should-you-care-about-net-gc/)
 
-![gc](https://dotnetweeklyimages.blob.core.windows.net/016/gc.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/37b5ff63-7e53-4538-b20b-62ea2c590eff)
 
 很多时候，我们并不关心 `.NET` GC 的问题，因为它看上去好像跟我们没有什么关系。`.NET` 的抽象已经将这些细节全部隐藏起来了， 只需要关心使用即可。但是仅仅是抽象是不够的，因为
 
@@ -131,7 +129,7 @@ L0032: call 0x719cc280
 
 1、[Enum 增强版](https://github.com/andrewlock/NetEscapades.EnumGenerators)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/016/enum.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/f8443f17-07b8-4fb0-a7bc-e855bc8eeaf7)
 
 `Enum` 类型是 `.NET` 中重要的类型，它的很多方法是采用反射的方式实现，比如 `ToString`， `IsDefined` 或者 `TryParse` 方法。我们都知道反射的都是非常慢，因此 `NetEscapades.EnumGenerators` 这个库可以帮你解决这个问题，它主要采用 `.NET 6` 的 `Source Generator` 方法，通过自动生成相关的代码来避免反射带来的开销。
 
@@ -189,4 +187,4 @@ public class EnumRunner
 }
 ```
 
-![benchmark](https://dotnetweeklyimages.blob.core.windows.net/016/benchmark.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/7834651c-7fe9-41bc-92a1-9ad9565099c4)

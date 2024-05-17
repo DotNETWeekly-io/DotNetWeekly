@@ -27,7 +27,7 @@ static async Task<IEnumerable<int>> FetchItems()
 
 但是输出的结果如下
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/yieldreturn.png)
+![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/3c456797-b3e5-46f9-8f3b-7a7b877870ea)
 
 可以看出来，集合是在内容全部提取完毕之后，才依次输出。我们知道 `C#` 提供了 `yield return` 方法可以部分返回数据，而不是等全部执行完毕。那么改成这样事否可以呢？
 
@@ -75,19 +75,19 @@ static async Task Main(string[] args)
 
 效果如下
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/asyncyieldreturn.png)
+![image](https://user-images.githubusercontent.com/11272110/187018546-2cfd69fa-1015-48b3-8720-30ca62d2991a.png)
 
 ## 行业资讯
 
 1、[.NET Conf Focus on MAUI 活动回顾](https://devblogs.microsoft.com/dotnet/dotnet-conf-focus-on-maui-recap/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/muai.png)
+![image](https://user-images.githubusercontent.com/11272110/185733261-4e1f5ee4-e439-4608-8b55-ac6b380c900c.png)
 
 前一阵子关于 `MAUI` 的 `.NET Conf` 如期举办，会议包含了很多有趣的内容，包含了大量的录像和实例代码。
 
 2、[C# 11 Preview](https://devblogs.microsoft.com/dotnet/csharp-11-preview-august-update/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/C11.png)
+![image](https://user-images.githubusercontent.com/11272110/187016963-12ad0153-e517-4caf-9574-0b6f7098beba.png)
 
 C# 11 马上就要发布了，这篇文章带你介绍了 `C#11` 包含的特性，主要分为三大块
 
@@ -125,19 +125,19 @@ string? GetTopLevelDomainFromFullUrl(string? url)
 
 1、[如何使用 .NET Memory Tool](https://devblogs.microsoft.com/visualstudio/choosing-a-net-memory-profiler-in-visual-studio-part-1/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/memortytool.png)
+![image](https://user-images.githubusercontent.com/11272110/185724326-fbc9f3e4-de06-4c30-9b04-8a93392e7e3d.png)
 
 内存泄露是 `.NET` 应用程序排查的难点，因为它们不是仅仅通过编写代码或者编译的时候就能发现，需要在程序运行的过程中，通过分析内存分布情况才能发现。 `Visual Studio` 内置了量中重要的工具 `Memory Usage` 和 `.NET Object Allocation Tracking`， 通过它们我们能够发现内存的异样。
 
 2、[Azure App Service Kestrel + YARP 迁移](https://azure.github.io/AppService/2022/08/16/A-Heavy-Lift.html)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/appservice.png)
+![image](https://user-images.githubusercontent.com/11272110/185725983-200263df-2162-4151-a7f4-ee37e94686b2.png)
 
 Azure App Service 是 Azure 平台上的 `PaaS`，开发者可以开发 `Web` 服务，而无需关心底层 VM，外部网络等等。因为这些基础项目都交给了 `Azure` 平台来处理，最近 `Azure App Service` 的网络已经切换到 `Kestrel` 和 `YARP`， 这篇文章详细介绍了这些内容。
 
 3、[如何并行执行多个异步任务？](https://code-maze.com/csharp-execute-multiple-tasks-asynchronously/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/cocurrent.png)
+![image](https://user-images.githubusercontent.com/11272110/185732478-7c6b4e02-14cc-4281-8734-7ef599288519.png)
 
 对于异步编程，`C#` 已经有很好的编程模型，通过 `async` 和 `await` 两个关键字实现了复杂的状态机转移。如果在应用程序开发的过程中，需要执行多个异步操作，那么该怎么办呢？
 
@@ -183,7 +183,7 @@ WPF [博客](https://www.cnblogs.com/zh7791/category/1213318.html)和[视频](ht
 
 5、[ASP.NET Core Controller 返回值类型](https://code-maze.com/aspnetcore-web-api-return-types/)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/controller.png)
+![image](https://user-images.githubusercontent.com/11272110/187017261-31b2f030-e353-4727-a038-34f894a942ab.png)
 
 `ASP.NET Core` 的 `Controller` 的返回值有三种类型
 
@@ -240,12 +240,10 @@ public ActionResult<Employee> GetById(int id)
 
 1、[NUnit](https://github.com/nunit/nunit)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/nunit.png)
-
 NUnit 是一个适用于所有 .NET 语言的单元测试框架。最初版本由 java 单元测试框架 JUnit 移植，当前的生产版本 NUnit3 已完全重写，目前具有许多新功能和对各种 .NET 平台的支持。
 
 2、[Bogus](https://github.com/bchavez/Bogus)
 
-![image](https://dotnetweeklyimages.blob.core.windows.net/021/bogus.png)
+![image](https://user-images.githubusercontent.com/11272110/187018564-0e58390d-1498-4e01-a7ca-6f72073dbe5b.png)
 
 在软件开发过程中，测试是并不可少的。但是在测试过程准备一些测试数据可就比较繁琐了。`Bogus` 开源库可以帮助你自动生成测试数据，而且看上去跟真实的很类似。
