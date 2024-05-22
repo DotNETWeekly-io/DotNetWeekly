@@ -10,12 +10,13 @@
 
 - GitHub
 - [Web](https://www.fungkao.net/searchByTag/.NET%20Weekly)
+- [知乎](https://www.zhihu.com/column/c_1775053216763277312)
 
 ## 周刊
 
 ### 2024
 
-**五月份** : [第 054 期](docs/episode-054.md) :high_brightness:
+**五月份** : [第 055 期](docs/episode-055.md) :high_brightness: | [第 054 期](docs/episode-054.md)
 
 **四月份** : [第 053 期](docs/episode-053.md)
 
