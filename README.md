@@ -16,7 +16,9 @@
 
 ### 2024
 
-**五月份** : [第 055 期](docs/episode-055.md) :high_brightness: | [第 054 期](docs/episode-054.md)
+**六月份** : [第 056 期](docs/episode-056.md) :high_brightness: 
+
+**五月份** : [第 055 期](docs/episode-055.md) | [第 054 期](docs/episode-054.md)
 
 **四月份** : [第 053 期](docs/episode-053.md)
 
