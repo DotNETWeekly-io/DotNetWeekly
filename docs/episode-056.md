@@ -12,7 +12,7 @@ Microsoft Build 大会 .NET 内容[汇总](https://devblogs.microsoft.com/dotnet
 
 ![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/4705f569-d5ca-4f2e-a061-eaaca794e8d4)
 
-之前我们分享过 `.NET` 官方文档中现在提供了 `GitHub` 源码查询的链接，这样大大方便了我们了解更多的实现细节。这篇文章介绍了 `.NET` 组是如何开发这个功能的。
+之前我们分享过 `.NET` 官方文档中现在提供了 `GitHub` 源码查看链接，这样大大方便了我们了解更多实现的细节，这篇文章介绍了 `.NET` 组是如何开发这个功能的。
 
 ## 文章推荐
 
@@ -33,11 +33,12 @@ Microsoft Build 大会 .NET 内容[汇总](https://devblogs.microsoft.com/dotnet
 ![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/73542067-e404-4a13-aeda-4d719204b3aa)
 
 在 `ASP.NET Core` 中每个请求的处理流程如下：
-- 找到相应的 route 定义
+
+- 找到相应的 `Route` 定义
 - 链式处理每个中间件
 - 找到对应的 `Endpoint` 并且处理
 
-在 `ASP.NET Core 8` 中引入的 `Short Circuit`。顾名思义，我们定义好一些请求可以不用经过各种 `Middleware` 而直接处理并且返回，比如像一些静态文件处理，我们可以直接返回结果，通常是为了下述考虑：
+在 `ASP.NET Core 8` 中引入的 `Short Circuit`。顾名思义，我们定义好一些请求可以不用经过各种 `Middleware` 而直接处理并且返回，比如像一些静态文件请求，我们可以直接返回结果，通常是为了下述考虑：
 
 - 性能优化
 - 资源有效性
@@ -76,11 +77,12 @@ app.MapShortCircuit(500, "robots.txt", "favicon.ico");
 
 3、[6 条 C# 性能提升的建议](https://www.code4it.dev/blog/top-6-string-performance-tips/)
 
-1. StringBuilder Vs String concatenation 
-- 如果只有几个字符串，使用字符串拼接
-- 如果有很多字符串，使用 `StringBuilder` 
+1. StringBuilder Vs String concatenation
 
-2. EndsWith(string) Vs EndsWith(char) 
+- 如果只有几个字符串，使用字符串拼接
+- 如果有很多字符串，使用 `StringBuilder`
+
+2. EndsWith(string) Vs EndsWith(char)
 
 `EndsWith(char)`  性能比较好
 
@@ -119,7 +121,7 @@ string.Equals(s1, s2, StringComparison.OrdinalIgnoreCase); //False
 
 1. Virtual
 
-C# 中 `Virtual` 关键字用来表示该属性或者方法可以在子类中进行重载，所以在单元测试中可以构造新的子类来重写部分方法。
+C# 中 `Virtual` 关键字用来表示该属性或者方法可以在子类中进行重载，所以在单元测试中可以构造新的子类来重写这个方法。
 
 ```csharp
 public class NumbersRepository
@@ -231,7 +233,7 @@ public void Should_WorkWithMockRepo() {
 
 5、[Hanselman & Toub 现场代码秀](https://www.youtube.com/watch?v=TRFfTdzpk-M&ab_channel=MicrosoftDeveloper)
 
-今年 `Build` 大会，`Scott Hanselman` 和  `Stephen Toub` 这对老搭档又来整活，他们通过对 [Humanizer](https://github.com/Humanizr/Humanizer) 这个库的优化，来提升 C# 代码性能。
+今年 `Build` 大会，`Scott Hanselman` 和  `Stephen Toub` 这对老搭档又来整活，他们通过对 [Humanizer](https://github.com/Humanizr/Humanizer) 这个库的优化，来提升代码性能。
 
 - Span
 
@@ -247,7 +249,7 @@ public void Should_WorkWithMockRepo() {
 + public static string Transform(this string input params ReadonlySpan<IStringTransformer> transformers)
 ```
 
-- Regex 
+- Regex
 
 ```diff
 - private static readonly Regex ValidRomanNumeral =  new Regex("^(?i:(?=[MDCLXVI])((M{0,3})((C[DM])|(D?C{0,3}))?((X[LC])|(L?XX{0,2})|L)?((I[VX])|(V?(II{0,2}))|V)?))$", RegexOptionsUtil.Compiled);
@@ -270,14 +272,14 @@ public void Should_WorkWithMockRepo() {
 
 ![image](https://github.com/DotNETWeekly-io/DotNetWeekly/assets/11272110/add62da1-461a-4472-97db-cdf9b17e975b)
 
-如果说你的应用程序是 `.NET Framework` + `SQL Server` 的架构，并且部署在 `On premise` 上，那么你的应用程序就像**囚犯**一样：
+如果说你的应用程序是 `.NET Framework` + `SQL Server` 的架构，并且部署在 `On premise` 机器上，那么你的应用程序就像**囚犯**一样：
 
 - 受限于 `on-premise` 无法动态扩展
 - 被 Windows 和 `SQL Server` 授权费用牵制
 - 受困于服务器管理
 - 受整体架构的限制
 
-使用 `AWS` 和相关工作可以帮助解决上述问题
+使用 `AWS` 和相关工具可以解决上述问题
 
 **阶段一**
 
@@ -300,8 +302,8 @@ public void Should_WorkWithMockRepo() {
 
 7、[当开源维护者不再更新 NuGet 包怎么办？](https://www.thereformedprogrammer.net/how-to-update-a-nuget-library-once-the-author-isnt-available/)
 
-这是一篇令人难受的文章，作者是一名 `.NET` 开源库的维护者。但是最近他被诊断为一种叫做 `失智` 的疾病，该疾病导致作者无法再及时更新这些开源库。
-微软每年都会发布新的 `.NET` 版本，每个版本都包含新的功能，或者性能的提升，亦或者一些 breaking change。如果这个开源库只依赖 `.NET Standard`, 新发布的 `.NET` 并不会影响他们，以为只依赖 `BCL`。如果依赖特定的 `.NET`，但是使用者想再新的 `.NET` 版本中使用这个库，但是作者并没有及时更新这个库，那该怎么办呢？
+这是一篇令人难过的文章，作者是一名 `.NET` 开源库的维护者。但是最近他被诊断为一种叫做 `失智` 的疾病，该疾病导致作者无法再及时更新这些开源库。
+微软每年都会发布新的 `.NET` 版本，每个版本都包含新的功能，或者性能的提升，亦或者包含一些 breaking change。如果这个开源库只依赖 `.NET Standard`, 新发布的 `.NET` 并不会影响他们，以为只依赖 `BCL`。如果依赖特定的 `.NET`，但是使用者想再新的 `.NET` 版本中使用这个库，但是作者并没有及时更新这个库，那该怎么办呢？
 
 - 首先下载这个库的源码到本地，通常 `NuGet` 页面会有指向源码的链接
 - 修改项目的 `TargetFramework` 属性到最新的版本
