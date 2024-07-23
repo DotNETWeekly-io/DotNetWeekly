@@ -16,7 +16,7 @@
 
 ### 2024
 
-**七月份** : [第 058 期](docs/episode-058.md) :high_brightness:
+**七月份** :  [第 059 期](docs/episode-059.md) :high_brightness: |  [第 058 期](docs/episode-058.md)
 
 **六月份** : [第 057 期](docs/episode-057.md) |  [第 056 期](docs/episode-056.md)  
 
