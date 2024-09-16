@@ -6,7 +6,7 @@
 
 欢迎投稿，请[提交 issue](https://github.com/DotNETWeekly-io/DotNetWeekly/issues)。
 
-我们在两个平台上发布
+我们在三个平台上发布
 
 - GitHub
 - [Web](https://www.fungkao.net/searchByTag/.NET%20Weekly)
@@ -16,7 +16,9 @@
 
 ### 2024
 
-**八月份** : [第 060 期](docs/episode-060.md)  :high_brightness:
+**十月份** : [第 061 期](docs/episode-061.md) :high_brightness:
+
+**八月份** : [第 060 期](docs/episode-060.md)
 
 **七月份** :  [第 059 期](docs/episode-059.md) |  [第 058 期](docs/episode-058.md)
 
