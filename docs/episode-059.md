@@ -8,6 +8,7 @@ Jeffrey Snover 是 PowerShell 之父，这篇[访谈](https://corecursive.com/bu
 
 ## 行业资讯
 
+
 1、[Rider 中 Task 视图](https://blog.jetbrains.com/dotnet/2024/07/02/how-to-use-the-tasks-view-in-jetbrains-rider/)
 
 ![image](https://github.com/user-attachments/assets/bd08cea9-ca9f-4316-8e09-3edb126573f3)
