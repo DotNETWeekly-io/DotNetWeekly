@@ -16,7 +16,9 @@
 
 ### 2024
 
-**十月份** :  [第 062 期](docs/episode-062.md) :high_brightness: |  [第 061 期](docs/episode-061.md)
+**十二月份** :  [第 063 期](docs/episode-063.md) :high_brightness:
+
+**十月份** :  [第 062 期](docs/episode-062.md)  |  [第 061 期](docs/episode-061.md)
 
 **八月份** : [第 060 期](docs/episode-060.md)
 
