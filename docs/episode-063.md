@@ -32,7 +32,7 @@ https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core/
 
 ## 行业资讯
 
-1、[如何用 Stopwatch 正确的计算耗时](https://www.youtube.com/watch?v=Lvdyi5DWNm4&ab_channel=NickChapsas)
+1、[是否升级.NET 9还是等.NET 10的投票](https://x.com/Dave_DotNet/status/1856017668261724547)
 
 ![image](https://github.com/user-attachments/assets/5268c04e-ff5c-4454-a6b5-f28f86608fba)
 
@@ -46,7 +46,7 @@ https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core/
 
 ## 文章推荐
 
-1、[.NET 9 性能提升](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-9/)
+1、[如何用 Stopwatch 正确的计算耗时](https://www.youtube.com/watch?v=Lvdyi5DWNm4&ab_channel=NickChapsas)
 
 ![image](https://github.com/user-attachments/assets/0a14e040-4fb9-4143-86e2-010653df9aeb)
 
@@ -351,8 +351,6 @@ mi: 0.0006213711922373339
 nmi: 0.0005399568034557236
 
 2、[.NET Debugging 开源书](https://michaelscodingspot.com/free-book/)
-
-![image](https://github.com/user-attachments/assets/bc890975-8867-4583-a172-3a0274404c72)
 
 ![image](https://github.com/user-attachments/assets/246a518b-bd50-4149-aaf6-ab7392c1202b)
 
