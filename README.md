@@ -14,9 +14,13 @@
 
 ## 周刊
 
+### 2025
+
+**一月份** :  [第 064 期](docs/episode-064.md) :high_brightness:
+
 ### 2024
 
-**十二月份** :  [第 063 期](docs/episode-063.md) :high_brightness:
+**十二月份** :  [第 063 期](docs/episode-063.md)
 
 **十月份** :  [第 062 期](docs/episode-062.md)  |  [第 061 期](docs/episode-061.md)
 
