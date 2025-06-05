@@ -8,7 +8,7 @@
 
 我们在三个平台上发布
 
-- GitHub
+- [GitHub订阅通道（首选)](https://github.com/DotNETWeekly-io/dotnet-monthly)
 - [Web](https://www.fungkao.net/searchByTag/.NET%20Weekly)
 - [知乎](https://www.zhihu.com/column/c_1775053216763277312)
 
