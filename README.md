@@ -16,7 +16,7 @@
 
 ### 2025
 
-**六月份** :  [第 068 期](docs/episode-068.md)  :high_brightness:
+**六月份** :  [第 069 期](docs/episode-069.md) :high_brightness: |  [第 068 期](docs/episode-068.md)  
 
 **五月份** :  [第 067 期](docs/episode-067.md)
 
