@@ -16,7 +16,9 @@
 
 ### 2025
 
-**七月份** :  [第 070 期](docs/episode-070.md) :high_brightness:
+**八月份** :  [第 071 期](docs/episode-071.md) :high_brightness:
+
+**七月份** :  [第 070 期](docs/episode-070.md) 
 
 **六月份** :  [第 069 期](docs/episode-069.md)  |  [第 068 期](docs/episode-068.md)  
 
