@@ -12,6 +12,7 @@ Generate an image based on the assigned issue comments
 
 <Steps>
 1. Review the assigned issue comments for relevant information.
-2. Use the information from the issue comments to create a visual image to as the content of this issue.
-3. Save the generated image in the `/assets/images/` folder of the repository. The file name format is `issue-<issue_number>.png`, where `<issue_number>` is the number of the issue you are working on.
+2. Translate it to English if the comments is Chinese.
+3. Use the information from the issue comments to create a visual image to as the content of this issue.
+4. Save the generated image in the `/assets/images/` folder of the repository. The file name format is `issue-<issue_number>.png`, where `<issue_number>` is the number of the issue you are working on.
 </Steps>
