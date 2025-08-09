@@ -91,6 +91,28 @@ Nick Chapsas 在这段视频中深入展示了 .NET 10（预览版）中新加�
 MCP 还支持「Prompt 模板」与「Resource」：开发者可预设常用提示词模板或附加文件/链接，用户在聊天时通过 / 命令一键插入，或将资源上下文发送给模型。 
 
 最后 Dan 演示了 Playwright MCP Server，模型自动对网站进行无头浏览、找出错误并生成报告，进一步展示了多工具协同带来的开发新范式。他提醒：设计工具要单一职责、粒度细，以便模型按需组合调用；部署可使用 Docker 镜像，通过 `docker run` 即可在本地以标准 IO 方式启动。整套流程表明 MCP 简单易用却威力巨大，为未来“对话式开发”奠定了基础。
+3、 [.NET GraphQL 学习](https://www.youtube.com/watch?v=YL07NyBXC7M&ab_channel=NickChapsas)
+在本期视频中，Nick Chapsas 通过一个从零开始的演示，带大家快速了解如何在 .NET 平台上使用 GraphQL（以 HotChocolate 为例）构建 API，并与传统 REST 风格进行对比。
+
+1. GraphQL 基础概念：Nick 首先解释 GraphQL 的核心优势——客户端按需获取数据、减少 over-fetching/under-fetching 以及单一端点带来的简化调用。随后展示 Schema、Query、Mutation、Subscription 的组成，并强调类型系统保证了强一致性与自描述能力。
+
+2. 创建项目与安装依赖：使用 `dotnet new web` 快速生成最简 API，再通过 NuGet 引入 `HotChocolate.AspNetCore`、`HotChocolate.Data` 等包，开启 GraphQL 中间件。
+
+3. 定义模型与 Schema：
+   • Code-First 方式：直接在 C# 类上加特性 `[GraphQLName]`、`[GraphQLDescription]` 等生成对象类型；查询方法以 `Query` 类承载。
+   • 展示了字段选择、嵌套对象、枚举与非空类型的映射。
+
+4. 数据获取与性能：
+   • 集成 EF Core，演示 HotChocolate 的 Data Loader 机制，以批量查询和缓存避免 N+1 问题。
+   • 使用 `UsePaging`、`UseFiltering`、`UseSorting` 快速为列表提供分页、过滤与排序能力。
+
+5. 安全与验证：通过 `Authorize` 特性结合 ASP.NET Core 身份验证管道，实现基于声明或角色的字段级访问控制。
+
+6. 工具链：演示 Banana Cake Pop（HotChocolate 自带的 IDE）实时编写/测试查询，并展示 Schema 文档和 Introspection 带来的开发体验。
+
+7. 与 REST 的对比与适用场景：Nick 总结 GraphQL 适合需要灵活查询、前端迭代频繁、数据模型复杂的项目；而纯 CRUD、简单读写接口 REST 依然高效。
+
+整体来看，本视频在 30 分钟左右的时间里覆盖了从零搭建、核心语法到进阶优化的完整流程，新手可快速上手，已有 REST 经验的开发者亦能对 GraphQL 的价值形成清晰认知。
 
 ## 开源项目
 1、 [基于.NET的Toml文件读写库Tomlet](https://github.com/SamboyCoding/Tomlet)
