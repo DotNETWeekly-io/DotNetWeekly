@@ -7,6 +7,7 @@ Generate an image based on the assigned issue comments
 <Limitations>
 - The repository is a .NET project. The generated image should be relevant to .NET development.
 - The image should be suitable for use in a weekly newsletter format.
+- Don't close the issue after generating the image.
 </Limitations>
 
 
