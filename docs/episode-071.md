@@ -70,6 +70,23 @@
 
 > 总结：本次更新显著提升了 MCP C# SDK 的安全性、交互性与数据结构表达能力，为 .NET 开发者构建 AI 助手、自动化工具或复杂业务集成提供了更坚实的基础。立即升级体验这些新特性，拥抱更智能的 .NET 未来！
 
+4、 [.NET 开发者应该学会的 5 个 Copilot Chat 提示](https://devblogs.microsoft.com/dotnet/5-copilot-chat-prompts-dotnet-devs-should-steal-today/)
+
+![.NET Copilot Prompts](../assets/images/issue-984.png)
+
+微软 .NET 团队在官方博客分享了 5 个专为 .NET 开发者设计的 GitHub Copilot Chat 提示，旨在显著提升日常开发效率。文章涵盖了代码审查、单元测试生成、性能优化建议、文档生成以及调试辅助等关键开发场景。
+
+每个提示都经过精心设计，充分利用 Copilot 对 .NET 生态的深度理解，能够生成符合最佳实践的代码建议和解决方案。作者详细展示了如何在 Visual Studio 和 VS Code 中使用这些提示，并提供了实际的使用示例和预期输出。
+
+这些提示特别适合：
+• 希望提高代码质量和一致性的开发团队
+• 需要快速生成测试用例的开发者
+• 寻求性能优化指导的项目
+• 希望改善代码文档的团队
+• 在复杂调试场景中需要 AI 辅助的开发者
+
+通过采用这些经过验证的提示模式，.NET 开发者可以更好地利用 AI 辅助编程，将更多时间专注于核心业务逻辑和创新功能的实现。
+
 ## 视频推荐
 1、 [dotnet run app.cs 后的隐藏的功能](https://www.youtube.com/watch?v=473o5AWkJec&ab_channel=NickChapsas)
 Nick Chapsas 在这段视频中深入展示了 .NET 10（预览版）中新加入的“dotnet run app.cs”脚本化功能，并补充了官方演示中遗漏的细节。
