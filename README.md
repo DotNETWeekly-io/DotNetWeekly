@@ -1,4 +1,4 @@
-[![linter](<https://dev.azure.com/tindi/DotNETWeekly/_apis/build/status/DotNETWeekly-io.DotNetWeekly%20(1)?branchName=master>)](https://dev.azure.com/tindi/DotNETWeekly/_build/latest?definitionId=10&branchName=master)
+[![linter](https://dev.azure.com/tindi/DotNETWeekly/_apis/build/status/DotNETWeekly-io.DotNetWeekly%20(1)?branchName=master)](https://dev.azure.com/tindi/DotNETWeekly/_build/latest?definitionId=10&branchName=master)
 
 # 介绍
 
@@ -16,7 +16,7 @@
 
 ### 2025
 
-**八月份** :  [第 071 期](docs/episode-071.md)
+**八月份** :  [第 071 期](docs/episode-071.md)  |  [第 072 期](docs/episode-072.md)
 
 **七月份** :  [第 070 期](docs/episode-070.md)
 
