@@ -81,15 +81,25 @@ Copilot Diagnostics 并非取代开发者技能，而是嵌入 IDE、贴合上�
 2、 [DependaBot Nuget 性能提升](https://devblogs.microsoft.com/dotnet/the-new-dependabot-nuget-updater/)
 
 ![image](https://raw.githubusercontent.com/DotNETWeekly-io/DotNetWeekly/master/assets/images/issue-1008.png)
+
 • 文章介绍了 GitHub Dependabot NuGet 更新器的全新版本。核心变化是彻底抛弃原先以 Ruby 脚本手动解析 csproj / packages.config 的“混合”方案，转而百分之百使用原生 .NET 工具链：NuGet 官方客户端库、MSBuild API 及 dotnet CLI。
+
 • 性能与稳定性显著提升：内部测试套件执行时间从 26 min 缩短到 9 min，提速 65%；更新成功率由 82% 提升至 94%，大幅减少人工干预。
+
 • 依赖发现：借助 MSBuild 的真实项目评估流程，能够正确处理条件编译的 PackageReference、Directory.Build.props/targets 中的版本定义、MSBuild 变量，以及其他复杂引用模式，避免以往“猜测式”解析带来的漏检。
+
 • 依赖解析：新增冲突解决算法。遇到存在漏洞的传递依赖时，更新器会先尝试升级上游包至安全版本；若无可用版本，则自动在项目中增加显式引用，使 NuGet 的“直接依赖优先”规则生效，从而消除漏洞。同时，若某个包系列（如 Microsoft.Extensions.*）需要保持版本一致，工具会整体协同升级，避免碎片化。
+
 • 环境一致性：现在严格遵循 global.json 中指定的 SDK 版本；结合 Dependabot 先前推出的 SDK 升级器，可在自动升级与团队自定义之间取得平衡。
+
 • 完整支持 Central Package Management。能够识别并更新 Directory.Packages.props 中的集中版本信息，也能处理项目级 overrides 与传递依赖。
+
 • 源兼容性：由于使用了 NuGet 官方库，现已原生支持所有符合规范的 v2 / v3 源，包括 nuget.org、Azure Artifacts、GitHub Packages 及企业私有源，并自动处理 API Key、PAT 等认证方式及源映射。
+
 • 开发体验：失败时给出更清晰、可操作的错误消息；用户无需修改 dependabot.yml 就能自动获得新特性。
+
 • 迁移意义：代码基于 C# 重写，方便社区以熟悉的 .NET 开发流程参与贡献，也为后续支持新特性、改进企业场景、加强诊断奠定基础。
+
 • 新版已在 GitHub 全量上线。未使用 Dependabot 的项目可通过极简配置启用：
 ```yaml
 version: 2
@@ -124,27 +134,38 @@ ReSharper 2025.2 以“快”作为首要目标，从架构、算法到 I/O 路�
 
 Workleap 为在数百个 .NET 项目中统一并强制执行编码规范，推出了一个开源 NuGet 包，将 .editorconfig、Roslyn 分析规则与关键 MSBuild 属性封装于一处，实现“一包即配”。本文总结其动机、实施过程与收益。
 
-1. 背景与痛点  
-   • 多年来，各仓库通过复制粘贴方式散布大量 .editorconfig、StyleCop 配置，导致规则漂移与风格不一致。  
-   • PR 审查中约有三成评论是样式争议，拉长合并周期并损害团队氛围。  
+1. 背景与痛点
+   • 多年来，各仓库通过复制粘贴方式散布大量 .editorconfig、StyleCop 配置，导致规则漂移与风格不一致。
+
+   • PR 审查中约有三成评论是样式争议，拉长合并周期并损害团队氛围。
+
    • 构建阶段警告被忽视，Nullable、AnalysisLevel 等默认值过低，隐藏性能、安全隐患。
 
 2. 解决方案设计  
-   • 放弃 StyleCop，全面启用 Roslyn 分析器与 Code Fix。  
+   • 放弃 StyleCop，全面启用 Roslyn 分析器与 Code Fix。 
+
    • 精细定义 200+ 行代码风格规则与 800+ 质量/性能/安全规则，并评估对编译时长的影响，确保零或微增。  
+
    • 通过 MSBuild 属性启用 TreatWarningsAsErrors（CI/Release）、EnforceCodeStyleInBuild、NuGetAudit 等；在新项目模板中默认开启 Nullable。  
+
    • 引入 Microsoft.CodeAnalysis.BannedApiAnalyzers 统一屏蔽常见危险 API。  
+
    • 以上配置打包为单一 NuGet 包，利用 SDK 自动导入 .editorconfig 与 props/targets，免去手动复制。
 
 3. 推广与落地  
    • 先在核心产品试点并收集“非符合示例”，以“正向羞耻”方式展示潜在缺陷，赢得技术负责人支持。  
+
    • 迁移成本小：IDE Code Fix + 文档指引，80% 以上项目在短期内完成升级。
 
 4. 收获  
    • 代码评审更专注业务逻辑，样式争议显著减少，合并速度提升。  
+
    • 统一风格、性能与安全基线，提高整体代码质量；少量大型解决方案编译时间最多缩短 20%。  
+
    • 开发者借助分析器提示加深对 C# 语言与最佳实践的理解。  
+
    • 删除上百个分散的 .editorconfig 与 Build props，降低维护成本。
+   
 
 5. 开源与可定制性  
    • 项目已在 GitHub 与 NuGet 发布，配有自动升级脚本和测试基线；其他组织可直接引用或 Fork 并调整规则。
