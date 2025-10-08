@@ -16,6 +16,8 @@
 
 ### 2025
 
+**十月份** :  [第 074 期](docs/episode-074.md)
+
 **九月份** :  [第 073 期](docs/episode-073.md)
 
 **八月份** :  [第 072 期](docs/episode-072.md) | [第 071 期](docs/episode-071.md)
